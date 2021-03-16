@@ -37,10 +37,6 @@ const article = {
     },
 };
 
-const addClass = (string, element) => {
-    const classToAdd = string;
-}
-
 //Insert all members in the DOM
 for(let i=0; i<team.length; i++){
     let newArticle = Object.create(article);
