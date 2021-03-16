@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text:400,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <nav class="navBar">
+      <div id="burger" class="menu-icon menu-icon-cross">
+        <span></span>
+      </div>
+
+      <a href="#"><img src="./Ressources/Capture d’écran 2021-03-15 à 21.17.47.png" alt=""/></a>
+    </nav>
+
+    <div id="menuNavigation" class="menuNavigation">
+       <ul>
+           <li><a href="#">Accueil</a></li>
+           <li><a href="#">Staff</a></li>
+           <li><a href="#">Article</a></li>
+           <li><a href="#">Cours</a></li>
+       </ul>
+    </div>
+
+
+
+
+
+
+    <canvas id="chart" width="600" height="100"></canvas>
+    <container class="container">
+        <cards class="cards">
+            <bitcoin  class="btc">
+                <card class="asset-info">
+                    <div class="title">
+                        <img src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/btc.svg" width="15%"> 
+                        <h1>Bitcoin</h1>
+                    </div>
+                    <div class="details">
+                        <h2 class="asset-price" id="btcPrice"></h2>
+                    </div>
+                </card>
+                <canvas id="btcChart"></canvas>
+            </bitcoin>
+    
+            <cosmos class="cosmos">
+                <card class="asset-info">
+                    <div class="title">
+                        <img src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/atm.svg" width="15%"> 
+                        <h1>Cosmos</h1>
+                    </div>
+                    <div class="details">
+                        <h2 class="asset-price" id="atomPrice"></h2>
+                    </div>
+                </card>
+                <canvas id="cosmosChart"></canvas>
+            </cosmos>
+
+        
+    
+            <ethereum  class="ethereum">
+                <card class="asset-info">
+                    <div class="title">
+                        <img src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/eth.svg" width="10%"> 
+                        <h1>Ethereum</h1>
+                    </div>
+                    <div class="details">
+                        <h2 class="asset-price" id="ethPrice"></h2>
+                    </div>
+                </card>
+                <canvas id="ethereumChart"></canvas>
+            </ethereum>
+
+     
+
+        </cards>
+      </container>
+
+
+
+    <div class="main">
+
+
+
+
+       
+      
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/js/burger.js"></script>
+    <script src="./assets/js/app.js"></script>
+   
+   
+  </body>
+</html>
