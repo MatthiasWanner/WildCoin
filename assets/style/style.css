@@ -42,6 +42,7 @@ body{
 .profil-description{
     flex-direction: column;
 }
+
 .invert-description{
     text-align: end;
 }
