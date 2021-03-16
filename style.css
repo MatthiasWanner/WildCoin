@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#body-container{
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+}
+
+#main-container{
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+    min-height: 100%;
+}
+
+.profil-img{
+    width: 30%;
+
+}
+
+.item{
+    height: 20vh;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.invert{
+    flex-direction: row-reverse;
+    text-align: start;
+}
+
+.item h3, .item p{
+    height: 50%;
+    margin: 0;
+}
+
+.profil-description{
+    flex-direction: column;
+}
+.invert-description{
+    text-align: end;
+}
