@@ -55,6 +55,18 @@ for(let i=0; i<team.length; i++){
     }
 }
 
+const items = document.querySelectorAll('.item');
+
+items.forEach(function(item){
+    item.classList.add("hidden");
+});
+
+setTimeout(function(){
+    items.forEach(function(item){
+    item.classList.remove("hidden");
+    item.classList.add("shown");
+    });
+}, 500);
 
 
 

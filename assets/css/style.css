@@ -9,6 +9,7 @@ body{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    overflow: hidden;
 }
 
 /* Header */
@@ -180,6 +181,20 @@ nav{
 
 .text-description{
     display: none;
+}
+
+.hidden + .invert{
+    translate: -110vw;
+    transition-duration: 1s;
+}
+
+.hidden{
+    translate: 110vw;
+}
+
+.shown{
+    transform: translate(0);
+    transition-duration: 1s;
 }
 
 @media (orientation: landscape) {
