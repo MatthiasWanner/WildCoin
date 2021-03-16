@@ -27,10 +27,12 @@ const article = {
         textDiv.appendChild(pTextDiv);
         descriptionDiv.appendChild(textDiv);
         articleElt.appendChild(descriptionDiv);
+        const pictureContainer = document.createElement("div");
+        pictureContainer.classList.add("profil-img");
         const profilPicture = new Image();
         profilPicture.src = this.picture;
-        profilPicture.classList.add("profil-img");
-        articleElt.appendChild(profilPicture);
+        pictureContainer.appendChild(profilPicture);
+        articleElt.appendChild(pictureContainer);
         return articleElt;
     },
 };
@@ -49,16 +51,13 @@ for(let i=0; i<team.length; i++){
     articlesContainer.appendChild(newArticle.printArticle());
     const item = articlesContainer.children[i];
     const itemDescription = articlesContainer.children[i].querySelector(".profil-description");
-    console.log(item);
-    console.log(itemDescription);
+    item.classList.add("hidden");
     if(i%2 !== 0){
         item.classList.add("invert");
     }else{
         itemDescription.classList.add("invert-description");
     }
 }
-
-
 
 
 

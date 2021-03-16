@@ -21,15 +21,27 @@ body{
 }
 
 .profil-img{
-    width: 30%;
+    width: 25%;
+    border-radius: 50%;
+    max-height: 70%;
+    overflow: hidden;
+}
 
+.profil-img img{
+    width: 100%;
 }
 
 .item{
+    background-color: #e6d1d1;
     height: 20vh;
     justify-content: flex-end;
     align-items: center;
-    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ED6C6D;
+    box-shadow: 5px 5px 5px grey;
+    padding: 0px 10px 0px;
+    border-radius: 10px;
 }
 
 .invert{
@@ -38,12 +50,15 @@ body{
 }
 
 .item h3, .item p{
-    height: 50%;
     margin: 0;
 }
 
 .profil-description{
     flex-direction: column;
+    width: 75%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
 }
 
 .invert-description{
