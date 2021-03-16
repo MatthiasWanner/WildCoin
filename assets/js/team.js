@@ -1,3 +1,9 @@
+const clicThumbnail = (e) => {
+    console.log(e.target.offsetParent);
+    element = e.target.offsetParent;
+    element.classList.add("open");
+}
+
 // team array is charge befor this script. It contain all team's members
 
 const articlesContainer = document.getElementById("main-container");
@@ -20,6 +26,12 @@ const article = {
         const pElt =  document.createElement("p");
         pElt.innerText = this.job;
         descriptionDiv.appendChild(pElt);
+        const pictureContainer = document.createElement("div");
+        pictureContainer.classList.add("profil-img");
+        const profilPicture = new Image();
+        profilPicture.src = this.picture;
+        pictureContainer.appendChild(profilPicture);
+        articleElt.appendChild(pictureContainer);
         const textDiv = document.createElement("div");
         textDiv.classList.add("text-description");
         const pTextDiv = document.createElement("p");
@@ -27,12 +39,7 @@ const article = {
         textDiv.appendChild(pTextDiv);
         descriptionDiv.appendChild(textDiv);
         articleElt.appendChild(descriptionDiv);
-        const pictureContainer = document.createElement("div");
-        pictureContainer.classList.add("profil-img");
-        const profilPicture = new Image();
-        profilPicture.src = this.picture;
-        pictureContainer.appendChild(profilPicture);
-        articleElt.appendChild(pictureContainer);
+        articleElt.addEventListener("click", clicThumbnail);
         return articleElt;
     },
 };
@@ -64,7 +71,6 @@ items.forEach(function(item){
 setTimeout(function(){
     items.forEach(function(item){
     item.classList.remove("hidden");
-    item.classList.add("shown");
     });
 }, 500);
 

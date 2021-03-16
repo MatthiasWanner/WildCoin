@@ -156,6 +156,8 @@ nav{
     box-shadow: 3px 2px 7px grey;
     padding: 0px 10px 0px;
     border-radius: 10px;
+    transform: translate(0);
+    transition-duration: 1s;
 }
 
 .invert{
@@ -192,9 +194,8 @@ nav{
     translate: 110vw;
 }
 
-.shown{
-    transform: translate(0);
-    transition-duration: 1s;
+.open .text-description{
+    display: flex;
 }
 
 @media (orientation: landscape) {
