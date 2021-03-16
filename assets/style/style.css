@@ -4,7 +4,9 @@ body{
 }
 
 #body-container{
+    display: flex;
     min-height: 100vh;
+    flex-direction: column;
 }
 
 .container{
@@ -27,6 +29,7 @@ body{
     height: 20vh;
     justify-content: flex-end;
     align-items: center;
+    overflow: hidden;
 }
 
 .invert{
@@ -45,4 +48,8 @@ body{
 
 .invert-description{
     text-align: end;
+}
+
+.text-description{
+    display: none;
 }

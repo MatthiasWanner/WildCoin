@@ -10,7 +10,7 @@ const article = {
     description: "",
     printArticle: function(){
         const articleElt = document.createElement("article");
-        articleElt.setAttribute("id", this.name);
+        articleElt.setAttribute("id", this.name.toLowerCase());
         articleElt.classList.add("container", "item");
         const descriptionDiv = document.createElement("div");
         descriptionDiv.classList.add("container", "profil-description");
@@ -29,10 +29,15 @@ const article = {
         articleElt.appendChild(descriptionDiv);
         const profilPicture = new Image();
         profilPicture.src = this.picture;
+        profilPicture.classList.add("profil-img");
         articleElt.appendChild(profilPicture);
         return articleElt;
     },
 };
+
+const addClass = (string, element) => {
+    const classToAdd = string;
+}
 
 //Insert all members in the DOM
 for(let i=0; i<team.length; i++){
@@ -41,10 +46,18 @@ for(let i=0; i<team.length; i++){
     newArticle.job = team[i].job;
     newArticle.picture = team[i].picture;
     newArticle.description = team[i].description;
-    console.log(newArticle);
     articlesContainer.appendChild(newArticle.printArticle());
-
+    const item = articlesContainer.children[i];
+    const itemDescription = articlesContainer.children[i].querySelector(".profil-description");
+    console.log(item);
+    console.log(itemDescription);
+    if(i%2 !== 0){
+        item.classList.add("invert");
+    }else{
+        itemDescription.classList.add("invert-description");
+    }
 }
+
 
 
 
