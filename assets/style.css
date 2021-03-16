@@ -21,6 +21,7 @@ ul, li{
 .topnav {
     top: 0;
     position: fixed;
+    z-index: 100;
     width: 100%;
     height: 66px;
     line-height: 66px;
@@ -30,8 +31,53 @@ ul, li{
     background-color: #ED6C6D;
 }
 .burger{
-    padding: 25px;
+    padding: 1rem;
     cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    position: relative;  
+}
+
+.burger span{
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 3rem;
+    height: 4px;
+    background-color: #FFFFFF;
+    transition: background-color 0.4s ease-in-out;
+    margin: auto 1rem;
+}
+.burger span::before, .burger span::after {
+    content:'';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #FFFFFF;
+    transition: transform 0.4s ease-in-out;
+}
+.burger span::before{
+    transform: translateY(-12px);
+}
+.burger:hover > ::before{
+    transform: translateY(-15px);
+}
+.burger span::after{
+    transform: translateY(12px);
+}
+.burger:hover > ::after{
+    transform: translateY(15px);
+}
+.burger.active span {
+    background-color: transparent;
+}
+.burger.active span::before{
+    transform: translateY(0px) rotateZ(45deg);
+}
+.burger.active span::after{
+    transform: translateY(0px) rotateZ(-45deg);
 }
 .logo-title{
     display: flex;
@@ -80,13 +126,21 @@ ul, li{
 }
 
 nav{
+    top: 0;
+    position: fixed;
     margin-top: 66px;
 }
 
 .nav-menu{
-    position: static;
     width: 100%;
-    background-color: #e6d1d1;
+    height :100vh;
+    background-color: #000000;
+    border-right: 3px solid rgba(0, 0, 0, 0.5);
+    transition-duration: 0.3s;
+    transform : translateX(-500px);
+}
+.nav-menu-animation{
+    transform : translateX(0);
 }
 .nav-slider{
     display: flex;
@@ -103,4 +157,19 @@ nav{
 }
 .nav-slider-menu{
     display: flex;
+    justify-content: space-around;
+    font-size: 3rem;
+}
+.nav-slider-menu:hover {
+    font-size: 110%;
+
+
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    height: 66px;
+    background-color: #6E7785;
 }

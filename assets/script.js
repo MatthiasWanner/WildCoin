@@ -1,4 +1,10 @@
-const bouttonBurger = document.querySelectorAll('.burger');
-const navSlider = document.querySelector('.nav-slider');
-const buttonX = document.querySelector('.nav-slider-menu-x');
+const buttonBurger = document.querySelector('.burger');
+const navMenu = document.querySelector('#nav-menu');
+const buttonBurgerX = document.querySelector('.burger.active');
+
+buttonBurger.addEventListener('click', () => {
+    buttonBurger.classList.toggle('active');
+    navMenu.classList.toggle('nav-menu-animation');
+});
+
 
