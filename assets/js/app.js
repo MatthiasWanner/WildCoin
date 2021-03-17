@@ -21,8 +21,38 @@ menuButton.addEventListener("click", function (e) {
 ///  Appel API et répartition des données ///
 
 let currency = "EUR"
-let selectCurrency = document.getElementById('select-currency')
+let selectCurrency = document.getElementById('select-currency');
+let selectCrypto = document.getElementById('select-crypto');
 let symbol = "€"
+
+
+
+
+
+
+
+
+
+selectCrypto.addEventListener('change', function(e){
+  if (selectCrypto.value === "BTC"){
+     myData()
+     updateMyPrice();
+     printMyChart()
+  } else if ( selectCrypto.value === "ETH") {
+     myData()
+     updateMyPrice();
+     printMyChart()
+  } else if (selectCrypto.value === "LTC")
+    myData()
+    updateMyPrice();
+    printMyChart()
+})
+
+
+
+
+
+
 
 selectCurrency.addEventListener('change', function(e){
   if(selectCurrency.value === "EUR"){
@@ -34,14 +64,15 @@ selectCurrency.addEventListener('change', function(e){
   updateLtcPrice();
   updateXrpPrice();
   updateBnbPrice();
-  
+  updateMyPrice();
+
   printBtcChart();
   printCosmosChart();
   printEthereumChart();
   printLtcChart();
   printXrpChart();
   printBnbChart();
-  
+  printMyChart();
   
   
   } else if (selectCurrency.value === "USD") {
@@ -53,6 +84,7 @@ selectCurrency.addEventListener('change', function(e){
     updateLtcPrice();
     updateXrpPrice();
     updateBnbPrice();
+    updateMyPrice();
     
     printBtcChart();
     printCosmosChart();
@@ -60,6 +92,8 @@ selectCurrency.addEventListener('change', function(e){
     printLtcChart();
     printXrpChart();
     printBnbChart();
+    printMyChart();
+
   } else if (selectCurrency.value === "CAD"){
     currency = "CAD"
     symbol = "CAD"
@@ -69,13 +103,16 @@ selectCurrency.addEventListener('change', function(e){
     updateLtcPrice();
     updateXrpPrice();
     updateBnbPrice();
-    
+    updateMyPrice();
+
     printBtcChart();
     printCosmosChart();
     printEthereumChart();
     printLtcChart();
     printXrpChart();
     printBnbChart();
+    updateMyPrice();
+
   }
 })
 
@@ -165,6 +202,28 @@ const bnbData = async () => {
     prices,
   };
 };
+
+
+const myData = async () => {
+  const response = await fetch(
+    `https://min-api.cryptocompare.com/data/v2/histominute?fsym=${selectCrypto.value}&tsym=${currency}&limit=119&api_key=6f82a74e514a9ae1119f916469dda27ba1297e53c61c2b1abb88db8174f43bf1`
+  );
+  const json = await response.json();
+  const data = json.Data.Data;
+  const times = data.map((obj) => obj.time);
+  const prices = data.map((obj) => obj.high);
+  let date =  new Date(prices * 1000 );
+  let hours = date.getHours();
+  console.log(hours)
+  
+  
+  return {
+    times,
+    prices,
+  };
+};
+
+
 
 /// ERREUR ///
 function checkStatus(response) {
@@ -705,6 +764,112 @@ async function printEthereumChart() {
   });
 }
 
+
+
+
+
+
+
+
+
+async function printMyChart() {
+  let { times, prices } = await myData();
+
+  let myChart = document.getElementById("myChart").getContext("2d");
+
+  let gradient = myChart.createLinearGradient(0, 0, 0, 400);
+
+  gradient.addColorStop(0, "rgba(78,56,216,.5)");
+  gradient.addColorStop(0.425, "rgba(118,106,192,0)");
+
+  Chart.defaults.global.defaultFontFamily = "Red Hat Text";
+  Chart.defaults.global.defaultFontSize = 12;
+
+  createMyChart = new Chart(myChart, {
+    type: "line",
+    data: {
+      labels: times,
+      datasets: [
+        {
+          label: symbol,
+          data: prices,
+          backgroundColor: gradient,
+          borderColor: "white",
+          borderJoinStyle: "round",
+          borderCapStyle: "round",
+          borderWidth: 0.3,
+          pointRadius: 0,
+          pointHitRadius: 10,
+          lineTension: 0.2,
+        },
+      ],
+    },
+
+    options: {
+      title: {
+        display: false,
+        text: "Heckin Chart!",
+        fontSize: 35,
+      },
+
+      legend: {
+        display: false,
+      },
+
+      layout: {
+        padding: {
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
+        },
+      },
+
+      scales: {
+        xAxes: [
+          {
+            display: false,
+            gridLines: {},
+          },
+        ],
+        yAxes: [
+          {
+            display: false,
+            gridLines: {},
+          },
+        ],
+      },
+
+      tooltips: {
+        callbacks: {
+          //Ce code enlève le titre tooltip
+          title: function () {},
+        },
+        //Ce code enlève les couleurs de la légende
+        displayColors: false,
+        yPadding: 10,
+        xPadding: 10,
+        position: "nearest",
+        caretSize: 10,
+        backgroundColor: "rgba(255,255,255,.9)",
+        bodyFontSize: 15,
+        bodyFontColor: "#303030",
+      },
+    },
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /// Mise à jour des cours ///
 async function updateEthereumPrice() {
   let { times, prices } = await ethereumData();
@@ -748,12 +913,21 @@ async function updateBnbPrice() {
   document.getElementById("bnbPrice").innerHTML = `${symbol}` + currentPrice;
 }
 
+async function updateMyPrice() {
+  let { times, prices } = await myData();
+  let currentPrice = prices[prices.length - 1].toFixed(2);
+
+  document.getElementById("myPrice").innerHTML = `${symbol}` + currentPrice;
+}
+
+
 updateEthereumPrice();
 updateCosmosPrice();
 updateBitcoinPrice();
 updateLtcPrice();
 updateXrpPrice();
 updateBnbPrice();
+updateMyPrice();
 
 printBtcChart();
 printCosmosChart();
@@ -761,6 +935,24 @@ printEthereumChart();
 printLtcChart();
 printXrpChart();
 printBnbChart();
+printMyChart();
+
+
+
+
+
+
+// /* Tableau avec crypto en survey */
+
+
+
+
+
+
+
+
+
+
 
 // SCROLL TO REFRESH !! 8-) //
 
@@ -823,3 +1015,8 @@ function swipe(e) {
 document.addEventListener("touchstart", (e) => swipeStart(e), false);
 document.addEventListener("touchmove", (e) => swipe(e), false);
 document.addEventListener("touchend", (e) => swipeEnd(e), false);
+
+
+
+
+

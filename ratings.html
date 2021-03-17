@@ -127,6 +127,7 @@
         </xrp>
         <bnb class="bnb">
           <card class="asset-info">
+            
             <div class="title">
               <img
                 src="./Ressources/téléchargement.png"
@@ -141,21 +142,54 @@
           <canvas id="bnbChart"></canvas>
         </bnb>
       </cards>
-
-     
-    
-
-
-
     </container>
 
+  <div id="tableauSurvey" class="tableauSurvey">
     
+    <container class="container">
+
+
+      <cards  id="tableauBorder" class="cards">
+        <myChart class="myChart">
+          <card class="asset-info" >
+            <div class="title">
+            
+              <h1>NAME</h1>
+            </div>
+            <div class="details">
+              <h2 class="asset-price" id="myPrice"></h2>
+            </div>
+          </card>
+          <canvas id="myChart"></canvas>
+        </myChart>
+
+      </cards>
+    </container>
+
+
+
+
+  </div>
 
   
 
 
 
     <div class="filters">
+
+
+
+      <div class="currencyChoose">
+        <label for="select-currency">Choose a currency:</label>
+        <select name="select-currency" id="select-currency">
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+          <option value="CAD">CAD</option>
+        </select>
+      </div>
+      <div class="themeChoose">
+
+      </div>
         <div class="cryptoChoixe">
           <label for="select-crypto">Choose a crypto:</label>
           <select name="select-crypto" id="select-crypto">
@@ -166,17 +200,7 @@
         </div>
 
 
-        <div class="currencyChoose">
-          <label for="select-currency">Choose a currency:</label>
-          <select name="select-currency" id="select-currency">
-            <option value="EUR">EUR</option>
-            <option value="USD">USD</option>
-            <option value="CAD">CAD</option>
-          </select>
-        </div>
-        <div class="themeChoose">
-
-        </div>
+       
     </div>
     <footer></footer>
 
