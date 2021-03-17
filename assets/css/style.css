@@ -10,6 +10,7 @@ body{
     min-height: 100vh;
     flex-direction: column;
     overflow: hidden;
+    position: relative;
 }
 
 /* Header */
@@ -149,6 +150,7 @@ nav{
     background-color: #e6d1d1;
     height: 20vh;
     justify-content: flex-end;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -192,6 +194,13 @@ nav{
 
 .hidden{
     translate: 110vw;
+}
+
+.open{
+    overflow: scroll;
+    position: relative;
+    z-index: 10;
+
 }
 
 .open .text-description{

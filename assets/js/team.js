@@ -1,12 +1,22 @@
+
 const clicThumbnail = (e) => {
-    console.log(e.target.offsetParent);
-    element = e.target.offsetParent;
-    element.classList.add("open");
+    //console.log(e);
+    const element = e.target.offsetParent;
+    console.log(element);
+    const positionY = element.offsetTop;
+    isOpen = element.classList.contains("open"); //false
+    element.classList.toggle("open");
+    if(isOpen !== true){
+        element.style.transform = `translateY(-${positionY-10}px)`;
+    }else{
+        element.style.transform = `translateY(0)`;
+    }
 }
 
 // team array is charge befor this script. It contain all team's members
 
 const articlesContainer = document.getElementById("main-container");
+//console.log(articlesContainer);
 
 //Create a model of objet with method to display in the DOM
 const article = {
@@ -18,27 +28,27 @@ const article = {
         const articleElt = document.createElement("article");
         articleElt.setAttribute("id", this.name.toLowerCase());
         articleElt.classList.add("container", "item");
-        const descriptionDiv = document.createElement("div");
-        descriptionDiv.classList.add("container", "profil-description");
+        const jobDiv = document.createElement("div");
+        jobDiv.classList.add("container", "profil-description");
         const h3Elt = document.createElement("h3");
         h3Elt.innerText = this.name;
-        descriptionDiv.appendChild(h3Elt);
+        jobDiv.appendChild(h3Elt);
         const pElt =  document.createElement("p");
         pElt.innerText = this.job;
-        descriptionDiv.appendChild(pElt);
+        jobDiv.appendChild(pElt);
         const pictureContainer = document.createElement("div");
         pictureContainer.classList.add("profil-img");
         const profilPicture = new Image();
         profilPicture.src = this.picture;
         pictureContainer.appendChild(profilPicture);
-        articleElt.appendChild(pictureContainer);
         const textDiv = document.createElement("div");
         textDiv.classList.add("text-description");
         const pTextDiv = document.createElement("p");
         pTextDiv.innerText = this.description;
         textDiv.appendChild(pTextDiv);
-        descriptionDiv.appendChild(textDiv);
-        articleElt.appendChild(descriptionDiv);
+        articleElt.appendChild(pictureContainer);
+        articleElt.appendChild(jobDiv);
+        articleElt.appendChild(textDiv);
         articleElt.addEventListener("click", clicThumbnail);
         return articleElt;
     },
