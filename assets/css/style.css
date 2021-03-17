@@ -8,8 +8,9 @@ h1 {
     margin: 0;
 }
 
-html{
+html {
     width: 100%;
+    background-color: rgb(9, 9, 31);
 }
 
 body {
@@ -17,10 +18,13 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .navBar {
-    background-color: #f76b6b;
+    background-color: #0b0714;
     height: 80px;
     width: 100%;
     position: fixed;
@@ -29,10 +33,12 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 100;
+    border-bottom: 1px solid #19102c;
 }
 
 .navBar img {
     width: 100px;
+    opacity: 0.5;
 }
 
 /*----------- icone burger -------*/
@@ -41,7 +47,7 @@ body {
     width: 50px;
     height: 54px;
     position: absolute;
-    background-color: #f76b6b;
+    background-color: #0b0714;
     border-radius: 50%;
     cursor: pointer;
 
@@ -53,7 +59,7 @@ body {
 .menu-icon span {
     width: 22px;
     height: 2px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.486);
     display: block;
     position: absolute;
     top: 50%;
@@ -66,7 +72,7 @@ body {
     width: 22px;
     height: 2px;
     transform: translateY(6px);
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.493);
     content: "";
     position: absolute;
     transition: transform 0.5s;
@@ -78,7 +84,7 @@ body {
     width: 22px;
     height: 2px;
     transform: translateY(-6px);
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.507);
     content: "";
     position: absolute;
     transition: transform 0.5s;
@@ -112,8 +118,6 @@ body {
 
 /* ---------------*/
 
-
-
 .menuNavigationDisplay {
     width: 20%;
     height: 300vh;
@@ -125,7 +129,6 @@ body {
     animation-name: fadein;
     animation-duration: 0.3s;
     display: block !important;
-    
 }
 
 @keyframes fadein {
@@ -139,51 +142,103 @@ body {
     }
 }
 
-#menuNavigation{
+#menuNavigation {
     color: white;
-    display:flex;
+    display: flex;
     justify-content: center;
-    display:none;
-    text-align:center;
-
+    display: none;
+    text-align: center;
+    position: fixed;
+    left: 0px;
 }
 
-
-#menuNavigation ul{
-    margin-top:50px;
+#menuNavigation ul {
+    margin-top: 50px;
 }
-#menuNavigation li{
+#menuNavigation li {
     list-style: none;
     padding-top: 50px;
-    
 }
 
-#menuNavigation li:hover{
+#menuNavigation li:hover {
     text-decoration: underline;
     width: 110%;
 }
 
-#menuNavigation a{
+#menuNavigation a {
     text-decoration: none;
     font-size: 20px;
     animation-name: opacity;
-    animation-duration: 0.8s;
+    animation-duration: 1.5s;
     color: white;
     font-family: "Roboto";
-    
 }
 
-@keyframes opacity{
+
+#placeholder {
+    height: 70px;
+}
+
+#touchForRefresh {
+    z-index: -999;
+}
+#touchForRefresh img {
+    width: 50px;
+    margin-top: -25px;
+    opacity: 0.3;
+    left: 50%;
+}
+
+
+.filters{
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(22, 22, 54);
+    position: fixed;
+    bottom: 80px;
+    color: rgba(255, 255, 255, 0.493);
+    font-family: "Roboto";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filters select{
+    background-color: rgb(22, 22, 54);
+    height: 30px;
+    color: rgba(255, 255, 255, 0.705);
+    width: 100px;
+}
+
+
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: grey;
+    position: fixed;
+    bottom: 0px;
+    background-color: rgb(12, 12, 29);
+    border-top: 1px solid rgba(129, 129, 129, 0.089);
+}
+
+
+
+
+
+@keyframes opacity {
     from {
         opacity: 0;
     }
-    to{
+    to {
         opacity: 1;
     }
 }
 
 
 
+ /*/// ------------------ Charts ----------------------///*/
 
 
 
@@ -191,10 +246,10 @@ body {
 
 
 
-/* graph  */
 
-
-
+container {
+    background-color: rgb(4, 4, 31);
+}
 
 h1 {
     font-size: 1.5em;
@@ -204,13 +259,12 @@ h2 {
     font-size: 1.25em;
 }
 
-h1, 
-h2, 
+h1,
+h2,
 p {
-    font-family: 'Red Hat Text', sans-serif;
+    font-family: "Red Hat Text", sans-serif;
     color: #303030;
 }
-
 
 .container {
     display: flex;
@@ -218,28 +272,34 @@ p {
     width: 100%;
 }
 
-
-
 cards {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
     flex-wrap: wrap;
     padding-top: 30px;
     padding-bottom: 30px;
 }
+ethereum img{
+    width: 15px;
+    transform: translateY(10px)
+}
+
 
 .btc,
 .cosmos,
-.ethereum {
+.ethereum,
+.ltc,
+.xrp,
+.bnb {
     display: grid;
-    max-width: 90%;;
-    min-width: 250px;
+    max-width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(50px, 60px) 1fr;
-    grid-template: 
+    grid-template:
         "info"
         "chart";
     border-radius: 30px;
@@ -249,15 +309,29 @@ cards {
 }
 
 .btc {
-    box-shadow: 10px 10px 20px 1px rgba(247,147,26,.15);
+    
+    border: 1px solid rgba(255, 255, 255, 0.548);
 }
 
 .cosmos {
-    box-shadow: 10px 10px 20px 1px rgba(46,49,72,.15);
+    
+    border: 1px solid rgba(255, 255, 255, 0.493);
 }
-
 .ethereum {
-    box-shadow: 10px 10px 20px 1px rgba(78,56,216,.15);
+    
+    border: 1px solid rgba(255, 255, 255, 0.473);
+}
+.ltc {
+    
+    border: 1px solid rgba(255, 255, 255, 0.473);
+}
+.xrp {
+    
+    border: 1px solid rgba(255, 255, 255, 0.473);
+}
+.bnb {
+    
+    border: 1px solid rgba(255, 255, 255, 0.473);
 }
 
 .asset-info {
@@ -272,55 +346,131 @@ cards {
     display: inline-flex;
 }
 
-card h1 {
-    margin-left: 10px;
-}
 
 
-/* /// Charts ///
-#btcChart,
-#cosmosChart,
-#ethereumChart {
+
+
+
+
+
+@media (min-width: 576px) and (max-width: 768px) {
    
-} */
 
-
-.btc{
-    width: 100%;
-}
-.cosmos{
-    width:100%;
-}
-
-.ethereum{
-    width:100%;
-}
-
-
-
-
-
-
-
-@media ( min-width: 576px) and (max-width: 768px){
-    
-    
     cards{
-        display: grid;
-        grid-template-rows: 300px 300px;
-        grid-template-columns: 300px 300px;
-        margin-left: 6%;
+        align-items: center;
     }
 
-    .btc{
+
+
+
+    cards h1 {
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    ethereum img{
+        width: 15px;
+        transform: translateY(10px)
+    }
+
+    .btc {
         width: 50%;
     }
-    .cosmos{
-        width:50%;
+    .bnb {
+        width: 50%;
     }
-    
-    .ethereum{
-        width:50%;
+    .cosmos {
+        width: 50%;
     }
 
+    .ethereum {
+        width: 50%;
+    }
+
+    .ltc {
+        width: 50%;
+    }
+    .xrp {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    cards {
+        background-color: rgb(12, 12, 29);
+        
+        display: grid;
+        grid-template-rows: 200px 200px;
+        grid-template-columns: 25% 25% 25%;
+        grid-gap: 30px;
+        width: 100%;
+        height: 100%;
+        font-size: 10px;
+        position: absolute;
+        left: -10px;
+        top: 100px;
+        align-items: center;
+    }
+
+    cards img {
+        width: 20px;
+    }
+
+    cards h1 {
+        margin-left: 10px;
+        font-size: 20px;
+        display: none;
+    }
+
+    ethereum img{
+        width: 15px;
+        transform: translateY(0px);
+        position: absolute;
+    }
+
+    container {
+        width: 10%;
+        height: 30%;
+    }
+
+    .btc {
+        width: 100%;
+    }
+    .bnb {
+        width: 100%;
+    }
+    .cosmos {
+        width: 100%;
+    }
+
+    .ethereum {
+        width: 100%;
+    }
+
+    .ltc {
+        width: 100%;
+    }
+    .xrp {
+        width: 100%;
+    }
+
+    .btc,
+    .cosmos,
+    .ethereum,
+    .ltc,
+    .xrp,
+    .bnb {
+        display: grid;
+        max-width: 300%;
+        min-width: 100px;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(50px, 60px) 1fr;
+        grid-template:
+            "info"
+            "chart";
+        border-radius: 30px;
+        margin-top: 30px;
+        margin-bottom: 70px;
+        border-radius: 0px;
+    }
 }
