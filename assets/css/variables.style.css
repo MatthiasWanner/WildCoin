@@ -1,0 +1,15 @@
+.theme-light:root {
+    --background-color: #FFFFFF;
+    --text-color: #000000;
+
+    /* Theme toggler */
+    --toggle-color: #000000;
+}
+
+.theme-dark:root {
+    --background-color: #1A1A1A;
+    --text-color: #FFFFFF;
+
+    /* Theme toggler */
+    --toggle-color: #FFFFFF;
+}

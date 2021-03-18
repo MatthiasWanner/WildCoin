@@ -1,0 +1,60 @@
+/* - Fonts - */
+/*noinspection CssUnknownTarget*/
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+/*noinspection CssUnknownTarget*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* - Custom files - */
+@import url('variables.style.css');
+@import url('article.style.css');
+@import url('animations.style.css');
+
+/* - CSS Reset - */
+html {
+    font-size: 62.5%; /* Make REM and EM values value 10px instead of 16px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    border: none;
+    background-color: var(--background-color);
+}
+
+
+/* - Class utilities - */
+.small {
+    font-size: 1.3rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.fade__out__in {
+    animation: 2s ease-in fade;
+}
+
+
+/* - Reskin - */
+#themeSwap {
+    display: none;
+}
+
+/* || Very small */
+
+/* || Medium */
+
+/* || Large */
+@media screen and (min-width: 1200px) {
+    #themeSwap {
+        display: unset;
+    }
+
+    #themeSwap > svg {
+        fill: var(--toggle-color);
+    }
+}
+
+/* || Very large */

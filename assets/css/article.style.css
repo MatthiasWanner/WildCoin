@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.article {
+    width: 100%;
+}
+
+.article__wrapper {
+    width: 90vw;
+    margin: auto;
+}
+
+.article__title {
+    font-family: 'Varela Round', sans-serif;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+.article__title:first-child {
+    margin-top: 3vh;
+}
+
+/* = Split articles = */
+.article__wrapper + .article__wrapper > .article__title {
+    margin-top: 3vh;
+    padding-top: 1vh;
+    border-top: 1px solid;
+}
+
+.article__access {
+    align-items: center;
+    width: 100%;
+}
+
+.article__img {
+    width: 25vw;
+}
+
+.article__description {
+    font-family: Raleway, sans-serif;
+    width: 60vw;
+    margin-left: 5vw;
+}
+
+@media screen and (min-width: 1200px) {
+    .article__video {
+        display: flex;
+        width: 30vw;
+        overflow: hidden;
+    }
+
+    .article__video + .article__video {
+        margin-top: 5vh;
+    }
+
+    .article__thumbnail {
+        width: 5vw;
+    }
+
+    .article__complement {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-self: flex-end;
+        width: 100%;
+        margin-left: 1vw;
+    }
+
+    .article__complement .article__title {
+        text-align: left;
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .article__complement .article__title:first-child {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .article__complement .article__date {
+        font-size: 1.5rem;
+    }
+
+    .article__complement .article__description {
+        text-align: left;
+        margin-left: 0;
+        font-size: 1.3rem;
+    }
+
+    .article__complement .article__tags {
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-family: Raleway, sans-serif;
+    }
+}
