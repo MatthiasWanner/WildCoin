@@ -1,3 +1,19 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #536390;
+    --font-color: #c7c7c7;
+    --bg-color: rgb(83, 83, 83);
+    --heading-color: #ed6c6d;
+}
+
+[data-theme="dark"] {
+    --primary-color: #0b0920;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #122044;
+}
+
 *,
 ::before,
 ::after,
@@ -9,22 +25,24 @@ h1 {
 }
 
 html {
-    width: 100%;
-    background-color: rgb(9, 9, 31);
+    background-color: var(--primary-color);
 }
 
 body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
+    background-color: var(--primary-color);
+    color: var(--font-color);
 }
 
 .navBar {
-    background-color: #0b0714;
+    background-color: var(--heading-color);
     height: 80px;
     width: 100%;
     position: fixed;
@@ -47,7 +65,7 @@ body {
     width: 50px;
     height: 54px;
     position: absolute;
-    background-color: #0b0714;
+    border: 1px solid rgb(173, 172, 172);
     border-radius: 50%;
     cursor: pointer;
 
@@ -174,22 +192,21 @@ body {
     font-family: "Roboto";
 }
 
-
-.tableauSurvey{
-    margin-top: 150px;
+.tableauSurvey {
+    margin-top: -210px;
     width: 50%;
     height: 465px;
     position: relative;
-    right: 100px;
+    right: 20px;
 }
 
-
-.filters{
+.filters {
     padding-left: 20%;
+    z-index: 999;
     padding-right: 20%;
     height: 80px;
     width: 100%;
-    background-color: rgb(22, 22, 54);
+    background-color: var(--heading-color);
     position: fixed;
     bottom: 80px;
     color: rgba(255, 255, 255, 0.493);
@@ -198,11 +215,13 @@ body {
     justify-content: space-around;
     align-items: center;
 }
-.filters select{
-    background-color: rgb(22, 22, 54);
+.filters select {
+    background-color: white;
     height: 30px;
-    color: rgba(255, 255, 255, 0.705);
-    width: 100px;
+    color: black;
+    border-radius: 30px;
+    width: 150px;
+    text-align-last:center;
 }
 
 
@@ -210,16 +229,13 @@ body {
 footer {
     width: 100%;
     height: 80px;
+    z-index: 999;
     background-color: grey;
     position: fixed;
     bottom: 0px;
-    background-color: rgb(12, 12, 29);
+    background-color: var(--heading-color);
     border-top: 1px solid rgba(129, 129, 129, 0.089);
 }
-
-
-
-
 
 @keyframes opacity {
     from {
@@ -230,20 +246,7 @@ footer {
     }
 }
 
-
-
- /*/// ------------------ Charts ----------------------///*/
-
-
-
-
-
-
-
-
-container {
-
-}
+/*/// ------------------ Charts ----------------------///*/
 
 h1 {
     font-size: 1.5em;
@@ -257,7 +260,7 @@ h1,
 h2,
 p {
     font-family: "Red Hat Text", sans-serif;
-    color: #303030;
+    color: #616161;
 }
 
 .container {
@@ -277,58 +280,38 @@ cards {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-card img{
+card img {
     width: 15px;
-    transform: translateY(10px)
-}
-
-
-.btc,
-.cosmos,
-.ethereum,
-.ltc,
-.xrp,
-.bnb {
-    display: grid;
-    max-width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(50px, 60px) 1fr;
-    grid-template:
-        "info"
-        "chart";
-    border-radius: 30px;
-    margin-top: 30px;
-    margin-bottom: 70px;
-    border-radius: 0px;
+    transform: translateY(10px);
 }
 
 .btc {
-    border: 1px solid rgba(255, 255, 255, 0.548);
+    border: 1px solid rgba(88, 88, 88, 0.548);
 }
 
 .cosmos {
-    
-    border: 1px solid rgba(255, 255, 255, 0.493);
+    margin-top: 50px;
+    border: 1px solid rgba(88, 88, 88, 0.548);
 }
 .ethereum {
-    
-    border: 1px solid rgba(255, 255, 255, 0.473);
+    margin-top: 50px;
+    border: 1px solid rgba(88, 88, 88, 0.548);
 }
 .ltc {
-    
-    border: 1px solid rgba(255, 255, 255, 0.473);
+    margin-top: 50px;
+    border: 1px solid rgba(88, 88, 88, 0.548);
 }
 .xrp {
-    
-    border: 1px solid rgba(255, 255, 255, 0.473);
+    margin-top: 50px;
+    border: 1px solid rgba(88, 88, 88, 0.548);
 }
 .bnb {
-    
-    border: 1px solid rgba(255, 255, 255, 0.473);
+    margin-top: 50px;
+    border: 1px solid rgba(88, 88, 88, 0.548);
 }
 .myChart {
-    
-    border: 1px solid rgba(255, 255, 255, 0.473);
+    margin-top: 50px;
+    border: 1px solid rgba(88, 88, 88, 0.548);
 }
 
 .asset-info {
@@ -341,69 +324,209 @@ card img{
 
 .title {
     display: inline-flex;
+    position: relative;
 }
 
+@media (max-width: 576px) {
 
-
-
-
-
-
-
-@media (min-width: 576px) and (max-width: 768px) {
-   
-
-    cards{
+    .filters {
+        padding-left: 20%;
+        z-index: 999;
+        padding-right: 20%;
+        height: 80px;
+        width: 100%;
+        background-color: var(--heading-color);
+        position: fixed;
+        bottom: 80px;
+        color: rgba(255, 255, 255, 0.493);
+        font-family: "Roboto";
+        display: flex;
+        justify-content: center;
         align-items: center;
+    }
+
+    .cryptoChoixe{
+        display:none;
+    }
+
+    .filters select{
+        width: 100px;
     }
 
 
 
+
+    .container_2 {
+        display: none;
+    }
+
+    .container {
+        position: relative;
+        top: 0px;
+        margin-top: 100px;
+
+        width: 90%;
+    }
+
+    .btc {
+        width: 100%;
+    }
+    .bnb {
+        width: 100%;
+    }
+    .cosmos {
+        width: 100%;
+    }
+
+    .ethereum {
+        width: 100%;
+    }
+
+    .ltc {
+        width: 100%;
+    }
+    .xrp {
+        width: 100%;
+    }
+    .myChart {
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 690px) {
+    
+    .cryptoChoixe{
+        display:none;
+    }
+
+    .filters{
+        justify-content: center;
+    }
+    
+    
+    .container {
+        position: relative;
+        top: 0px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 90%;
+    }
+    .container_2 {
+        display: none;
+    }
+
+    cards {
+        position: relative;
+        align-items: center;
+    }
 
     cards h1 {
         margin-left: 10px;
         font-size: 15px;
     }
 
-    ethereum img{
+    ethereum img {
         width: 15px;
-        transform: translateY(10px)
+        transform: translateY(10px);
     }
 
     .btc {
-        width: 50%;
+        width: 100%;
     }
     .bnb {
-        width: 50%;
+        width: 100%;
     }
     .cosmos {
-        width: 50%;
+        width: 100%;
     }
 
     .ethereum {
-        width: 50%;
+        width: 100%;
     }
 
     .ltc {
-        width: 50%;
+        width: 100%;
     }
     .xrp {
-        width: 50%;
+        width: 100%;
     }
     .myChart {
-        width: 50%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 690px) and (max-width: 1200px) {
+    .cryptoChoixe{
+        display:none;
+    }
+
+    .filters{
+        justify-content: center;
+    }
+    
+    
+    
+    .container {
+        position: relative;
+        top: 0px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        width: 90%;
+    }
+
+    .container_2 {
+        display: none;
+    }
+
+    cards {
+        align-items: center;
+    }
+
+    cards h1 {
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    ethereum img {
+        width: 15px;
+        transform: translateY(10px);
+    }
+
+    .btc {
+        width: 100%;
+    }
+    .bnb {
+        width: 100%;
+    }
+    .cosmos {
+        width: 100%;
+    }
+
+    .ethereum {
+        width: 100%;
+    }
+
+    .ltc {
+        width: 100%;
+    }
+    .xrp {
+        width: 100%;
+    }
+    .myChart {
+        width: 100%;
     }
 }
 
 @media (min-width: 1200px) {
+  
 
-   
 
+    
     body {
         margin: 0;
         padding: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -411,7 +534,6 @@ card img{
     }
 
     cards {
-       
         border: 1px solid grey;
         display: grid;
         grid-template-rows: 200px 200px;
@@ -422,7 +544,7 @@ card img{
         font-size: 10px;
         position: absolute;
         left: 10px;
-        top:150px;
+        top: 150px;
         align-items: center;
     }
 
@@ -436,7 +558,7 @@ card img{
         display: none;
     }
 
-    ethereum img{
+    ethereum img {
         width: 15px;
         transform: translateY(0px);
         position: absolute;
@@ -445,10 +567,14 @@ card img{
     container {
         width: 10%;
         height: 30%;
+        padding-bottom: 0px;
+
+        top: 0px;
     }
 
     .btc {
         width: 100%;
+        margin-top: 800px;
     }
     .bnb {
         width: 100%;
@@ -472,22 +598,18 @@ card img{
         border: 0px;
     }
 
-    #tableauBorder{
-       border: 0px;
+    #tableauBorder {
+        border: 0px;
     }
-    #tableauSurvey{
-        border: 1px solid rgba(255, 255, 255, 0.473);
+    #tableauSurvey {
+        border: 1px solid var(--secondary-color);
         width: 900px;
-        
+        top: 30px;
     }
     #tableauSurvey:hover {
-        background-color:rgb(17, 17, 56)
+        background-color: var(--font-color);
     }
 
- 
-
-
-   
     .btc,
     .cosmos,
     .ethereum,
@@ -506,6 +628,7 @@ card img{
         margin-top: 30px;
         margin-bottom: 70px;
         border-radius: 0px;
+        border: 1px solid black;
     }
 
     .myChart {
@@ -522,19 +645,81 @@ card img{
         margin-bottom: 70px;
         border-radius: 0px;
     }
-
-
-
-
 }
-
-
-
-
 
 /* Tableau avec crypto en survey */
 
+.theme-switch-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+em {
+    margin-left: 10px;
+    font-size: 1rem;
+}
 
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
 
+.theme-switch input {
+    display: none;
+}
 
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
 
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider img {
+    position: relative;
+    width: 20px;
+    top: 7px;
+    left: 6px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+    background-image: url("./Ressources/307307.svg");
+}
+
+.slider #sun {
+    position: relative;
+    left: 13px;
+    top: 7px;
+}

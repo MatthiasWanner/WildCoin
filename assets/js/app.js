@@ -20,64 +20,50 @@ menuButton.addEventListener("click", function (e) {
 
 ///  Appel API et répartition des données ///
 
-let currency = "EUR"
-let selectCurrency = document.getElementById('select-currency');
-let selectCrypto = document.getElementById('select-crypto');
-let symbol = "€"
+let currency = "EUR";
+let selectCurrency = document.getElementById("select-currency");
+let selectCrypto = document.getElementById("select-crypto");
+let symbol = "€";
+let coin = "BTC";
 
-
-
-
-
-
-
-
-
-selectCrypto.addEventListener('change', function(e){
-  if (selectCrypto.value === "BTC"){
-     myData()
-     updateMyPrice();
-     printMyChart()
-  } else if ( selectCrypto.value === "ETH") {
-     myData()
-     updateMyPrice();
-     printMyChart()
-  } else if (selectCrypto.value === "LTC")
-    myData()
+selectCrypto.addEventListener("change", function (e) {
+  if (selectCrypto.value === "BTC") {
+    coin = "BTC";
+    myData();
     updateMyPrice();
-    printMyChart()
-})
+    printMyChart();
+  } else if (selectCrypto.value === "ETH") {
+    coin = "ETH";
+    myData();
+    updateMyPrice();
+    printMyChart();
+  } else if (selectCrypto.value === "LTC") {
+    coin = "LTC";
+    myData();
+    updateMyPrice();
+    printMyChart();
+  } else if (selectCrypto.value === "XRP") {
+    coin = "XRP";
+    myData();
+    updateMyPrice();
+    printMyChart();
+  } else if (selectCrypto.value === "BNB") {
+    coin = "BNB";
+    myData();
+    updateMyPrice();
+    printMyChart();
+  } else if (selectCrypto.value === "ATOM") {
+    coin = "ATOM";
+    myData();
+    updateMyPrice();
+    printMyChart();
+  }
+});
 
-
-
-
-
-
-
-selectCurrency.addEventListener('change', function(e){
-  if(selectCurrency.value === "EUR"){
-    currency = "EUR"
-    symbol = "€"
-  updateEthereumPrice();
-  updateCosmosPrice();
-  updateBitcoinPrice();
-  updateLtcPrice();
-  updateXrpPrice();
-  updateBnbPrice();
-  updateMyPrice();
-
-  printBtcChart();
-  printCosmosChart();
-  printEthereumChart();
-  printLtcChart();
-  printXrpChart();
-  printBnbChart();
-  printMyChart();
-  
-  
-  } else if (selectCurrency.value === "USD") {
-    currency = "USD"
-    symbol = "$"
+selectCurrency.addEventListener("change", function (e) {
+  if (selectCurrency.value === "EUR") {
+    currency = "EUR";
+    symbol = "€";
     updateEthereumPrice();
     updateCosmosPrice();
     updateBitcoinPrice();
@@ -85,7 +71,7 @@ selectCurrency.addEventListener('change', function(e){
     updateXrpPrice();
     updateBnbPrice();
     updateMyPrice();
-    
+
     printBtcChart();
     printCosmosChart();
     printEthereumChart();
@@ -93,10 +79,27 @@ selectCurrency.addEventListener('change', function(e){
     printXrpChart();
     printBnbChart();
     printMyChart();
+  } else if (selectCurrency.value === "USD") {
+    currency = "USD";
+    symbol = "$";
+    updateEthereumPrice();
+    updateCosmosPrice();
+    updateBitcoinPrice();
+    updateLtcPrice();
+    updateXrpPrice();
+    updateBnbPrice();
+    updateMyPrice();
 
-  } else if (selectCurrency.value === "CAD"){
-    currency = "CAD"
-    symbol = "CAD"
+    printBtcChart();
+    printCosmosChart();
+    printEthereumChart();
+    printLtcChart();
+    printXrpChart();
+    printBnbChart();
+    printmyChart();
+  } else if (selectCurrency.value === "JPY") {
+    currency = "JPY";
+    symbol = "JPY";
     updateEthereumPrice();
     updateCosmosPrice();
     updateBitcoinPrice();
@@ -112,12 +115,8 @@ selectCurrency.addEventListener('change', function(e){
     printXrpChart();
     printBnbChart();
     updateMyPrice();
-
   }
-})
-
-
-
+});
 
 const btcData = async () => {
   const response = await fetch(
@@ -203,7 +202,6 @@ const bnbData = async () => {
   };
 };
 
-
 const myData = async () => {
   const response = await fetch(
     `https://min-api.cryptocompare.com/data/v2/histominute?fsym=${selectCrypto.value}&tsym=${currency}&limit=119&api_key=6f82a74e514a9ae1119f916469dda27ba1297e53c61c2b1abb88db8174f43bf1`
@@ -212,18 +210,15 @@ const myData = async () => {
   const data = json.Data.Data;
   const times = data.map((obj) => obj.time);
   const prices = data.map((obj) => obj.high);
-  let date =  new Date(prices * 1000 );
+  let date = new Date(prices * 1000);
   let hours = date.getHours();
-  console.log(hours)
-  
-  
+  console.log(hours);
+
   return {
     times,
     prices,
   };
 };
-
-
 
 /// ERREUR ///
 function checkStatus(response) {
@@ -267,7 +262,7 @@ async function printBnbChart() {
           borderColor: "rgba(247,147,26,1)",
           borderJoinStyle: "round",
           borderCapStyle: "round",
-          borderWidth: 1,
+          borderWidth: 1.5,
           pointRadius: 0,
           pointHitRadius: 10,
           lineTension: 0.2,
@@ -354,7 +349,7 @@ async function printBtcChart() {
           borderColor: "rgba(247,147,26,1)",
           borderJoinStyle: "round",
           borderCapStyle: "round",
-          borderWidth: 1,
+          borderWidth: 1.5,
           pointRadius: 0,
           pointHitRadius: 10,
           lineTension: 0.2,
@@ -441,7 +436,7 @@ async function printLtcChart() {
           borderColor: "rgba(247,147,26,1)",
           borderJoinStyle: "round",
           borderCapStyle: "round",
-          borderWidth: 1,
+          borderWidth: 1.5,
           pointRadius: 0,
           pointHitRadius: 10,
           lineTension: 0.2,
@@ -528,7 +523,7 @@ async function printCosmosChart() {
           borderColor: "rgba(46,49,72,1)",
           borderJoinStyle: "round",
           borderCapStyle: "round",
-          borderWidth: 1,
+          borderWidth: 1.5,
           pointRadius: 0,
           pointHitRadius: 10,
           lineTension: 0.2,
@@ -615,7 +610,7 @@ async function printXrpChart() {
           borderColor: "rgba(118,106,192,1)",
           borderJoinStyle: "round",
           borderCapStyle: "round",
-          borderWidth: 1,
+          borderWidth: 1.5,
           pointRadius: 0,
           pointHitRadius: 10,
           lineTension: 0.2,
@@ -702,7 +697,7 @@ async function printEthereumChart() {
           borderColor: "rgba(118,106,192,1)",
           borderJoinStyle: "round",
           borderCapStyle: "round",
-          borderWidth: 1,
+          borderWidth: 1.5,
           pointRadius: 0,
           pointHitRadius: 10,
           lineTension: 0.2,
@@ -763,14 +758,6 @@ async function printEthereumChart() {
     },
   });
 }
-
-
-
-
-
-
-
-
 
 async function printMyChart() {
   let { times, prices } = await myData();
@@ -794,10 +781,10 @@ async function printMyChart() {
           label: symbol,
           data: prices,
           backgroundColor: gradient,
-          borderColor: "white",
+          borderColor: "grey",
           borderJoinStyle: "round",
           borderCapStyle: "round",
-          borderWidth: 0.3,
+          borderWidth: 1.5,
           pointRadius: 0,
           pointHitRadius: 10,
           lineTension: 0.2,
@@ -807,9 +794,9 @@ async function printMyChart() {
 
     options: {
       title: {
-        display: false,
-        text: "Heckin Chart!",
-        fontSize: 35,
+        display: true,
+        text: coin,
+        fontSize: 20,
       },
 
       legend: {
@@ -858,17 +845,6 @@ async function printMyChart() {
     },
   });
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /// Mise à jour des cours ///
 async function updateEthereumPrice() {
@@ -920,7 +896,6 @@ async function updateMyPrice() {
   document.getElementById("myPrice").innerHTML = `${symbol}` + currentPrice;
 }
 
-
 updateEthereumPrice();
 updateCosmosPrice();
 updateBitcoinPrice();
@@ -937,22 +912,7 @@ printXrpChart();
 printBnbChart();
 printMyChart();
 
-
-
-
-
-
 // /* Tableau avec crypto en survey */
-
-
-
-
-
-
-
-
-
-
 
 // SCROLL TO REFRESH !! 8-) //
 
@@ -961,62 +921,3 @@ const pCurrent = { x: 0, y: 0 };
 const cards = document.querySelectorAll(".card");
 const main = document.querySelector("body > div");
 let isLoading = false;
-
-function loading() {
-  
-  console.log("test");
-
-  isLoading = true;
-  main.style.transform = `translateY(0px)`;
-  setTimeout(() => {
-    main.style.transform = `translateY(-100px)`;
-    isLoading = false;
-    for (const card of cards) {
-      card.style.transform = `rotateX(0deg)`;
-    }
-  }, 2000);
-}
-
-function swipeStart(e) {
-  if (typeof e["targetTouches"] !== "undefined") {
-    let touch = e.targetTouches[0];
-    pStart.x = touch.screenX;
-    pStart.y = touch.screenY;
-  } else {
-    pStart.x = e.screenX;
-    pStart.y = e.screenY;
-  }
-}
-
-function swipeEnd(e) {
-  if (document.body.scrollTop === 0 && !isLoading) {
-    
-  }
-}
-
-function swipe(e) {
-  if (typeof e["changedTouches"] !== "undefined") {
-    let touch = e.changedTouches[0];
-    pCurrent.x = touch.screenX;
-    pCurrent.y = touch.screenY;
-  } else {
-    pCurrent.x = e.screenX;
-    pCurrent.y = e.screenY;
-  }
-  let changeY = pStart.y < pCurrent.y ? Math.abs(pStart.y - pCurrent.y) : 0;
-  const rotation = changeY < 100 ? (changeY * 30) / 100 : 30;
-  if (document.body.scrollTop === 0) {
-    if (changeY > 100)
-    document.location.reload();
-    for (const card of cards) card.style.transform = `rotateX(${rotation}deg)`;
-  }
-}
-
-document.addEventListener("touchstart", (e) => swipeStart(e), false);
-document.addEventListener("touchmove", (e) => swipe(e), false);
-document.addEventListener("touchend", (e) => swipeEnd(e), false);
-
-
-
-
-
