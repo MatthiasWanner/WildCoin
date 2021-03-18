@@ -1,16 +1,16 @@
 
 const clicThumbnail = (e) => {
-    //console.log(e);
-    const element = e.target.offsetParent;
+    console.log(e);
+    const element = e.target.parentNode;
     console.log(element);
     const positionY = element.offsetTop;
     isOpen = element.classList.contains("open"); //false
     element.classList.toggle("open");
-    if(isOpen !== true){
-        element.style.transform = `translateY(-${positionY-10}px)`;
-    }else{
-        element.style.transform = `translateY(0)`;
-    }
+    // if(isOpen !== true){
+    //     element.style.transform = `translateY(-${positionY-10}px)`;
+    // }else{
+    //     element.style.transform = `translateY(0)`;
+    // }
 }
 
 // team array is charge befor this script. It contain all team's members
@@ -46,10 +46,16 @@ const article = {
         const pTextDiv = document.createElement("p");
         pTextDiv.innerText = this.description;
         textDiv.appendChild(pTextDiv);
-        articleElt.appendChild(pictureContainer);
-        articleElt.appendChild(jobDiv);
+        const thumbnailHeader = document.createElement('header');
+        thumbnailHeader.classList.add("container", "header");
+        const thumbnailbutton = document.createElement("button");
+        thumbnailbutton.classList.add("button");
+        thumbnailHeader.appendChild(jobDiv);
+        thumbnailHeader.appendChild(pictureContainer);
+        articleElt.appendChild(thumbnailbutton);
+        articleElt.appendChild(thumbnailHeader);
         articleElt.appendChild(textDiv);
-        articleElt.addEventListener("click", clicThumbnail);
+        thumbnailbutton.addEventListener("click", clicThumbnail);
         return articleElt;
     },
 };
@@ -63,10 +69,12 @@ for(let i=0; i<team.length; i++){
     newArticle.description = team[i].description;
     articlesContainer.appendChild(newArticle.printArticle());
     const item = articlesContainer.children[i];
+    const header = articlesContainer.children[i].querySelector(".header")
     const itemDescription = articlesContainer.children[i].querySelector(".profil-description");
     item.classList.add("hidden");
     if(i%2 !== 0){
-        item.classList.add("invert");
+        item.classList.add("invert-container")
+        header.classList.add("invert-header");
     }else{
         itemDescription.classList.add("invert-description");
     }
