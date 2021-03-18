@@ -30,7 +30,6 @@ ul, li{
 .topnav {
     top: 0;
     position: fixed;
-    z-index: 100;
     width: 100vw;
     height: 66px;
     line-height: 66px;
@@ -50,13 +49,16 @@ ul, li{
     position: relative;
     border-radius: 50%;
     transition: transform 0.3s;
-    padding: 0px 10px;
+    margin: 4px 10px;
+    z-index: 100;
 }
-
+.burger:active{
+    background-color: #eb8080;
+}
 .burger span{
     position: absolute;
     top: 50%;
-    left:50%;
+    left: 50%;
     display: block;
     width: 2.6rem;
     height: 3px;
@@ -78,29 +80,26 @@ ul, li{
 .burger span::before{
     transform: translateY(-10px);
 }
-.burger:hover > ::before{
+.burger:active > ::before{
     transform: translateY(-12px);
 }
 .burger span::after{
     transform: translateY(10px);
 }
-.burger:hover > ::after{
+.burger:active > ::after{
     transform: translateY(12px);
 }
-.burger.active{
+.burger.pivot{
     transform: rotate(180deg);
 }
-.burger.active span {
+.burger.pivot span {
     background-color: transparent;
 }
-.burger.active span::before{
+.burger.pivot span::before{
     transform: translateY(0px) rotateZ(45deg);
 }
-.burger.active span::after{
+.burger.pivot span::after{
     transform: translateY(0px) rotateZ(-45deg);
-}
-.burger:hover{
-    background-color: #eb8080;
 }
 
 /* Logo */
@@ -167,14 +166,16 @@ footer{
     color:#FFFFFF;
 }
 .footer-content{
+    cursor: pointer;
     text-align: center;
     font-size: 1.2rem;
-    padding: 0 3rem;
+    padding: 0.5rem 2rem;  
 }
-.footer-content:hover{
-    text-decoration: underline;
-    font-size: 1.5rem;
-    font-weight: 900;
+
+/* Footer Animation */
+
+.footer-content:active{
+    background-color: #eb8080;
     transition: font-size 0.3s ease-in-out;
 }
 .logo-reseaux-sociaux{
@@ -214,6 +215,7 @@ footer{
     font-weight: 900;
     transition: font-size 0.3s ease-in-out;
 }
+
 @media only screen and (min-width : 576px) {
     .burger{
         display: none;
