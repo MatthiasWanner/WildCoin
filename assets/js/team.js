@@ -1,17 +1,51 @@
-
+let isOpen;
+let initialPositionOpenedThumbnail;
 const clicThumbnail = (e) => {
-    console.log(e);
+    //console.log(e);
     const element = e.target.parentNode;
     console.log(element);
-    const positionY = element.offsetTop;
-    isOpen = element.classList.contains("open"); //false
-    element.classList.toggle("open");
-    // if(isOpen !== true){
-    //     element.style.transform = `translateY(-${positionY-10}px)`;
-    // }else{
-    //     element.style.transform = `translateY(0)`;
-    // }
-}
+    let isTargetOpened = element.classList.contains("open"); //false
+    if(isTargetOpened !== true){
+        isOpen = element.getAttribute("id");
+        duplicateThumbnail(element);
+        element.style.opacity = "0";
+    }else{
+        document.getElementById(isOpen).style.opacity = "100%";
+        removeDuplicatedThumbnail();
+    }
+    // element.style.transform = `translateY(-${positionY-10}px)`;
+};
+
+const duplicateThumbnail = (element) => {
+    initialPositionOpenedThumbnail = element.offsetTop;
+    const containerDiv = document.createElement("div");
+    containerDiv.classList.add("thumbnail-container");
+    const elementDuplicated = element.cloneNode(true);
+    elementDuplicated.removeAttribute("id");
+    elementDuplicated.querySelector(".button").addEventListener("click", clicThumbnail);
+    elementDuplicated.classList.add("item-duplicated");
+    elementDuplicated.style.top = `${initialPositionOpenedThumbnail}px`;
+    setTimeout((function(){
+        elementDuplicated.classList.add("open");
+        console.log(elementDuplicated);
+    }), 1000);
+    containerDiv.appendChild(elementDuplicated);
+    articlesContainer.appendChild(containerDiv);
+    console.log(containerDiv);
+    console.log(elementDuplicated);
+    return;
+
+};
+
+const removeDuplicatedThumbnail = () => {
+    document.querySelector('.thumbnail-container').querySelector('.item').classList.remove("open");
+    setTimeout((function(){
+        articlesContainer.removeChild(articlesContainer.querySelector('.thumbnail-container'));  
+
+    }), 1000);
+    return;
+
+};
 
 // team array is charge befor this script. It contain all team's members
 
