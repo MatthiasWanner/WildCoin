@@ -11,8 +11,15 @@ const moveLeftOrRight = (
 	articlesList,
 	currentIndex
 ) => {
-	if (isRatelimited()) {
+	// Avoid going too fast
+	if (isRatelimited(articlesOnScreen)) {
 		return;
+	}
+
+	if (direction === 'left') {
+		updateIndex(currentIndex === 0 ? articlesList.length - 1 : currentIndex - 1);
+	} else if (direction === 'right') {
+		updateIndex(currentIndex === articlesList.length - 1 ? 0 : currentIndex + 1);
 	}
 
 	// Fade in and out
@@ -33,11 +40,8 @@ const moveLeftOrRight = (
 	}
 };
 
-const moveToIndex = () => {
-};
-
 /**
- *
+ * Helper to automatically pass arguments to {moveLeftOrRight}
  * @param {'left' | 'right'} direction - Direction to follow
  */
 const moveDirection = direction => {
@@ -47,4 +51,7 @@ const moveDirection = direction => {
 		articlesList,
 		currentIndex
 	);
+};
+
+const moveToIndex = () => {
 };

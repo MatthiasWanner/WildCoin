@@ -1,11 +1,27 @@
+/**
+ * Initialize the carousel's index
+ * @type {number}
+ */
 let currentIndex = 0;
-// In ms
-const ratelimit = 800;
+
+/**
+ * The cooldown between each swap, in milliseconds
+ * @default
+ * @type {number}
+ */
+const cooldown = 1000;
+
+/**
+ * Last time carousel got updated
+ * @default
+ * @type {number}
+ */
 let lastSwap;
 
 /**
  * Refresh the current index
  * @param {number} newIndex - Index to go to
+ * @return {number} The updated index
  */
 const updateIndex = newIndex => {
 	currentIndex = newIndex;

@@ -6,8 +6,9 @@
 
 /* - Custom files - */
 @import url('variables.style.css');
-@import url('article.style.css');
 @import url('animations.style.css');
+@import url('article.style.css');
+@import url('carousel.style.css');
 
 /* - CSS Reset - */
 html {
@@ -17,7 +18,7 @@ html {
 * {
     margin: 0;
     padding: 0;
-    color: var(--text-color);
+    color: var(--primary-color);
     border: none;
     background-color: var(--background-color);
 }
@@ -33,7 +34,7 @@ html {
 }
 
 .fade__out__in {
-    animation: 2s ease-in fade;
+    animation: 1500ms ease-in fade;
 }
 
 
@@ -53,7 +54,7 @@ html {
     }
 
     #themeSwap > svg {
-        fill: var(--toggle-color);
+        fill: var(--secondary-color);
     }
 }
 
