@@ -1,0 +1,50 @@
+.carousel {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .carousel {
+        display: unset;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .carousel > h2 {
+        font-family: Raleway, sans-serif;
+        font-size: 2rem;
+        margin-top: 3vh;
+        margin-bottom: 1.5vh;
+    }
+
+    .carousel__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 20vw;
+        margin-top: 3vh;
+    }
+
+    .carousel__arrow {
+        fill: var(--secondary-color);
+    }
+
+    .carousel__arrow,
+    .carousel__arrow > button,
+    .carousel__arrow svg,
+    .carousel__button {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+
+    .carousel__button {
+        border-radius: 100%;
+        background-color: var(--secondary-color);
+    }
+
+
+    .carousel__button:focus {
+        border: 1px solid;
+        background-color: var(--secondary-color-transparent);
+    }
+}

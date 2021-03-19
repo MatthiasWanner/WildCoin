@@ -1,0 +1,15 @@
+.theme-light:root {
+    --background-color: #FFFFFF;
+    --primary-color: rgb(83, 83, 83);
+    --secondary-color: rgb(83, 99, 144);
+    --ternary-color: #C7C7C7;
+    --secondary-color-transparent: rgba(83, 99, 144, .7);
+}
+
+.theme-dark:root {
+    --background-color: #0B0920;
+    --primary-color: #E1E1FF;
+    --secondary-color: #818CAB;
+    --secondary-color-transparent: rgba(129, 140, 171, .7);
+    --ternary-color: #818CAB;
+}

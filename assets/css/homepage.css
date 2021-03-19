@@ -1,14 +1,8 @@
-/* - Fonts - */
-/*noinspection CssUnknownTarget*/
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-/*noinspection CssUnknownTarget*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
 /* - Custom files - */
-@import url('variables.style.css');
-@import url('animations.style.css');
+@import url('variables.homepage.css');
+@import url('animations.homepage.css');
 @import url('article.style.css');
-@import url('carousel.style.css');
+@import url('carousel.homepage.css');
 
 /* - CSS Reset - */
 html {
@@ -18,11 +12,21 @@ html {
 * {
     margin: 0;
     padding: 0;
+    list-style-type: none;
     color: var(--primary-color);
     border: none;
+    outline: none;
     background-color: var(--background-color);
 }
 
+body {
+    max-width: 1200px;
+    margin: auto;
+}
+
+main {
+    margin-top: 5vh;
+}
 
 /* - Class utilities - */
 .small {
@@ -37,9 +41,12 @@ html {
     animation: 1500ms ease-in fade;
 }
 
-
 /* - Reskin - */
 #themeSwap {
+    display: none;
+}
+
+.graph {
     display: none;
 }
 
@@ -55,6 +62,23 @@ html {
 
     #themeSwap > svg {
         fill: var(--secondary-color);
+    }
+
+    #bottom {
+        display: flex;
+        justify-content: flex-end;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #bottom *:not(.article__thumbnail) {
+        overflow: hidden;
+    }
+
+    .graph {
+        display: flex;
+        align-items: center;
+        width: 50%;
     }
 }
 

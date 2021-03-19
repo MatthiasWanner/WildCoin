@@ -37,7 +37,7 @@ const articlesList = [
 	{
 		videos: [
 			{
-				image: 'assets/img/video_bitcoin.jpg',
+				image: 'assets/img/blockchain.webp',
 				title: '2020',
 				link: 'https://thisisyoutube.com',
 				date: '01 / 01 / 2021',
@@ -48,7 +48,7 @@ const articlesList = [
 				]
 			},
 			{
-				image: 'assets/img/video_bitcoin.jpg',
+				image: 'assets/img/blockchain.webp',
 				title: '2021',
 				link: 'https://thisisyoutube.com',
 				date: '01 / 01 / 2021',
@@ -63,7 +63,7 @@ const articlesList = [
 	{
 		videos: [
 			{
-				image: 'assets/img/video_bitcoin.jpg',
+				image: 'assets/img/blockchain.webp',
 				title: '2022',
 				link: 'https://thisisyoutube.com',
 				date: '01 / 01 / 2021',
@@ -74,7 +74,7 @@ const articlesList = [
 				]
 			},
 			{
-				image: 'assets/img/video_bitcoin.jpg',
+				image: 'assets/img/blockchain.webp',
 				title: '2023',
 				link: 'https://thisisyoutube.com',
 				date: '01 / 01 / 2021',
@@ -89,7 +89,7 @@ const articlesList = [
 	{
 		videos: [
 			{
-				image: 'assets/img/video_bitcoin.jpg',
+				image: 'assets/img/blockchain.webp',
 				title: '2024',
 				link: 'https://thisisyoutube.com',
 				date: '01 / 01 / 2024',
@@ -100,7 +100,7 @@ const articlesList = [
 				]
 			},
 			{
-				image: 'assets/img/video_bitcoin.jpg',
+				image: 'assets/img/blockchain.webp',
 				title: '2025',
 				link: 'https://thisisyoutube.com',
 				date: '01 / 01 / 2025',
