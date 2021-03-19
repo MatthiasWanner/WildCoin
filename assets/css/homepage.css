@@ -41,6 +41,32 @@ main {
     animation: 1500ms ease-in fade;
 }
 
+.hidden {
+    display: none;
+}
+
+.modal:not(.hidden) {
+    font-size: 2rem;
+    position: absolute;
+    z-index: 999;
+    top: calc(50% - var(--modal-height) / 2);
+    left: calc(50% - var(--modal-width) / 2);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: var(--modal-width);
+    height: var(--modal-height);
+    padding: 3vh 3vw;
+    border-radius: 3rem;
+    background-color: var(--modal-background-color);
+    /* Modal width */
+    --modal-width: 30vw;
+    /* Modal height */
+    --modal-height: 30vh;
+    /* Modal background */
+    --modal-background-color: #221B54;
+}
+
 /* - Reskin - */
 #themeSwap {
     display: none;
@@ -55,7 +81,7 @@ main {
 /* || Medium */
 
 /* || Large */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
     #themeSwap {
         display: unset;
     }

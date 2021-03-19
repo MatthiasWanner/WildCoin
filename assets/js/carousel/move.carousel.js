@@ -12,7 +12,7 @@ const moveLeftOrRight = (
 	currentIndex
 ) => {
 	// Avoid going too fast
-	if (isRatelimited(articlesOnScreen)) {
+	if (isinCooldown()) {
 		return;
 	}
 
@@ -53,5 +53,44 @@ const moveDirection = direction => {
 	);
 };
 
-const moveToIndex = () => {
+/**
+ * Move to a specified index
+ * @param {HTMLCollection} articlesOnScreen - The current articles
+ * @param {number} index - The index to move to
+ */
+const moveToIndex = (articlesOnScreen, index) => {
+	if (isinCooldown()) {
+		return;
+	}
+
+	// Fade in and out
+	for (let i = 0; i < articlesOnScreen.length; i++) {
+		// Start animation
+		articlesOnScreen[i].classList.add('fade__out__in');
+
+		updateContent(
+			articlesOnScreen,
+			articlesList
+		);
+
+		// Remove animation's class so we can restart those steps
+		articlesOnScreen[i]
+			.getAnimations()[0]
+			.finished
+			.then(() => articlesOnScreen[i].classList.remove('fade__out__in'));
+	}
+	if (index > articlesList.length) {
+		updateIndex(0);
+
+		updateContent(
+			document.getElementsByClassName('article__video'),
+			articlesList
+		);
+	} else {
+		updateIndex(index - 1);
+		updateContent(
+			document.getElementsByClassName('article__video'),
+			articlesList
+		);
+	}
 };

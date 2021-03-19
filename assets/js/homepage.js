@@ -12,18 +12,8 @@ const moonSVG = `
 `;
 
 const swapTheme = () => {
-	const root = document.querySelector(':root');
-	const theme = root.classList[0];
+	const theme = document.documentElement.classList;
 
-	if (theme === 'theme-light') {
-		root.classList.remove('theme-light');
-		root.classList.add('theme-dark');
-		// Change icon to a white moon
-		document.getElementById('themeSwap').children[0].innerHTML = 'assets/img/moon.svg';
-	} else {
-		root.classList.remove('theme-dark');
-		root.classList.add('theme-light');
-		// Swap icon back to black sun
-		document.getElementById('themeSwap').children[0].innerHTML = sunSVG;
-	}
+	theme.toggle('theme-dark');
+	theme.toggle('theme-light');
 };

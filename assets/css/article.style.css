@@ -43,9 +43,12 @@
     margin-left: 5vw;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
     .article {
         display: flex;
+        justify-content: space-between;
+        padding-left: 10vw;
+        padding-right: 10vw;
     }
 
     .article__wrapper {
@@ -53,7 +56,7 @@
         align-items: center;
         flex-direction: column-reverse;
         justify-content: center;
-        width: 100%;
+        width: 10vw;
         margin: 0;
     }
 
