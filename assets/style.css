@@ -44,14 +44,13 @@ ul, li{
 
 .burger{
     cursor: pointer;
-    width: 8vw;
+    width: 8vh;
     height: 8vh;
     position: relative;
     border-radius: 50%;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease-in-out;
     margin: 1vh;
     z-index: 100;
-    padding: 0 1.5vh;
 }
 .burger:active{
     background-color: #eb8080;
@@ -79,16 +78,16 @@ ul, li{
     border-radius: 2px;
 }
 .burger span::before{
-    transform: translateY(-10px);
+    transform: translateY(-1.5vh);
 }
 .burger:active > ::before{
-    transform: translateY(-12px);
+    transform: translateY(-1.75vh);
 }
 .burger span::after{
-    transform: translateY(10px);
+    transform: translateY(1.5vh);
 }
 .burger:active > ::after{
-    transform: translateY(12px);
+    transform: translateY(1.75vh);
 }
 .burger.pivot{
     transform: rotate(180deg);
@@ -97,10 +96,10 @@ ul, li{
     background-color: transparent;
 }
 .burger.pivot span::before{
-    transform: translateY(0px) rotateZ(45deg);
+    transform: translateY(0) rotateZ(45deg);
 }
 .burger.pivot span::after{
-    transform: translateY(0px) rotateZ(-45deg);
+    transform: translateY(0) rotateZ(-45deg);
 }
 
 /* Logo */
@@ -135,11 +134,10 @@ ul, li{
 nav{
     top: 0;
     position: fixed;
-    margin-top: 66px;
+    margin-top: 10vh;
 }
 .nav-menu{
     z-index: 99;
-    top: 0.5vh;
     width: 100%;
     height: 82vh;
     background-color: #0000008f;
@@ -301,6 +299,36 @@ footer{
     }
 }
 @media only screen and (min-width : 768px) {
+    .topnav{
+        height: 12vh;
+        line-height: 12vh;
+    }
+    .logo{
+        height: 9vh;
+    }
+    .nav-menu{
+        height: 12vh;
+    }
+    .nav-slider{
+        height: 12vh;
+    }
+    .nav-slider-item{
+        font-size: 1.5rem;
+        padding: 0 5px;
+        width: 18vw;
+    }
+    footer{
+        height: 12vh;
+    }
+    .footer-content{
+        align-items: center;
+    }
+    .footer-contact{
+        height: 12vh;
+        font-size: 1.5rem;
+        align-items: center;
+    }
+
 
 }
 @media only screen and (min-width : 992px) {
