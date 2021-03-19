@@ -3,7 +3,7 @@ const team = [
         name: "Julien",
         picture: "../assets/img/man-6077947_960_720.webp",
         job: "Front-end Dev",
-        description: "Pastry muffin tiramisu toffee caramels."
+        description: "Pastry muffin tiramisu toffee caramels.lorem Pastry muffin tiramisu toffee caramels.lorem Pastry muffin tiramisu toffee caramels.lorem"
     },
 
     {

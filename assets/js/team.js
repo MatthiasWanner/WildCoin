@@ -8,10 +8,8 @@ const clicThumbnail = (e) => {
     if(isTargetOpened !== true){
         isOpen = element.getAttribute("id");
         duplicateThumbnail(element);
-        element.style.opacity = "0";
     }else{
-        document.getElementById(isOpen).style.opacity = "100%";
-        removeDuplicatedThumbnail();
+        removeDuplicatedThumbnail(isOpen);
     }
     // element.style.transform = `translateY(-${positionY-10}px)`;
 };
@@ -22,24 +20,27 @@ const duplicateThumbnail = (element) => {
     containerDiv.classList.add("thumbnail-container");
     const elementDuplicated = element.cloneNode(true);
     elementDuplicated.removeAttribute("id");
-    elementDuplicated.querySelector(".button").addEventListener("click", clicThumbnail);
-    elementDuplicated.classList.add("item-duplicated");
+    elementDuplicated.classList.add("item-duplicated", "move", "scale");
     elementDuplicated.style.top = `${initialPositionOpenedThumbnail}px`;
     setTimeout((function(){
+        elementDuplicated.querySelector(".button").addEventListener("click", clicThumbnail);
         elementDuplicated.classList.add("open");
         console.log(elementDuplicated);
     }), 1000);
     containerDiv.appendChild(elementDuplicated);
     articlesContainer.appendChild(containerDiv);
+    element.style.opacity = "0";
     console.log(containerDiv);
     console.log(elementDuplicated);
     return;
 
 };
 
-const removeDuplicatedThumbnail = () => {
-    document.querySelector('.thumbnail-container').querySelector('.item').classList.remove("open");
+const removeDuplicatedThumbnail = (id) => {
+    removedItem = document.querySelector('.thumbnail-container').querySelector('.item');
+    removedItem.classList.remove("open", "move", "scale");
     setTimeout((function(){
+        document.getElementById(id).style.opacity = "100%";
         articlesContainer.removeChild(articlesContainer.querySelector('.thumbnail-container'));  
 
     }), 1000);
