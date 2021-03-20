@@ -411,6 +411,9 @@ async function printBtcChart() {
   });
 }
 
+
+
+
 async function printLtcChart() {
   let { times, prices } = await ltcData();
 
