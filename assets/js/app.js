@@ -88,8 +88,7 @@ selectCurrency.addEventListener("change", function (e) {
     updateLtcPrice();
     updateXrpPrice();
     updateBnbPrice();
-    updateMyPrice();
-
+    
     printBtcChart();
     printCosmosChart();
     printEthereumChart();
@@ -905,7 +904,6 @@ updateBitcoinPrice();
 updateLtcPrice();
 updateXrpPrice();
 updateBnbPrice();
-updateMyPrice();
 
 printBtcChart();
 printCosmosChart();

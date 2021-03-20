@@ -329,6 +329,25 @@ card img {
 
 @media (max-width: 576px) {
 
+    cards img {
+        width: 30px;
+
+    }
+
+    cards h1 {
+        margin-left: 10px;
+        margin-top: 15px;
+        font-size: 10px;
+        padding-left: 20px;
+        
+    }
+
+    cards h2{
+        margin-left: 50px;
+    }
+
+
+
     .filters {
         padding-left: 20%;
         z-index: 999;
@@ -540,11 +559,11 @@ card img {
         grid-template-columns: 25% 25% 25%;
         grid-gap: 30px;
         width: 50%;
-        height: 400px;
+        height: 40%;
         font-size: 10px;
         position: absolute;
         left: 10px;
-        top: 150px;
+        top: 180px;
         align-items: center;
     }
 
@@ -555,14 +574,13 @@ card img {
 
     cards h1 {
         margin-left: 10px;
-        font-size: 15px;
+        font-size: 10px;
         padding-left: 20px;
         
     }
 
-    .tableauSurvey h1{
-        display: none;
-    }
+   
+  
 
 
     ethereum img {
@@ -653,6 +671,12 @@ card img {
         margin-bottom: 70px;
         border-radius: 0px;
     }
+
+   
+
+
+
+
 }
 
 /* Tableau avec crypto en survey */
