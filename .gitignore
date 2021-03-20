@@ -1,3 +1,4 @@
 node_modules
-.vscode
+**/.vscode
 package.json
+**/.DS_Store 
