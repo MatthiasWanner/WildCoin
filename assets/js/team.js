@@ -1,5 +1,12 @@
+// Initialization of the variables that will be used later
 let isOpen;
 let initialPositionOpenedThumbnail;
+let thumbnailContainer;
+
+const bodyContainer = document.getElementById("body-container");
+const articlesContainer = document.getElementById("main-container");
+
+// Function called when we clic on thumbnail (mobile version`$)
 const clicThumbnail = (e) => {
     //console.log(e);
     const element = e.target.parentNode;
@@ -16,42 +23,41 @@ const clicThumbnail = (e) => {
 
 const duplicateThumbnail = (element) => {
     initialPositionOpenedThumbnail = element.offsetTop;
-    const containerDiv = document.createElement("div");
-    containerDiv.classList.add("thumbnail-container");
+    thumbnailContainer = document.createElement("div");
+    thumbnailContainer.classList.add("thumbnail-container");
+    bodyContainer.appendChild(thumbnailContainer);
     const elementDuplicated = element.cloneNode(true);
     elementDuplicated.removeAttribute("id");
-    elementDuplicated.classList.add("item-duplicated", "move", "scale");
     elementDuplicated.style.top = `${initialPositionOpenedThumbnail}px`;
+    thumbnailContainer.appendChild(elementDuplicated);
     setTimeout((function(){
-        elementDuplicated.querySelector(".button").addEventListener("click", clicThumbnail);
+        thumbnailContainer.classList.add("show-div");
+        elementDuplicated.classList.add("move");
+        
+    }), 10);
+    setTimeout((function(){
         elementDuplicated.classList.add("open");
-        console.log(elementDuplicated);
+        elementDuplicated.querySelector(".button").addEventListener("click", clicThumbnail);
+        //console.log(elementDuplicated);
     }), 1000);
-    containerDiv.appendChild(elementDuplicated);
-    articlesContainer.appendChild(containerDiv);
     element.style.opacity = "0";
-    console.log(containerDiv);
-    console.log(elementDuplicated);
     return;
 
 };
 
 const removeDuplicatedThumbnail = (id) => {
-    removedItem = document.querySelector('.thumbnail-container').querySelector('.item');
-    removedItem.classList.remove("open", "move", "scale");
+    const item = thumbnailContainer.querySelector(".item");
+    item.classList.remove("move", "open");
+    thumbnailContainer.classList.remove("show-div");
     setTimeout((function(){
-        document.getElementById(id).style.opacity = "100%";
-        articlesContainer.removeChild(articlesContainer.querySelector('.thumbnail-container'));  
-
+        item.querySelector('.text-description').style.display = "none";
+        document.getElementById(id).style.opacity = "100%";  
+        bodyContainer.removeChild(thumbnailContainer);
     }), 1000);
     return;
 
 };
 
-// team array is charge befor this script. It contain all team's members
-
-const articlesContainer = document.getElementById("main-container");
-//console.log(articlesContainer);
 
 //Create a model of objet with method to display in the DOM
 const article = {
@@ -95,6 +101,8 @@ const article = {
     },
 };
 
+
+// team array is charge before this script. It contain all team's members
 //Insert all members in the DOM
 for(let i=0; i<team.length; i++){
     let newArticle = Object.create(article);
