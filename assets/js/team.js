@@ -1,5 +1,5 @@
 // Initialization of the variables that will be used later
-let isOpen;
+let thumbnailOpen;
 let initialPositionOpenedThumbnail;
 let thumbnailContainer;
 
@@ -9,14 +9,15 @@ const articlesContainer = document.getElementById("main-container");
 // Function called when we clic on thumbnail (mobile version`$)
 const clicThumbnail = (e) => {
     //console.log(e);
+    e.preventDefault();
     const element = e.target.parentNode;
     console.log(element);
     let isTargetOpened = element.classList.contains("open"); //false
     if(isTargetOpened !== true){
-        isOpen = element.getAttribute("id");
+        thumbnailOpen = element.getAttribute("id");
         duplicateThumbnail(element);
     }else{
-        removeDuplicatedThumbnail(isOpen);
+        removeDuplicatedThumbnail(thumbnailOpen);
     }
     // element.style.transform = `translateY(-${positionY-10}px)`;
 };
@@ -28,7 +29,7 @@ const duplicateThumbnail = (element) => {
     bodyContainer.appendChild(thumbnailContainer);
     const elementDuplicated = element.cloneNode(true);
     elementDuplicated.removeAttribute("id");
-    elementDuplicated.style.top = `${initialPositionOpenedThumbnail}px`;
+    elementDuplicated.style.top = `${initialPositionOpenedThumbnail-10}px`;
     thumbnailContainer.appendChild(elementDuplicated);
     setTimeout((function(){
         thumbnailContainer.classList.add("show-div");
