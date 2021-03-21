@@ -1,19 +1,3 @@
-/* MENU ICONE BURGER */
-let menu = document.getElementById("menuNavigation");
-let menuButton = document.getElementById("burger");
-
-let burger = document.getElementById("burger");
-let menuIcon = document.getElementById(".menu-icon");
-
-burger.addEventListener("click", function (e) {
-  burger.classList.toggle("is-opened");
-});
-
-menuButton.addEventListener("click", function (e) {
-  menu.classList.toggle("menuNavigationDisplay");
-  menu.classList.toggle("menuNavigation");
-});
-
 //----------------------------------------------------
 
 // GRAPH ---------------------------------------------------
@@ -88,7 +72,7 @@ selectCurrency.addEventListener("change", function (e) {
     updateLtcPrice();
     updateXrpPrice();
     updateBnbPrice();
-    
+
     printBtcChart();
     printCosmosChart();
     printEthereumChart();
@@ -306,10 +290,8 @@ async function printBnbChart() {
 
       tooltips: {
         callbacks: {
-          //Ce code enlève le titre tooltip
           title: function () {},
         },
-        //Ce code enlève les couleurs de la légende
         displayColors: false,
         yPadding: 10,
         xPadding: 10,
@@ -409,9 +391,6 @@ async function printBtcChart() {
     },
   });
 }
-
-
-
 
 async function printLtcChart() {
   let { times, prices } = await ltcData();
@@ -657,10 +636,9 @@ async function printXrpChart() {
 
       tooltips: {
         callbacks: {
-          //Ce code enlève le titre tooltip
           title: function () {},
         },
-        //Ce code enlève les couleurs de la légende
+
         displayColors: false,
         yPadding: 10,
         xPadding: 10,
@@ -744,10 +722,9 @@ async function printEthereumChart() {
 
       tooltips: {
         callbacks: {
-          //Ce code enlève le titre tooltip
           title: function () {},
         },
-        //Ce code enlève les couleurs de la légende
+
         displayColors: false,
         yPadding: 10,
         xPadding: 10,
@@ -831,10 +808,9 @@ async function printMyChart() {
 
       tooltips: {
         callbacks: {
-          //Ce code enlève le titre tooltip
           title: function () {},
         },
-        //Ce code enlève les couleurs de la légende
+
         displayColors: false,
         yPadding: 10,
         xPadding: 10,
@@ -848,7 +824,6 @@ async function printMyChart() {
   });
 }
 
-/// Mise à jour des cours ///
 async function updateEthereumPrice() {
   let { times, prices } = await ethereumData();
   let currentPrice = prices[prices.length - 1].toFixed(2);
@@ -912,13 +887,3 @@ printLtcChart();
 printXrpChart();
 printBnbChart();
 printMyChart();
-
-// /* Tableau avec crypto en survey */
-
-// SCROLL TO REFRESH !! 8-) //
-
-const pStart = { x: 0, y: 0 };
-const pCurrent = { x: 0, y: 0 };
-const cards = document.querySelectorAll(".card");
-const main = document.querySelector("body > div");
-let isLoading = false;

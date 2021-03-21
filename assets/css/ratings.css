@@ -4,6 +4,7 @@
     --font-color: #c7c7c7;
     --bg-color: rgb(83, 83, 83);
     --heading-color: #ed6c6d;
+    --shadow-color: rgba(0, 0, 0, 0.459);
 }
 
 [data-theme="dark"] {
@@ -12,6 +13,7 @@
     --font-color: #e1e1ff;
     --bg-color: #161625;
     --heading-color: #122044;
+    --shadow-color: rgb(22, 19, 66);
 }
 
 *,
@@ -193,9 +195,9 @@ body {
 }
 
 .tableauSurvey {
-    margin-top: -210px;
+    margin-top: -218px;
     width: 50%;
-    height: 465px;
+    height: 450px;
     position: relative;
     right: 20px;
 }
@@ -287,32 +289,75 @@ card img {
 
 .btc {
     border: 1px solid rgba(88, 88, 88, 0.548);
+    
+    box-shadow: 3px 3px 3px var(--shadow-color);
+}
+.btc:hover{
+    transform: translateY(3px) translateX(3px);
+    box-shadow: none;
 }
 
 .cosmos {
     margin-top: 50px;
     border: 1px solid rgba(88, 88, 88, 0.548);
+    box-shadow: 3px 3px 3px var(--shadow-color);
 }
+.cosmos:hover{
+    transform: translateY(3px) translateX(3px);
+    box-shadow: none;
+}
+
 .ethereum {
     margin-top: 50px;
     border: 1px solid rgba(88, 88, 88, 0.548);
+    box-shadow: 3px 3px 3px var(--shadow-color);
 }
+.ethereum:hover{
+    transform: translateY(3px) translateX(3px);
+    box-shadow: none;
+}
+
 .ltc {
     margin-top: 50px;
     border: 1px solid rgba(88, 88, 88, 0.548);
+    box-shadow: 3px 3px 3px var(--shadow-color);
 }
+.ltc:hover{
+    transform: translateY(3px) translateX(3px);
+    box-shadow: none;
+}
+
 .xrp {
     margin-top: 50px;
     border: 1px solid rgba(88, 88, 88, 0.548);
+    box-shadow: 3px 3px 3px var(--shadow-color);
 }
+.xrp:hover{
+    transform: translateY(3px) translateX(3px);
+    box-shadow: none;
+}
+
 .bnb {
     margin-top: 50px;
     border: 1px solid rgba(88, 88, 88, 0.548);
+    box-shadow: 3px 3px 3px var(--shadow-color);
 }
+.bnb:hover{
+    transform: translateY(3px) translateX(3px);
+    box-shadow: none;
+}
+
 .myChart {
     margin-top: 50px;
     border: 1px solid rgba(88, 88, 88, 0.548);
+    box-shadow: 3px 3px 3px var(--shadow-color);
 }
+
+.myChart:hover{
+    transform: translateY(3px) translateX(3px);
+    box-shadow: none;
+}
+
 
 .asset-info {
     grid-area: info;

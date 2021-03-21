@@ -1,0 +1,14 @@
+body {
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-top: 20px;
+
+  position: relative;
+  top: 400px !important;
+  width: 100%;
+  margin-bottom: 100px;
+
+
+}

@@ -1,218 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/ratings.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Red+Hat+Text:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text:400,500&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
-  <title>Document</title>
-</head>
-
-<body>
-  <nav class="navBar">
-    <div id="burger" class="menu-icon menu-icon-cross">
-      <span></span>
-    </div>
-
-    <a href="#"><img
-        src="./Ressources/Copie_de_logo-white-transparentback_1.png"
-        alt="" /></a>
-
-
-    <div class="theme-switch-wrapper">
-      <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <div class="slider round"><img id="moon" src="./Ressources/307307.svg" alt=""><img id="sun" src="./Ressources/sun--v2.png" alt=""></div>
-      </label>
-  </nav>
-
-  <div id="menuNavigation" class="menuNavigation">
-    <ul>
-      <li><a href="#">Accueil</a></li>
-      <li><a href="#">Staff</a></li>
-      <li><a href="#">Article</a></li>
-      <li><a href="#">Cours</a></li>
-    </ul>
-  </div>
-
-
-
-  <container class="container">
-
-
-    <cards class="cards">
-      <bitcoin class="btc">
-        <card class="asset-info">
-          <div class="title">
-            <img src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/btc.svg" width="10%" />
-            <h1>Bitcoin</h1>
-          </div>
-          <div class="details">
-            <h2 class="asset-price" id="btcPrice"></h2>
-          </div>
-        </card>
-        <canvas id="btcChart"></canvas>
-      </bitcoin>
-
-      <cosmos class="cosmos">
-        <card class="asset-info">
-          <div class="title">
-            <img src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/atm.svg" width="10%" />
-            <h1>Cosmos</h1>
-          </div>
-          <div class="details">
-            <h2 class="asset-price" id="atomPrice"></h2>
-          </div>
-        </card>
-        <canvas id="cosmosChart"></canvas>
-      </cosmos>
-
-      <ethereum class="ethereum">
-        <card class="asset-info">
-          <div class="title">
-            <img src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/eth.svg" width="10%" />
-            <h1>Ethereum</h1>
-          </div>
-          <div class="details">
-            <h2 class="asset-price" id="ethPrice"></h2>
-          </div>
-        </card>
-        <canvas id="ethereumChart"></canvas>
-      </ethereum>
-
-      <ltc class="ltc">
-        <card class="asset-info">
-          <div class="title">
-            <img src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/ltc.svg" width="10%" />
-            <h1>LTC</h1>
-          </div>
-          <div class="details">
-            <h2 class="asset-price" id="ltcPrice"></h2>
-          </div>
-        </card>
-        <canvas id="ltcChart"></canvas>
-      </ltc>
-
-      <xrp class="xrp">
-        <card class="asset-info">
-          <div class="title">
-            <img src="./Ressources/12-122739_xrp-logo-png-clipart.png" width="10%" />
-            <h1>XRP</h1>
-          </div>
-          <div class="details">
-            <h2 class="asset-price" id="xrpPrice"></h2>
-          </div>
-        </card>
-        <canvas id="xrpChart"></canvas>
-      </xrp>
-      <bnb class="bnb">
-        <card class="asset-info">
-
-          <div class="title">
-            <img src="./Ressources/téléchargement.png" width="10%" />
-            <h1>BNB</h1>
-          </div>
-          <div class="details">
-            <h2 class="asset-price" id="bnbPrice"></h2>
-          </div>
-        </card>
-        <canvas id="bnbChart"></canvas>
-      </bnb>
-    </cards>
-  </container>
-
-  <div id="tableauSurvey" class="tableauSurvey">
-
-    <container class="container_2">
-
-
-      <cards id="tableauBorder" class="cards">
-
-        <myChart class="myChart">
+  <body>
+    <container class="container">
+      <cards class="cards">
+        <bitcoin class="btc">
           <card class="asset-info">
             <div class="title">
-
-              
+              <img
+                src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/btc.svg"
+                width="10%"
+              />
+              <h1>Bitcoin</h1>
             </div>
             <div class="details">
-              <h2 class="asset-price" id="myPrice"></h2>
+              <h2 class="asset-price" id="btcPrice"></h2>
             </div>
           </card>
-          <canvas id="myChart"></canvas>
-        </myChart>
+          <canvas id="btcChart"></canvas>
+        </bitcoin>
 
+        <cosmos class="cosmos">
+          <card class="asset-info">
+            <div class="title">
+              <img
+                src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/atm.svg"
+                width="10%"
+              />
+              <h1>Cosmos</h1>
+            </div>
+            <div class="details">
+              <h2 class="asset-price" id="atomPrice"></h2>
+            </div>
+          </card>
+          <canvas id="cosmosChart"></canvas>
+        </cosmos>
+
+        <ethereum class="ethereum">
+          <card class="asset-info">
+            <div class="title">
+              <img
+                src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/eth.svg"
+                width="10%"
+              />
+              <h1>Ethereum</h1>
+            </div>
+            <div class="details">
+              <h2 class="asset-price" id="ethPrice"></h2>
+            </div>
+          </card>
+          <canvas id="ethereumChart"></canvas>
+        </ethereum>
+
+        <ltc class="ltc">
+          <card class="asset-info">
+            <div class="title">
+              <img
+                src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/ltc.svg"
+                width="10%"
+              />
+              <h1>LTC</h1>
+            </div>
+            <div class="details">
+              <h2 class="asset-price" id="ltcPrice"></h2>
+            </div>
+          </card>
+          <canvas id="ltcChart"></canvas>
+        </ltc>
+
+        <xrp class="xrp">
+          <card class="asset-info">
+            <div class="title">
+              <img
+                src="./assets/img/12-122739_xrp-logo-png-clipart.png"
+                width="10%"
+              />
+              <h1>XRP</h1>
+            </div>
+            <div class="details">
+              <h2 class="asset-price" id="xrpPrice"></h2>
+            </div>
+          </card>
+          <canvas id="xrpChart"></canvas>
+        </xrp>
+        <bnb class="bnb">
+          <card class="asset-info">
+            <div class="title">
+              <img src="./assets/img/téléchargement.png" width="10%" />
+              <h1>BNB</h1>
+            </div>
+            <div class="details">
+              <h2 class="asset-price" id="bnbPrice"></h2>
+            </div>
+          </card>
+          <canvas id="bnbChart"></canvas>
+        </bnb>
       </cards>
-
     </container>
 
-
-
-
-
-  </div>
-
-
-
-
-
-  <div class="filters">
-
-
-
-    <div class="currencyChoose">
-      <label for="select-currency">Choose a currency:</label>
-      <select name="select-currency" id="select-currency">
-        <option value="EUR">EUR</option>
-        <option value="USD">USD</option>
-        <option value="JPY">JPY</option>
-      </select>
+    <div id="tableauSurvey" class="tableauSurvey">
+      <container class="container_2">
+        <cards id="tableauBorder" class="cards">
+          <myChart class="myChart">
+            <card class="asset-info">
+              <div class="title"></div>
+              <div class="details">
+                <h2 class="asset-price" id="myPrice"></h2>
+              </div>
+            </card>
+            <canvas id="myChart"></canvas>
+          </myChart>
+        </cards>
+      </container>
     </div>
 
-   
-    
-    <div class="cryptoChoixe">
-      <label for="select-crypto">Choose a crypto:</label>
-      <select name="select-crypto" id="select-crypto">
-        <option value="BTC">BTC</option>
-        <option value="ETH">ETH</option>
-        <option value="LTC">LTC</option>
-        <option value="XRP">XRP</option>
-        <option value="BNB">BNB</option>
-        <option value="ATOM">COSMO</option>
-      </select>
+    <div class="filters">
+      <div class="currencyChoose">
+        <label for="select-currency">Choose a currency:</label>
+        <select name="select-currency" id="select-currency">
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+          <option value="JPY">JPY</option>
+        </select>
+      </div>
+
+      <div class="cryptoChoixe">
+        <label for="select-crypto">Choose a crypto:</label>
+        <select name="select-crypto" id="select-crypto">
+          <option value="BTC">BTC</option>
+          <option value="ETH">ETH</option>
+          <option value="LTC">LTC</option>
+          <option value="XRP">XRP</option>
+          <option value="BNB">BNB</option>
+          <option value="ATOM">COSMO</option>
+        </select>
+      </div>
     </div>
 
-
-
-  </div>
-
-
-
-
-  <div class="theme-switch-wrapper">
-    <label class="theme-switch" for="checkbox">
-      <input type="checkbox" id="checkbox" />
-      <div class="slider round"></div>
-    </label>
-
-  </div>
-
-
-
-
-
-
-
-
-
-  <footer></footer>
-  <script src="./assets/js/darkmode.js"></script>
-  <script src="./assets/js/app.js"></script>
-</body>
-
+    <script src="./assets/js/darkmode.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
 </html>
