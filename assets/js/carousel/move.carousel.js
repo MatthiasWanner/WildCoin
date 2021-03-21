@@ -12,7 +12,7 @@ const moveLeftOrRight = (
 	currentIndex
 ) => {
 	// Avoid going too fast
-	if (isinCooldown()) {
+	if (inCooldown()) {
 		return;
 	}
 
@@ -26,13 +26,15 @@ const moveLeftOrRight = (
 	for (let i = 0; i < articlesOnScreen.length; i++) {
 		// Start animation
 		articlesOnScreen[i].classList.add('fade__out__in');
-
-		updateContent(
-			articlesOnScreen,
-			articlesList
+		// Remove animation's class so we can restart those steps
+		setTimeout(
+			() => updateContent(
+				articlesOnScreen,
+				articlesList
+			),
+			750
 		);
 
-		// Remove animation's class so we can restart those steps
 		articlesOnScreen[i]
 			.getAnimations()[0]
 			.finished
@@ -59,7 +61,7 @@ const moveDirection = direction => {
  * @param {number} index - The index to move to
  */
 const moveToIndex = (articlesOnScreen, index) => {
-	if (isinCooldown()) {
+	if (inCooldown()) {
 		return;
 	}
 
@@ -67,30 +69,32 @@ const moveToIndex = (articlesOnScreen, index) => {
 	for (let i = 0; i < articlesOnScreen.length; i++) {
 		// Start animation
 		articlesOnScreen[i].classList.add('fade__out__in');
-
-		updateContent(
-			articlesOnScreen,
-			articlesList
-		);
-
 		// Remove animation's class so we can restart those steps
 		articlesOnScreen[i]
 			.getAnimations()[0]
 			.finished
 			.then(() => articlesOnScreen[i].classList.remove('fade__out__in'));
 	}
+
 	if (index > articlesList.length) {
 		updateIndex(0);
 
-		updateContent(
-			document.getElementsByClassName('article__video'),
-			articlesList
+		setTimeout(
+			() => updateContent(
+				document.getElementsByClassName('article__video'),
+				articlesList
+			),
+			1000
 		);
 	} else {
 		updateIndex(index - 1);
-		updateContent(
-			document.getElementsByClassName('article__video'),
-			articlesList
+
+		setTimeout(
+			() => updateContent(
+				document.getElementsByClassName('article__video'),
+				articlesList
+			),
+			1000
 		);
 	}
 };

@@ -17,5 +17,7 @@ const updateContent = (articlesOnScreen, articlesList) => {
 		img.src = articlesList[currentIndex].videos[i].image;
 		title.textContent = articlesList[currentIndex].videos[i].title;
 		date.textContent = articlesList[currentIndex].videos[i].date;
+		desc.textContent = articlesList[currentIndex].videos[i].desc;
+		tags.textContent = `#${articlesList[currentIndex].videos[i].tags.join(' #')}`;
 	}
 };

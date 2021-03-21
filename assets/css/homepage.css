@@ -1,7 +1,7 @@
 /* - Custom files - */
 @import url('variables.homepage.css');
 @import url('animations.homepage.css');
-@import url('article.style.css');
+@import url('article.homepage.css');
 @import url('carousel.homepage.css');
 
 /* - CSS Reset - */
@@ -56,7 +56,6 @@ main {
     justify-content: center;
     width: var(--modal-width);
     height: var(--modal-height);
-    padding: 3vh 3vw;
     border-radius: 3rem;
     background-color: var(--modal-background-color);
     /* Modal width */

@@ -2,7 +2,7 @@
  * Force a cooldown on carousel swaps
  * @returns {boolean}
  */
-const isinCooldown = () => {
+const inCooldown = () => {
 	if (lastSwap === void 0) {
 		lastSwap = new Date().getTime();
 	} else if (new Date().getTime() - lastSwap < cooldown) {
