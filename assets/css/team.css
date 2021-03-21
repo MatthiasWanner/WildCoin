@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#body-container{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Team */
+.text{
+    font-family: 'Roboto';
+}
+
+.text-container{
+    padding: 10px;
+}
+
+.team-title{
+    width: 100%;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+}
+
+#main-container{
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+    min-height: 100%;
+}
+
+.profil-img{
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profil-img img{
+    width: 100%;
+}
+
+.item{
+    position: relative;
+    background-color: #e6d1d1;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ED6C6D;
+    box-shadow: 3px 2px 7px grey;
+    border-radius: 10px;
+    max-height: 20vh;
+    transform: translateY(0) scale(1);
+    -webkit-transition: max-height 1s, translate 1s, transform 1s;
+    transition: max-height 1s, translate 1s, transform 1s;
+}
+
+
+.header{
+    width: 100%;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px 0px;
+}
+
+.button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    padding: 0;
+}
+
+.invert-header{
+    flex-direction: row-reverse;
+    text-align: start;
+}
+
+.item h3, .item p{
+    margin: 0;
+}
+
+.profil-description{
+    flex-direction: column;
+    width: 75%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.invert-description{
+    text-align: end;
+}
+
+.text-description{
+    font-family: 'Roboto';
+    text-align: center;
+    padding: 0px 10px 0px;
+    margin-top: 10px;
+}
+
+.hidden + .invert-container{
+    translate: -110vw;
+}
+
+.hidden{
+    translate: 110vw;
+} 
+
+.open{
+    max-height: 100vh;
+    padding-bottom: 10px;
+}
+
+
+.move{
+    margin: 0;
+    -webkit-transform: scale(1.05) translateY(-50px);
+    transform: scale(1.05) translateY(-50px);
+}
+
+.open .text-description{
+    display: flex;
+}
+
+.thumbnail-container{
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    align-items: flex-start;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: background-color 1s; 
+}
+
+.show-div{
+    background-color: rgba(0,0,0,0.3);
+}
+
+@media (orientation: landscape) {
+    #body-container{
+        min-height: 200vh;
+    }
+
+    .item{
+        max-height: 40vh;
+    }
+
+    .header{
+        height: 40vh;
+    }
+
+    .open{
+        max-height: 100vh;
+    }
+
+    .profil-img{
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .profil-description {
+        font-size: 2em;
+  }
+
+}
+
+  @media screen and (min-width: 992px) {
+      #body-container{
+        min-height: 100vh;
+      }
+
+      #main-container{
+          flex-direction: row;
+      }
+
+      .item, .invert-container{
+        flex-direction: column;
+        max-height: 50vh;
+        width: 20%;
+        margin: 20px;
+        height: 50vh;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    .button{
+        display: none;
+    }
+
+    .header, .invert-header{
+        order: 1;
+        height: 50%;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .profil-img{
+        margin-top: 10px;
+        width: 15vh;
+        height: 15vh;
+    }
+
+    .profil-description{
+        font-size: 1em;
+        height: auto;
+    }
+
+    .text-description{
+        display: flex;
+        order: 2;
+        height: 50%;
+        overflow: scroll;
+    }
+
+  }
