@@ -1,0 +1,110 @@
+/* - Custom files - */
+@import url('variables.homepage.css');
+@import url('animations.homepage.css');
+@import url('article.homepage.css');
+@import url('carousel.homepage.css');
+
+/* - CSS Reset - */
+html {
+    font-size: 62.5%; /* Make REM and EM values value 10px instead of 16px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: var(--primary-color);
+    border: none;
+    outline: none;
+    background-color: var(--background-color);
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+}
+
+main {
+    margin-top: 5vh;
+}
+
+/* - Class utilities - */
+.small {
+    font-size: 1.3rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.fade__out__in {
+    animation: 1500ms ease-in fade;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal:not(.hidden) {
+    font-size: 2rem;
+    position: absolute;
+    z-index: 999;
+    top: calc(50% - var(--modal-height) / 2);
+    left: calc(50% - var(--modal-width) / 2);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: var(--modal-width);
+    height: var(--modal-height);
+    border-radius: 3rem;
+    background-color: var(--modal-background-color);
+    /* Modal width */
+    --modal-width: 30vw;
+    /* Modal height */
+    --modal-height: 30vh;
+    /* Modal background */
+    --modal-background-color: #221B54;
+}
+
+/* - Reskin - */
+#themeSwap {
+    display: none;
+}
+
+.graph {
+    display: none;
+}
+
+/* || Very small */
+
+/* || Medium */
+
+/* || Large */
+@media screen and (min-width: 992px) {
+    #themeSwap {
+        display: unset;
+    }
+
+    #themeSwap > svg {
+        fill: var(--secondary-color);
+    }
+
+    #bottom {
+        display: flex;
+        justify-content: flex-end;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #bottom *:not(.article__thumbnail) {
+        overflow: hidden;
+    }
+
+    .graph {
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
+}
+
+/* || Very large */
