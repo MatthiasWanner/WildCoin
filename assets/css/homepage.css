@@ -9,15 +9,7 @@ html {
     font-size: 62.5%; /* Make REM and EM values value 10px instead of 16px */
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    color: var(--primary-color);
-    border: none;
-    outline: none;
-    background-color: var(--background-color);
-}
+
 
 body {
     max-width: 1200px;
