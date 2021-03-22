@@ -127,6 +127,7 @@ ul, li{
     display: flex;
     height: 8vh;
     justify-content: center;
+    cursor: pointer;
 }
 
 /* Menu Slider */
