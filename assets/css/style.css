@@ -41,6 +41,7 @@ ul, li{
 /* Barre de navigation */
 
 .topnav {
+    z-index: 99;
     top: 0;
     left: 0;
     position: fixed;
@@ -61,7 +62,8 @@ ul, li{
     width: 8vh;
     height: 8vh;
     position: fixed;
-    left: 0px;
+    left: 0;
+    top: 0;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out;
     margin: 1vh;
