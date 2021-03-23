@@ -1,4 +1,6 @@
 .theme-light:root {
+    --bg-header-color: #ED6C6D;
+    --shadow-header-color: #EB8080;
     --background-color: #FFFFFF;
     --primary-color: rgb(83, 83, 83);
     --secondary-color: rgb(83, 99, 144);
@@ -8,6 +10,8 @@
 
 .theme-dark:root {
     /* Background colors */
+    --bg-header-color:#122044;
+    --shadow-header-color:#536390;
     --background-color: #0B0920;
 
     /* Text colors */
@@ -24,3 +28,4 @@
     --height-header-lg: 12vh;
     --height-header-lf: 14vh;
 }
+
