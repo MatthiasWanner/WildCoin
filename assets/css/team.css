@@ -22,6 +22,9 @@ body{
 /* Team */
 .text{
     font-family: 'Roboto';
+    font-weight: normal;
+    font-size: 1.5em;
+
 }
 
 .text-container{
@@ -32,6 +35,18 @@ body{
     width: 100%;
     text-align: center;
     font-size: 3em;
+}
+
+.text-container h3{
+    font-size: 2em;
+}
+
+.text-description{
+    font-family: 'Roboto';
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0px 10px 10px;
+    margin-top: 10px;
 }
 
 .container{
@@ -111,17 +126,11 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 .invert-description{
     text-align: end;
-}
-
-.text-description{
-    font-family: 'Roboto';
-    text-align: center;
-    padding: 0px 10px 10px;
-    margin-top: 10px;
 }
 
 .hidden + .invert-container{
@@ -133,7 +142,7 @@ body{
 } 
 
 .open{
-    max-height: 100vh;
+    max-height: 300vh;
 }
 
 
@@ -170,16 +179,12 @@ body{
 
 @media (orientation: landscape) {
 
-    .item{
-        max-height: 40vh;
-    }
-
     .header{
         height: 40vh;
     }
 
     .open{
-        max-height: 100vh;
+        max-height: 300vh;
     }
 
     .profil-img{
@@ -194,9 +199,25 @@ body{
 }
 
   @media screen and (min-width: 992px) {
+      
+    .text-description{
+        display: flex;
+        order: 2;
+    }
+
+    .text{
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-size: 2em;
+    
+    }
 
       .team-title {
         padding-top: 10px;
+    }
+
+    .text-container h3{
+        font-size: 2.5em;
     }
 
       #main-container{
@@ -210,6 +231,17 @@ body{
         justify-content: flex-start;
         flex-wrap: nowrap;
         min-height: 20vw;
+        cursor: pointer;
+    }
+
+    .close:hover{
+        -webkit-transform: scale(1.1) translateY(0);
+        transform: scale(1.1);
+    }
+
+    .open:hover{
+        -webkit-transform: scale(1.2) translateY(0);
+        transform: scale(1.2);
     }
 
     .header, .invert-header{
@@ -235,11 +267,6 @@ body{
         margin-top: 10px;
     }
 
-    .text-description{
-        display: flex;
-        order: 2;
-    }
-
     .thumbnail-container{
         display: flex;
         width: 100vw;
@@ -247,9 +274,10 @@ body{
     
     .move{
         margin: 0;
-        -webkit-transform: scale(1.20) translateY(0);
-        transform: scale(1.20) translateY(0);
+        -webkit-transform: scale(1.3) translateY(0);
+        transform: scale(1.3) translateY(0);
     }
+
     
     .open .text-description{
         display: flex;

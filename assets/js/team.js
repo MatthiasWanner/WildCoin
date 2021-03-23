@@ -5,7 +5,6 @@ let thumbnailOpen;
 let initialTopOpenedThumbnail;
 let initialLeftOpenedThumbnail;
 let thumbnailContainer;
-const bodyContainer = document.getElementById('body-container');
 const articlesContainer = document.getElementById('main-container');
 
 const duplicateThumbnail = (DomElement) => {
@@ -26,6 +25,7 @@ const duplicateThumbnail = (DomElement) => {
     elementDuplicated.style.left = `${thumbnailPosition - 10}px`;
   }), 10);
   setTimeout((() => {
+    elementDuplicated.classList.remove('close');
     elementDuplicated.classList.add('open');
     elementDuplicated.querySelector('.button').addEventListener('click', clicThumbnail);
     // console.log(elementDuplicated);
@@ -68,7 +68,7 @@ const article = {
   printArticle() {
     const articleElt = document.createElement('article');
     articleElt.setAttribute('id', this.name.toLowerCase());
-    articleElt.classList.add('container', 'item');
+    articleElt.classList.add('container', 'item', 'close');
     const jobDiv = document.createElement('div');
     jobDiv.classList.add('container', 'profil-description');
     const h3Elt = document.createElement('h3');
@@ -78,7 +78,7 @@ const article = {
     pElt.innerText = this.job;
     jobDiv.appendChild(pElt);
     const pictureContainer = document.createElement('div');
-    pictureContainer.classList.add('profil-img');
+    pictureContainer.classList.add('container', 'profil-img');
     const profilPicture = new Image();
     profilPicture.src = this.picture;
     pictureContainer.appendChild(profilPicture);
