@@ -41,6 +41,7 @@ ul, li{
 /* Barre de navigation */
 
 .topnav {
+    z-index: 99;
     top: 0;
     left: 0;
     position: fixed;
@@ -61,7 +62,8 @@ ul, li{
     width: 8vh;
     height: 8vh;
     position: fixed;
-    left: 0px;
+    left: 0;
+    top: 0;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out;
     margin: 1vh;
@@ -242,10 +244,14 @@ footer{
 /* Theme switch */
 
 .theme-switch-wrapper {
-    z-index: 100;
+    cursor: pointer;
+    width: 14vw;
+    height: 14vw;
     position: fixed;
-    top: 40px;
-    right: 20px;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    margin: 1vh 2vh;
     display: flex;
     align-items: center;
 }
@@ -256,9 +262,9 @@ em {
 
 .theme-switch {
     display: inline-block;
-    height: 34px;
+    height: 5vh;
     position: relative;
-    width: 60px;
+    width: 100%;
 }
 
 .theme-switch input {
@@ -278,13 +284,13 @@ em {
 
 .slider:before {
     background-color: #fff;
-    bottom: 4px;
+    bottom: 0.8vw;
     content: "";
-    height: 26px;
-    left: 4px;
+    height: 7vw;
+    left: 0.8vw;
     position: absolute;
     transition: 0.4s;
-    width: 26px;
+    width: 7vw;
 }
 
 input:checked + .slider {
@@ -292,7 +298,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(5.6vw);
 }
 
 .slider.round {
@@ -365,6 +371,7 @@ input:checked + .slider:before {
         font-weight: 900;
         background-color: var(--shadow-color);
         transition: font-size 0.3s ease-in-out;
+        width: 15vw;
     }
     footer{
         flex-direction: row;
@@ -416,6 +423,7 @@ input:checked + .slider:before {
         font-weight: 900;
         background-color: var(--shadow-color);
         transition: font-size 0.3s ease-in-out;
+        width: 16vw;
     }
     footer{
         height: 11vh;
