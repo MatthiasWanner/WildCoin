@@ -56,13 +56,7 @@ selectCurrency.addEventListener("change", function (e) {
     updateBnbPrice();
     updateMyPrice();
 
-    printBtcChart();
-    printCosmosChart();
-    printEthereumChart();
-    printLtcChart();
-    printXrpChart();
-    printBnbChart();
-    printMyChart();
+   
   } else if (selectCurrency.value === "USD") {
     currency = "USD";
     symbol = "$";
@@ -72,14 +66,8 @@ selectCurrency.addEventListener("change", function (e) {
     updateLtcPrice();
     updateXrpPrice();
     updateBnbPrice();
-
-    printBtcChart();
-    printCosmosChart();
-    printEthereumChart();
-    printLtcChart();
-    printXrpChart();
-    printBnbChart();
-    printmyChart();
+    updateMyPrice();
+  
   } else if (selectCurrency.value === "JPY") {
     currency = "JPY";
     symbol = "JPY";
@@ -89,14 +77,6 @@ selectCurrency.addEventListener("change", function (e) {
     updateLtcPrice();
     updateXrpPrice();
     updateBnbPrice();
-    updateMyPrice();
-
-    printBtcChart();
-    printCosmosChart();
-    printEthereumChart();
-    printLtcChart();
-    printXrpChart();
-    printBnbChart();
     updateMyPrice();
   }
 });
@@ -879,6 +859,7 @@ updateBitcoinPrice();
 updateLtcPrice();
 updateXrpPrice();
 updateBnbPrice();
+updateMyPrice();
 
 printBtcChart();
 printCosmosChart();

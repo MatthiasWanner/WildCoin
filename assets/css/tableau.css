@@ -1,0 +1,40 @@
+.tableau-grid{
+    width:600px;
+    height:150px;
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    box-shadow: 3px 3px 3px grey;
+    border-radius: 10px;
+    font-family: Roboto;
+
+}
+
+.tableau-grid img{
+    width: 20px;
+}
+
+.tableau-grid div{
+    
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.filters{
+    height: 50px;
+   
+    position:relative;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    grid-column:span 6;
+}
+
+.title{
+    display:flex;
+    flex-direction: column;
+}
