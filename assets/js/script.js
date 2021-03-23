@@ -29,6 +29,10 @@ buttonBurger.addEventListener('click', () => {
 let sun = document.getElementById('sun');
 let moon = document.getElementById('moon');
 
+ButtonSwitch.addEventListener('click', () => {
+    sun.classList.toggle('on');
+    moon.classList.toggle('off');
+})
 
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
