@@ -392,7 +392,7 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
-    background-image: url("../../Ressources/307307.svg");
+    background-image: url("../../assets/img/307307.svg");
 }
 
 .slider #sun {
@@ -968,12 +968,3 @@ input{
 
 
 }
-
-
-
-
-
-
-
-
-
