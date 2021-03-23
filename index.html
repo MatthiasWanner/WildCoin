@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="theme-dark" lang="en">
+<html class="theme-light" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0"
@@ -7,32 +7,39 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>WildCoin</title>
 
+    <link href="assets/css/variables.css" rel="stylesheet"/>
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link href="assets/css/homepage.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    <link href="assets/css/homepage.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/contactez-nous.css">
 </head>
 <body>
     <header>
         <div class="burger" id="burger">
-          <span></span>
+            <span></span>
         </div>
         <div class="theme-switch-wrapper">
+        
           <label class="theme-switch" for="checkbox">
             <input type="checkbox" id="checkbox" />
-            <div class="slider round"><img id="moon" src="./Ressources/307307.svg" alt=""><img id="sun" src="./Ressources/sun--v2.png" alt="">
-            </div>
+            <span class="slider round">
+              <img id="moon" src="assets/img/307307.svg" alt="">
+              <img id="sun" src="assets/img/sun--v2.png" alt="">
+            </span>
           </label>
         </div>
         <div class="topnav">
           <div class="logo-title">
-            <img
+            <a href="index.html">
+              <img
               class="logo"
-              href="index.html"
               src="assets/img/Copie_de_logo-white-transparentback_1.png"
               alt="wild code school project wild coin"
             />
+          </a>
+            
             <!-- <a class="coin" href="index.html">wildcoin</a> -->
           </div>
           <nav class="nav-menu" id="nav-menu">
@@ -52,7 +59,7 @@
             </ul>
           </nav>
         </div>
-      </header>
+    </header>
     <!-- Main content -->
     <main>
         <div class="article">
@@ -167,32 +174,31 @@
 
     <footer>
         <div class="footer-content">
-            <ul class="footer-contact"> 
+            <ul class="footer-contact">
                 <li class="footer-contact-item">
-                    <a href="">
-                      Contactez-nous
+                    <a href="/src/contactez-nous.html">
+                        Contactez-nous
                     </a>
                 </li>
             </ul>
         </div>
         <div class="logo-reseaux-sociaux">
-          <div class="logo-size">
-            <i class="fab fa-facebook"></i>
-          </div>
-          <div class="logo-size">
-            <i class="fab fa-instagram"></i>
-          </div>
-          <div class="logo-size">
-            <i class="fab fa-youtube"></i>
-          </div>
-          <div class="logo-size">
-            <i class="fab fa-github"></i>
-          </div>
+            <div class="logo-size">
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="logo-size">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="logo-size">
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="logo-size">
+                <i class="fab fa-github"></i>
+            </div>
         </div>
-      </footer>
+    </footer>
 
     <script src="assets/js/variables.homepage.js"></script>
-    <script src="assets/js/homepage.js"></script>
     <!-- Carousel scripts -->
     <!--    <script src="assets/js/carousel/carousel.homepage.js"></script>-->
     <script src="assets/js/carousel.homepage.js"></script>
@@ -201,10 +207,11 @@
     <script src="assets/js/shortcuts.homepage.js"></script>
     <script src="assets/js/modal.js"></script>
     <script
-      src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
-      data-auto-replace-svg="nest"
+            data-auto-replace-svg="nest"
+            src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
     ></script>
     <!-- <script src="./assets/js/darkmode.js"></script> -->
-    <script src="./assets/script.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/darkmode.js"></script>
 </body>
 </html>

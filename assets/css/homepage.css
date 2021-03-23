@@ -1,15 +1,9 @@
 /* - Custom files - */
-@import url('variables.homepage.css');
 @import url('animations.homepage.css');
 @import url('article.homepage.css');
 @import url('carousel.homepage.css');
 
 /* - CSS Reset - */
-html {
-    font-size: 62.5%; /* Make REM and EM values value 10px instead of 16px */
-}
-
-
 
 body {
     max-width: 1200px;

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="theme-light" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../assets/css/variables.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../assets/css/ratings.css" />
    
     
@@ -24,35 +25,40 @@
   <body>
     <header>
       <div class="burger" id="burger">
-        <span></span>
+          <span></span>
       </div>
       <div class="theme-switch-wrapper">
+      
         <label class="theme-switch" for="checkbox">
           <input type="checkbox" id="checkbox" />
-          <div class="slider round"><img id="moon" src="../assets/img/307307.svg" alt=""><img id="sun" src="../assets/img/sun--v2.png" alt="">
-          </div>
+          <span class="slider round">
+            <img id="moon" src="../assets/img/307307.svg" alt="">
+            <img id="sun" src="../assets/img/sun--v2.png" alt="">
+          </span>
         </label>
       </div>
       <div class="topnav">
         <div class="logo-title">
-          <img
+          <a href="../index.html">
+            <img
             class="logo"
-            href="index.html"
             src="../assets/img/Copie_de_logo-white-transparentback_1.png"
             alt="wild code school project wild coin"
           />
+        </a>
+          
           <!-- <a class="coin" href="index.html">wildcoin</a> -->
         </div>
         <nav class="nav-menu" id="nav-menu">
           <ul class="nav-slider">
             <li class="nav-slider-item">
-              <a href="index.html">Accueil</a>
+              <a href="../index.html">Accueil</a>
             </li>
             <li class="nav-slider-item">
-              <a href="src/cours.html">Cours</a>
+              <a href="ratings.html">Cours</a>
             </li>
             <li class="nav-slider-item">
-              <a href="src/team.html">Equipe</a>
+              <a href="team.html">Equipe</a>
             </li>
             <li class="nav-slider-item">
                 <a href=""></a>
@@ -60,7 +66,7 @@
           </ul>
         </nav>
       </div>
-    </header>
+  </header>
     <container class="container">
       <cards class="cards">
         <bitcoin class="btc">
@@ -200,7 +206,7 @@
       <div class="footer-content">
           <ul class="footer-contact"> 
               <li class="footer-contact-item">
-                  <a href="">
+                  <a href="contactez-nous.html">
                     Contactez-nous
                   </a>
               </li>
@@ -223,5 +229,10 @@
     </footer>
     <script src="../assets/js/app.js"></script>
     <script src="../assets/js/script.js"></script>
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+    <script src="../assets/js/darkmode.js"></script>
   </body>
 </html>
