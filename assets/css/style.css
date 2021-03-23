@@ -24,7 +24,7 @@ html, body {
     font-family: 'Roboto', sans-serif;
     font-size: CALC(1em * 0.8);
     font-weight: normal;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-style: normal;
     margin: 0;
     padding: 0;
@@ -47,7 +47,6 @@ ul, li {
 /* Barre de navigation */
 
 .topnav {
-    line-height: 10vh;
     position: fixed;
     z-index: 99;
     top: 0;
@@ -381,12 +380,11 @@ input:checked + .slider:before {
     }
 
     .nav-menu {
-        top: 0vh;
+        top: 0;
         display: flex;
-        height: 10vh;
-        transition-duration: 0s;
+        transition-duration: 0;
         transform: none;
-        top: 0vh;
+        top: 0;
         height: var(--height-header-sm);
         background-color: transparent;
     }
@@ -410,6 +408,7 @@ input:checked + .slider:before {
         cursor: pointer;
         text-align: center;
         color: white;
+        font-weight: 600;
     }
 
     .nav-slider-item:hover {
@@ -433,8 +432,9 @@ input:checked + .slider:before {
 
     .footer-contact {
         justify-content: center;
-        width: 30vw;
+        width: 25vw;
         height: var(--height-header-sm);
+        font-weight: 600;
     }
 
     .footer-contact:hover {
@@ -472,6 +472,7 @@ input:checked + .slider:before {
         font-size: var(--font-size-md);
         width: 16vw;
         padding: 0 5px;
+        font-weight: 600;
     }
 
     .nav-slider-item:hover {
@@ -500,6 +501,7 @@ input:checked + .slider:before {
         height: var(--height-header-md);
         font-size: var(--font-size-md);
         width: 27vw;
+        font-weight: 600;
     }
 
     .footer-contact:hover {
@@ -532,6 +534,7 @@ input:checked + .slider:before {
 
     .nav-slider-item {
         font-size: var(--font-size-lg);
+        font-weight: 600;
         width: 17vw;
         padding: 0 6px;
     }
@@ -557,7 +560,7 @@ input:checked + .slider:before {
         font-size: var(--font-size-lg);
         width: 30vw;
         height: var(--height-header-lg);
-        font-size: var(--font-size-lg);
+        font-weight: 600;
     }
     .footer-contact:hover {
         font-size: var(--font-size-lg-bold);
