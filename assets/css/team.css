@@ -16,7 +16,6 @@ body{
     overflow: hidden;
     position: relative;
     background-color: var(--background-color);
-    padding-top: var(--height-header);
 }
 
 /* Team */
