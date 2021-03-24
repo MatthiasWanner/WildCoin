@@ -2,26 +2,30 @@
 /* eslint-disable no-use-before-define */
 // Initialization of the variables that will be used later
 let thumbnailOpen;
-let initialPositionOpenedThumbnail;
+let initialTopOpenedThumbnail;
+let initialLeftOpenedThumbnail;
 let thumbnailContainer;
-
-const bodyContainer = document.getElementById('body-container');
 const articlesContainer = document.getElementById('main-container');
 
 const duplicateThumbnail = (DomElement) => {
-  initialPositionOpenedThumbnail = DomElement.offsetTop;
+  initialTopOpenedThumbnail = DomElement.offsetTop;
+  initialLeftOpenedThumbnail = DomElement.offsetLeft;
+  thumbnailPosition = ((articlesContainer.offsetWidth / 2) - (DomElement.offsetWidth / 2));
   thumbnailContainer = document.createElement('div');
   thumbnailContainer.classList.add('thumbnail-container');
-  bodyContainer.appendChild(thumbnailContainer);
+  articlesContainer.appendChild(thumbnailContainer);
   const elementDuplicated = DomElement.cloneNode(true);
   elementDuplicated.removeAttribute('id');
-  elementDuplicated.style.top = `${initialPositionOpenedThumbnail - 10}px`;
+  elementDuplicated.style.top = `${initialTopOpenedThumbnail - 10}px`; // 10px padding of mainContainer (defined in CSS rules)
+  elementDuplicated.style.left = `${initialLeftOpenedThumbnail - 10}px`; // 10px padding of mainContainer (defined in CSS rules)
   thumbnailContainer.appendChild(elementDuplicated);
   setTimeout((() => {
     thumbnailContainer.classList.add('show-div');
     elementDuplicated.classList.add('move');
+    elementDuplicated.style.left = `${thumbnailPosition - 10}px`;
   }), 10);
   setTimeout((() => {
+    elementDuplicated.classList.remove('close');
     elementDuplicated.classList.add('open');
     elementDuplicated.querySelector('.button').addEventListener('click', clicThumbnail);
     // console.log(elementDuplicated);
@@ -31,17 +35,18 @@ const duplicateThumbnail = (DomElement) => {
 const removeDuplicatedThumbnail = (id) => {
   const item = thumbnailContainer.querySelector('.item');
   item.classList.remove('move', 'open');
+  item.style.top = `${initialTopOpenedThumbnail - 10}px`; // 10px padding of mainContainer (defined in CSS rules)
+  item.style.left = `${initialLeftOpenedThumbnail - 10}px`; // 10px padding of mainContainer (defined in CSS rules)
   thumbnailContainer.classList.remove('show-div');
   setTimeout((() => {
     item.querySelector('.text-description').style.display = 'none';
     document.getElementById(id).style.opacity = '100%';
-    bodyContainer.removeChild(thumbnailContainer);
+    articlesContainer.removeChild(thumbnailContainer);
   }), 1000);
 };
 
 // Function called when we clic on thumbnail (mobile version`$)
 const clicThumbnail = (e) => {
-  // console.log(e);
   e.preventDefault();
   const element = e.target.parentNode;
   const isTargetOpened = element.classList.contains('open'); // false
@@ -52,7 +57,6 @@ const clicThumbnail = (e) => {
   } else {
     removeDuplicatedThumbnail(thumbnailOpen);
   }
-  // element.style.transform = `translateY(-${positionY-10}px)`;
 };
 
 // Create a model of objet with method to display in the DOM
@@ -64,7 +68,7 @@ const article = {
   printArticle() {
     const articleElt = document.createElement('article');
     articleElt.setAttribute('id', this.name.toLowerCase());
-    articleElt.classList.add('container', 'item');
+    articleElt.classList.add('container', 'item', 'close');
     const jobDiv = document.createElement('div');
     jobDiv.classList.add('container', 'profil-description');
     const h3Elt = document.createElement('h3');
@@ -74,7 +78,7 @@ const article = {
     pElt.innerText = this.job;
     jobDiv.appendChild(pElt);
     const pictureContainer = document.createElement('div');
-    pictureContainer.classList.add('profil-img');
+    pictureContainer.classList.add('container', 'profil-img');
     const profilPicture = new Image();
     profilPicture.src = this.picture;
     pictureContainer.appendChild(profilPicture);

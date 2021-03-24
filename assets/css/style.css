@@ -4,6 +4,8 @@
 
 /* Variables */
 
+
+
 :root {
     /* --bg-color: #ED6C6D;
     --shadow-color: #EB8080; */
@@ -586,6 +588,7 @@ input:checked + .slider:before {
     .topnav{
         height: var(--height-header-lf);
         line-height: var(--height-header-lf);
+        background-color: var(--bg-header-color);
     }
 
     .logo {
