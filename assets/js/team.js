@@ -23,7 +23,7 @@ const duplicateThumbnail = (DomElement) => {
     thumbnailContainer.classList.add('show-div');
     elementDuplicated.classList.add('move');
     elementDuplicated.style.left = `${thumbnailPosition - 10}px`;
-  }), 10);
+  }), 20);
   setTimeout((() => {
     elementDuplicated.classList.remove('close');
     elementDuplicated.classList.add('open');
