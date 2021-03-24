@@ -24,8 +24,8 @@
 :root {
     /* Navbar and footer size vh */
     --height-header-sm: 10vh; 
-    --height-header-md: 11vh;
-    --height-header-lg: 12vh;
-    --height-header-lf: 14vh;
+    --height-header-md: 10vh;
+    --height-header-lg: 10vh;
+    --height-header-lf: 10vh;
 }
 
