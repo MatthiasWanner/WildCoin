@@ -409,7 +409,7 @@ input:checked + .slider:before {
         font-weight: 600;
     }
 
-    .nav-slider-item:hover {
+    ul.nav-slider-item:hover {
         font-size: var(--font-size-sm-bold);
         font-weight: 900;
         width: 15vw;
