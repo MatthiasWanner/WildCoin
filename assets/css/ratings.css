@@ -195,9 +195,9 @@ body {
 }
 
 .tableauSurvey {
-    margin-top: -218px;
+    margin-top: -518px;
     width: 50%;
-    height: 450px;
+    height: 400px;
     position: relative;
     right: 20px;
 }
@@ -598,7 +598,7 @@ card img {
     }
 
     cards {
-        border: 1px solid grey;
+        border: 0px solid grey;
         display: grid;
         grid-template-rows: 200px 200px;
         grid-template-columns: 25% 25% 25%;
@@ -672,7 +672,7 @@ card img {
         border: 0px;
     }
     #tableauSurvey {
-        border: 1px solid var(--secondary-color);
+        border: 0px solid var(--secondary-color);
         width: 900px;
         top: 30px;
        
