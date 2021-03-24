@@ -13,32 +13,38 @@ let coin = "BTC";
 selectCrypto.addEventListener("change", function (e) {
   if (selectCrypto.value === "BTC") {
     coin = "BTC";
-    myData();
+    
     updateMyPrice();
+
+  
+    
     printMyChart();
   } else if (selectCrypto.value === "ETH") {
     coin = "ETH";
-    myData();
+    
     updateMyPrice();
+    
     printMyChart();
   } else if (selectCrypto.value === "LTC") {
     coin = "LTC";
-    myData();
+    
     updateMyPrice();
+    document.querySelector('canvas').innerText = ""
+  
     printMyChart();
   } else if (selectCrypto.value === "XRP") {
     coin = "XRP";
-    myData();
+   
     updateMyPrice();
     printMyChart();
   } else if (selectCrypto.value === "BNB") {
     coin = "BNB";
-    myData();
+    
     updateMyPrice();
     printMyChart();
   } else if (selectCrypto.value === "ATOM") {
     coin = "ATOM";
-    myData();
+    
     updateMyPrice();
     printMyChart();
   }
@@ -201,6 +207,7 @@ let createXrpChart;
 let createBnbChart;
 
 async function printBnbChart() {
+  
   let { times, prices } = await bnbData();
 
   let bnbChart = document.getElementById("bnbChart").getContext("2d");
@@ -285,7 +292,11 @@ async function printBnbChart() {
   });
 }
 
+
+
+
 async function printBtcChart() {
+  
   let { times, prices } = await btcData();
 
   let btcChart = document.getElementById("btcChart").getContext("2d");
