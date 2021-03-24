@@ -25,7 +25,7 @@ body::-webkit-scrollbar {
     grid-template-rows:  1fr;
     width: 100%;
     font-family: Roboto;
-    background-color:var(--background-color);
+    
 }
 
 .holy-head{
@@ -144,6 +144,7 @@ article{
     justify-content:center;
     align-items: center;
    margin-top: -90px;
+   background-color: var(--background-color);
 }
 .filters select{
    

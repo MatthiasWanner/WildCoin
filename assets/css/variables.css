@@ -6,6 +6,8 @@
     --secondary-color: rgb(83, 99, 144);
     --ternary-color: #C7C7C7;
     --secondary-color-transparent: rgba(83, 99, 144, .7);
+
+    /* Thumbnails in team page */
     --thumbnail-background: #e6d1d1;
     --thumbnail-border: 1px solid #ED6C6D;
     --thumbnail-shadow-color: grey; 
