@@ -11,7 +11,7 @@
     --shadow-color: #EB8080; */
     --font-size: 1.2rem;
     --font-size-bold: 1.3rem;
-    --height-header: 8vh;
+   
     /* --font-size-md: 1.3rem;
     --font-size-md-bold: 1.5rem;
     --font-size-lg: 1.6rem;
@@ -38,6 +38,7 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+    width: 100%;
 }
 
 ul, li {
@@ -168,7 +169,7 @@ nav {
     width: 100vh;
     height: 84vh;
     transition-duration: 0.4s;
-    transform: translateX(-600px);
+    transform: translateX(-700px);
     opacity: 1;
     background-color: #0000008F;
 }
@@ -271,21 +272,22 @@ footer {
     background-color: gray;
     border: solid 2px #FFFFFF;
     width: 60vw;
+    text-align: center;
 }
 
 /* Theme switch */
 
 .theme-switch-wrapper {
     cursor: pointer;
-    width: 9vh;
-    height: 10vh;
+    width: 80px;
+    height: 40px;
     position: fixed;
     z-index: 100;
     top: 0;
-    right: 0;
+    right: -30px;
     display: flex;
     align-items: center;
-    margin: 0vh 2vh;
+    
 }
 /* em {
     margin-left: 10px;
@@ -293,10 +295,11 @@ footer {
 } */
 
 .theme-switch {
-    position: relative;
-    width: 9vh;
+    position: absolute;
+    
+    width: 80px;
     display: inline-block;
-    height: 7vh;
+    height: 50px;
 }
 
 .theme-switch input {
@@ -304,23 +307,26 @@ footer {
 }
 
 .slider {
-    width: 9vh;
-    height: 5vh;
+    width: 75px;
+    height: 40px;
     cursor: pointer;
     position: absolute;
+    top: 20px;
+    left: -50px;
     transition: 0.4s;
     background-color: #CCCCCC;
 }
 
 .slider:before {
     background-color: #fff;
-    bottom: 0.5vh;
+    top: 5px;
+    left: 5px;
     content: "";
-    height: 4vh;
-    left: 0.5vh;
+    height: 30px;
+    
     position: absolute;
     transition: 0.4s;
-    width: 4vh;
+    width: 30px;
 }
 
 input:checked + .slider {
@@ -337,9 +343,8 @@ input:checked + .slider:before {
 
 .slider img {
     position: relative;
-    width: 3vh;
-    top: 0vh;
-    left: 5vh;
+    width: 20px;    
+  
     transition: 0.4s;
 }
 
@@ -350,13 +355,17 @@ input:checked + .slider:before {
 
 .slider #sun {
     position: relative;
-    top: 0.5vh;
-    left: -3.3vh;
-    width: 4vh;
+    top: 7px;
+    left: -17px;
+   
     transition: 0.4s;
+    width: 26px;
 }
-#moon {
+.slider #moon {
+    position: relative;
     opacity: 0;
+    right: -43px;
+    top: 4px;
 }
 
 @media only screen and (min-width: 576px) {
@@ -412,6 +421,15 @@ input:checked + .slider:before {
     .nav-slider-item:hover {
         font-size: var(--font-size-bold);
         font-weight: 900;
+        transition: font-size 0.3s ease-in-out;
+        background-color: var(--shadow-header-color);
+        border: none;
+    }
+
+    .nav-slider-item:active {
+        font-size: var(--font-size-bold);
+        font-weight: 900;
+        width: 16vw;
         transition: font-size 0.3s ease-in-out;
         background-color: var(--shadow-header-color);
         border: none;

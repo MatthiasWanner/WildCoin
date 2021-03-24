@@ -208,9 +208,9 @@ body {
     padding-right: 20%;
     height: 80px;
     width: 100%;
-    background-color: var(--heading-color);
+    background-color: var(--shadow-header-color);
     position: fixed;
-    bottom: 80px;
+    bottom: var(--height-header);
     color: rgba(255, 255, 255, 0.493);
     font-family: "Roboto";
     display: flex;
@@ -401,7 +401,7 @@ card img {
         width: 100%;
         background-color: var(--heading-color);
         position: fixed;
-        bottom: 80px;
+        
         color: rgba(255, 255, 255, 0.493);
         font-family: "Roboto";
         display: flex;
@@ -526,6 +526,7 @@ card img {
 
     .filters{
         justify-content: center;
+        background-color: var(--heading-color);
     }
     
     
@@ -677,9 +678,7 @@ card img {
         top: 30px;
        
     }
-    #tableauSurvey:hover {
-        background-color: var(--font-color);
-    }
+    
 
     .btc,
     .cosmos,
