@@ -143,8 +143,9 @@ article{
     flex-direction: column;
     justify-content:center;
     align-items: center;
-   margin-top: -90px;
+    margin-top: -90px;
    background-color: var(--background-color);
+   color: var(--primary-color)
 }
 .filters select{
    
@@ -193,12 +194,19 @@ article{
 
 
 
+      .myDiv{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
 
 
 
 .holy-grail{
     position:relative;
-    top: 120px;
+    top: 20px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 50px 0px 2fr 1fr;

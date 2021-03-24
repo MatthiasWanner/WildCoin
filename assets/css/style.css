@@ -351,7 +351,7 @@ input:checked + .slider:before {
 .slider #sun {
     position: relative;
     top: 0.5vh;
-    left: -3.3vh;
+    left: -3vh;
     width: 4vh;
     transition: 0.4s;
 }

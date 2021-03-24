@@ -1,13 +1,13 @@
 .tableau-grid{
     width:600px;
-    height:150px;
+    height:250px;
     display:grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, 1fr);
     box-shadow: 3px 3px 3px grey;
     border-radius: 10px;
     font-family: Roboto;
-
+    border: 1px solid grey;
 }
 
 .tableau-grid img{
@@ -23,10 +23,11 @@
 }
 
 .filters{
+
     height: 50px;
    
     position:relative;
-    bottom: 10px;
+    bottom: -80px;
     width: 100%;
     display: flex;
     justify-content:center;
