@@ -1,0 +1,33 @@
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100%;
+}
+
+
+h2 {
+    margin: 2vh auto;
+    display: flex;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+label{
+    font-size: 1.3rem;
+    margin: 1vh;
+}
+
+.complet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10vh;
+}
+
+.button{
+    margin: 2vh auto;
+    width: 15vh;
+    justify-content: center;
+    display: flex;
+}

@@ -19,19 +19,16 @@
 
 /* HTML Reset */
 
-html, body {
+body {
     font-family: 'Roboto', sans-serif;
     font-size: CALC(1em * 0.8);
     font-weight: normal;
     /* font-weight: bold; */
     font-style: normal;
     margin: 0;
-    padding: 0;
+    padding-top: var(--height-header-sm);
+    padding-bottom: var(--height-header-sm);
     font-display: swap;
-}
-
-h2 {
-    margin: 0;
 }
 
 a {
@@ -352,7 +349,7 @@ input:checked + .slider:before {
 .slider #sun {
     position: relative;
     top: 0.5vh;
-    left: -3vh;
+    left: -3.3vh;
     width: 4vh;
     transition: 0.4s;
 }
@@ -451,6 +448,10 @@ input:checked + .slider:before {
 }
 
 @media only screen and (min-width : 768px) {
+    body{
+        padding-top: var(--height-header-md);
+        padding-bottom: var(--height-header-md);
+    }
     .topnav{
         height: var(--height-header-md);
         line-height: var(--height-header-md);
@@ -514,6 +515,10 @@ input:checked + .slider:before {
     }
 }
 @media only screen and (min-width : 992px) {
+    body{
+        padding-top: var(--height-header-lg);
+        padding-bottom: var(--height-header-lg);
+    }
     .topnav{
         height: var(--height-header-lg);
         line-height: var(--height-header-lg);
@@ -574,6 +579,10 @@ input:checked + .slider:before {
 }
 
 @media only screen and (min-width: 1200px) {
+    body{
+        padding-top: var(--height-header-lf);
+        padding-bottom: var(--height-header-lf);
+    }
     .topnav{
         height: var(--height-header-lf);
         line-height: var(--height-header-lf);
