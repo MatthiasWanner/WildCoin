@@ -27,9 +27,12 @@ body .swiper-container {
         width: 20px;
         height: 20px;
         text-align: center;
+    }
+
+    body .swiper-pagination-bullet {
         opacity: 1;
-        color: #000000;
-        background: rgba(0, 0, 0, 0.2);
+        color: var(var(--primary-color));
+        background-color: var(--secondary-color-transparent);
     }
 
     body .swiper-pagination-bullet {
@@ -38,8 +41,11 @@ body .swiper-container {
     }
 
     .swiper-pagination-bullet-active {
-        color: #FFFFFF;
-        background: #007AFF;
+        color: var(--primary-color);
+    }
+
+    body .swiper-pagination-bullet-active {
+        background-color: var(--ternary-color);
     }
 
     .carousel {

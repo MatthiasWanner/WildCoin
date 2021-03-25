@@ -12,6 +12,7 @@ body {
 
 main {
     margin-top: 5vh;
+    color: var(--primary-color);
 }
 
 /* - Class utilities - */
