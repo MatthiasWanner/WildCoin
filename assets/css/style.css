@@ -389,8 +389,8 @@ input:checked + .slider:before {
     .nav-menu {
         top: 0;
         display: flex;
-        transition-duration: 0;
-        transform: none;
+        
+       
         top: 0;
         height: var(--height-header);
         background-color: transparent;
