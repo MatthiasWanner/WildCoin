@@ -731,7 +731,7 @@ async function printEthereumChart() {
 
 async function printMyChart() {
   let { times, prices } = await myData();
-
+  
   let myChart = document.getElementById("myChart").getContext("2d");
 
   let gradient = myChart.createLinearGradient(0, 0, 0, 400);
