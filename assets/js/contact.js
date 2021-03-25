@@ -41,7 +41,9 @@ form.addEventListener('submit', (e) => {
     const nameWarningBox = document.createElement('span');
     nameWarningBox.setAttribute('class', 'warning');
     nameWarningBox.textContent = `Veuillez saisir un nom s'il vous plaît :)`;
-    nameLabel.appendChild(nameWarningBox);
+    if (!nameLabel.querySelector('.warning')) {
+      nameLabel.appendChild(nameWarningBox);
+    }
     setTimeout(() => {
       nameLabel.removeChild(nameWarningBox);
     }, 5000);
@@ -58,7 +60,9 @@ form.addEventListener('submit', (e) => {
     const emailWarningBox = document.createElement('span');
     emailWarningBox.setAttribute('class', 'warning');
     emailWarningBox.textContent = 'Adresse mail invalide :(';
-    mailLabel.appendChild(emailWarningBox);
+    if (!mailLabel.querySelector('.warning')) {
+      mailLabel.appendChild(emailWarningBox);
+    }
     setTimeout(() => {
       mailLabel.removeChild(emailWarningBox);
     }, 5000);
@@ -75,7 +79,9 @@ form.addEventListener('submit', (e) => {
     const messageWarningBox = document.createElement('span');
     messageWarningBox.setAttribute('class', 'warning');
     messageWarningBox.textContent = `Laissez-nous un p'tit mot...`;
-    msgLabel.appendChild(messageWarningBox);
+    if (!msgLabel.querySelector('.warning')) {
+      msgLabel.appendChild(messageWarningBox);
+    }
     setTimeout(() => {
       msgLabel.removeChild(messageWarningBox);
     }, 5000);
