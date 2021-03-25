@@ -1,4 +1,4 @@
-/* 
+
 body::-webkit-scrollbar {
     display: none;
   }
@@ -7,8 +7,7 @@ body::-webkit-scrollbar {
   body {
     -ms-overflow-style: none;  
     scrollbar-width: none;  
-  } */
-
+  } 
 
 
 
@@ -72,6 +71,15 @@ h1{
     text-align: center;
     padding-top: 450px;
     padding: 20px;
+    
+    color : var(--secondary-color)
+
+}
+
+.holy-aside h2{
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
 }
 
 .holy-aside ul{
@@ -99,9 +107,9 @@ h1{
 .holy-aside h2{
     text-align: center;
     margin-bottom: 20px;
-    border: 1px solid rgb(223, 223, 223);
+  
     border-radius: 10px;
-    box-shadow: 2px 2px 2px rgb(199, 199, 199);
+    
 }
 
 
@@ -160,9 +168,9 @@ article{
 
 
 
-
-
-
+.carousel img{
+    display:none;
+}
 
 
 
@@ -200,7 +208,10 @@ article{
           justify-content: center;
           align-items: center;
       }
-
+      
+.carousel img{
+    display: inline-block;
+}
 
 
 
@@ -209,7 +220,7 @@ article{
     top: 20px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 50px 0px 2fr 1fr;
+    grid-template-rows: 50px 0px 2fr ;
     width: 100%;
     font-family: Roboto;
 }
@@ -286,16 +297,19 @@ h1{
 .holy-aside h2{
     text-align: center;
     margin-bottom: 20px;
-    border: 1px solid rgb(223, 223, 223);
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgb(199, 199, 199);
+    text-align: center;
+    margin-bottom: 20px;
+    border: 0px;
+    box-shadow: 0px 0px 0px black;
 }
 
 
 #aside-left{
     display:flex; 
     flex-direction: column;
+    
 }
+
 
 
 article{
@@ -316,10 +330,7 @@ article{
    
 }
 
-.holy-aside h2{
-    text-align: center;
-    margin-bottom: 20px;
-}
+
 
 
 
@@ -452,12 +463,15 @@ container {
 
   .carousel {
     transform-style: preserve-3d;
+    width: 50%;
   }
+ 
   .carousel__photo {
     opacity: 0;
     position: absolute;
     top:0;
-    width: 100%;
+    width: 80%;
+    height: 300px;
     margin: auto;
     padding: 1rem 4rem;
     z-index: 100;
@@ -471,7 +485,7 @@ container {
 }
 
 .carousel img{
-    width: 100%;
+    width: 200%;
 }
 
 .carousel__photo.prev,
@@ -502,7 +516,7 @@ container {
   left:020px;
 }
 .carousel__button--next {
-  right:020px;
+  right:-150px;
   
  
 }
