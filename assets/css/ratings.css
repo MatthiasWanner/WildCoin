@@ -337,6 +337,7 @@ card img {
 
 .bnb {
     margin-top: 50px;
+    margin-bottom: 150px;
     border: 1px solid rgba(88, 88, 88, 0.548);
     box-shadow: 3px 3px 3px var(--shadow-color);
 }
