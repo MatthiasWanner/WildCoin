@@ -31,111 +31,95 @@ const updateIndex = newIndex => {
 
 /**
  * The list of articles found on the web
- * @type {[{videos: [{date: string, image: string, link: string, title: string, desc: string, tags: string[]}, {date: string, image: string, link: string, title: string, desc: string, tags: string[]}]}, {videos: [{date: string, image: string, link: string, title: string, desc: string, tags: string[]}, {date: string, image: string, link: string, title: string, desc: string, tags: string[]}]}, {videos: [{date: string, image: string, link: string, title: string, desc: string, tags: string[]}, {date: string, image: string, link: string, title: string, desc: string, tags: string[]}]}]}
+ * @type {[{image: string, title: string, link: string, date: string, desc: string, tags: string}]}
  */
 const articlesList = [
 	{
-		videos: [
-			{
-				image: 'assets/img/blockchain.webp',
-				title: '2020',
-				link: 'https://thisisyoutube.com',
-				date: '01 / 01 / 2021',
-				desc: 'Bitcoin is boomer',
-				tags: [
-					'bitcoin',
-					'boom'
-				]
-			},
-			{
-				image: 'assets/img/blockchain.webp',
-				title: '2021',
-				link: 'https://thisisyoutube.com',
-				date: '01 / 01 / 2021',
-				desc: 'Bitcoin is boomer',
-				tags: [
-					'bitcoin',
-					'boom'
-				]
-			}
+		image: 'assets/img/blockchain.webp',
+		title: '2020',
+		link: 'https://thisisyoutube.com',
+		date: '01 / 01 / 2021',
+		desc: 'Bitcoin is boomer',
+		tags: [
+			'bitcoin',
+			'boom'
 		]
 	},
 	{
-		videos: [
-			{
-				image: 'assets/img/blockchain.webp',
-				title: '2022 (page2)',
-				link: 'https://thisisyoutube.com',
-				date: '01 / 01 / 2022',
-				desc: 'Bitcoin is boomer',
-				tags: [
-					'bitcoin',
-					'boom'
-				]
-			},
-			{
-				image: 'assets/img/blockchain.webp',
-				title: '2023',
-				link: 'https://thisisyoutube.com',
-				date: '01 / 01 / 2023',
-				desc: 'Bitcoin is boomer',
-				tags: [
-					'bitcoin',
-					'boom'
-				]
-			}
+		image: 'assets/img/blockchain.webp',
+		title: '2021',
+		link: 'https://thisisyoutube.com',
+		date: '01 / 01 / 2021',
+		desc: 'Bitcoin is boomer',
+		tags: [
+			'bitcoin',
+			'boom'
 		]
 	},
 	{
-		videos: [
-			{
-				image: 'assets/img/blockchain.webp',
-				title: '2024 (page 3)',
-				link: 'https://thisisyoutube.com',
-				date: '01 / 01 / 2024',
-				desc: 'Bitcoin is boomer',
-				tags: [
-					'bitcoin',
-					'boom'
-				]
-			},
-			{
-				image: 'assets/img/blockchain.webp',
-				title: '2025',
-				link: 'https://thisisyoutube.com',
-				date: '01 / 01 / 2025',
-				desc: 'Bitcoin is boomer',
-				tags: [
-					'bitcoin',
-					'boom'
-				]
-			}
+		image: 'assets/img/blockchain.webp',
+		title: '2022 (page2)',
+		link: 'https://thisisyoutube.com',
+		date: '01 / 01 / 2022',
+		desc: 'Bitcoin is boomer',
+		tags: [
+			'bitcoin',
+			'boom'
 		]
 	},
 	{
-		videos: [
-			{
-				image: 'assets/img/blockchain.webp',
-				title: '2025 (page 4)',
-				link: 'https://thisisyoutube.com',
-				date: '01 / 01 / 2025',
-				desc: 'Bitcoin is boomer',
-				tags: [
-					'bitcoin',
-					'boom'
-				]
-			},
-			{
-				image: 'assets/img/blockchain.webp',
-				title: '2026',
-				link: 'https://thisisyoutube.com',
-				date: '01 / 01 / 2026',
-				desc: 'Bitcoin is boomer',
-				tags: [
-					'bitcoin',
-					'boom'
-				]
-			}
+		image: 'assets/img/blockchain.webp',
+		title: '2023',
+		link: 'https://thisisyoutube.com',
+		date: '01 / 01 / 2023',
+		desc: 'Bitcoin is boomer',
+		tags: [
+			'bitcoin',
+			'boom'
+		]
+	},
+	{
+		image: 'assets/img/blockchain.webp',
+		title: '2024 (page 3)',
+		link: 'https://thisisyoutube.com',
+		date: '01 / 01 / 2024',
+		desc: 'Bitcoin is boomer',
+		tags: [
+			'bitcoin',
+			'boom'
+		]
+	},
+	{
+		image: 'assets/img/blockchain.webp',
+		title: '2025',
+		link: 'https://thisisyoutube.com',
+		date: '01 / 01 / 2025',
+		desc: 'Bitcoin is boomer',
+		tags: [
+			'bitcoin',
+			'boom'
+		]
+	},
+	{
+		image: 'assets/img/blockchain.webp',
+		title: '2025 (page 4)',
+		link: 'https://thisisyoutube.com',
+		date: '01 / 01 / 2025',
+		desc: 'Bitcoin is boomer',
+		tags: [
+			'bitcoin',
+			'boom'
+		]
+	},
+	{
+		image: 'assets/img/blockchain.webp',
+		title: '2026',
+		link: 'https://thisisyoutube.com',
+		date: '01 / 01 / 2026',
+		desc: 'Bitcoin is boomer',
+		tags: [
+			'bitcoin',
+			'boom'
 		]
 	}
 ];

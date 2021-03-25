@@ -23,6 +23,18 @@ main {
     display: flex;
 }
 
+.column {
+    flex-direction: column;
+}
+
+.flex-left {
+    align-items: flex-start;
+}
+
+.ml-5 {
+    margin-left: 5%;
+}
+
 .fade__out__in {
     animation: 1500ms ease-in fade;
 }
