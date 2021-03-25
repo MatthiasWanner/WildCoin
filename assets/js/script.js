@@ -7,28 +7,10 @@ buttonBurger.addEventListener('click', () => {
 });
 
 
-// const sun = document.querySelector('#sun');
-// const moon = document.querySelector('#moon');
-// const buttonSwitch = document.querySelector('#checkbox');
 
-// buttonSwitch.addEventListener('click', () => {
-//     sun.classList.toggle('on');
-//     moon.classList.toggle('off');
-// });
+let buttonSubmit = document.getElementById('button')
+console.log(buttonSubmit)
+buttonSubmit.addEventListener('click', function(e){
+    buttonSubmit.preventDefault();
+})
 
-// const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-
-// function switchTheme(e) {
-//     if (e.target.checked) {
-//         document.documentElement.setAttribute('data-theme', 'dark');
-//         moon.style.opacity = "1";
-//         sun.style.opacity = "0"
-//     }
-//     else {
-//         document.documentElement.setAttribute('data-theme', 'light');
-//         sun.style.opacity = "1";
-//         moon.style.opacity = "0";
-//     }
-// }
-
-// toggleSwitch.addEventListener('change', switchTheme, false);

@@ -16,7 +16,6 @@ body::-webkit-scrollbar {
 
 
 
-
 .holy-grail{
     position:relative;
     top: -50px;
@@ -72,6 +71,15 @@ h1{
     text-align: center;
     padding-top: 450px;
     padding: 20px;
+    
+    color : var(--secondary-color)
+
+}
+
+.holy-aside h2{
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
 }
 
 .holy-aside ul{
@@ -292,14 +300,16 @@ h1{
     border: 1px solid rgb(223, 223, 223);
     border-radius: 10px;
     box-shadow: 2px 2px 2px rgb(199, 199, 199);
+    
 }
 
 
 #aside-left{
     display:flex; 
     flex-direction: column;
-   
+    
 }
+
 
 
 article{
