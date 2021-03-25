@@ -94,7 +94,9 @@ const btcData = async () => {
   const json = await response.json();
   const data = json.Data.Data;
   const times = data.map((obj) => obj.time);
+  
   const prices = data.map((obj) => obj.high);
+  
   return {
     times,
     prices,
@@ -179,9 +181,8 @@ const myData = async () => {
   const data = json.Data.Data;
   const times = data.map((obj) => obj.time);
   const prices = data.map((obj) => obj.high);
-  let date = new Date(prices * 1000);
-  let hours = date.getHours();
-  console.log(hours);
+  
+  
 
   return {
     times,
