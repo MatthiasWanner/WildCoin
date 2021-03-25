@@ -1,6 +1,5 @@
 let sun = document.getElementById('sun');
 let moon = document.getElementById('moon');
-
 const swapTheme = (e) => {
     switchTheme(e)
 	const theme = document.documentElement.classList;
