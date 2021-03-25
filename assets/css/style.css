@@ -350,7 +350,7 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
-    background-image: url('../img/307307.svg');
+    background-image: url('../img/moon.svg');
 }
 
 .slider #sun {
@@ -373,7 +373,7 @@ input:checked + .slider:before {
         display: none;
         width: 8vw;
         height: 8vh;
-        background-image: url('../img/Copie_de_logo-white-transparentback_1.png');
+        background-image: url('../img/WCS-logo-transparent.png');
     }
 
     li {
@@ -661,4 +661,3 @@ input:checked + .slider:before {
 
 
 }
-
