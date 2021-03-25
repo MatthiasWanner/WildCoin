@@ -5,7 +5,7 @@ const form = document.querySelector('form');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('mail');
 const messageInput = document.getElementById('msg');
-
+const modal = document.querySelector('.modal');
 // mail regex in format xxx@yyy.zzz
 const mailRegex = /.+@.+\..+/;
 
@@ -92,11 +92,20 @@ form.addEventListener('submit', (e) => {
 
   setTimeout(() => {
     if ((nameCheck === true) && (mailCheck === true) && (messageCheck === true)) {
-      window.alert(`Merci ${name}! Votre message est envoyé :)`);
+      modal.classList.remove('hidden');
+      modal.querySelector('p').innerText = `Merci ${name}! Votre message est envoyé :)`;
       nameInput.value = '';
       emailInput.value = '';
       messageInput.value = '';
-      window.location.reload();
+      messageInput.style = 'none';
+      emailInput.style = 'none';
+      nameInput.style = 'none';
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 3000);
+      setTimeout(() => {
+        modal.querySelector('p').innerText = '';
+      }, 5500);
     }
   }, 50);
 });

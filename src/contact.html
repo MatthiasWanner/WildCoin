@@ -4,102 +4,106 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="../assets/css/variables.css" rel="stylesheet"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" />
-<link rel="stylesheet" href="../assets/css/style.css" />
-<link rel="stylesheet" href="../assets/css/contact.css">
+<link rel="stylesheet" href="../assets/css/style.css"/>
+<link rel="stylesheet" href="../assets/css/contact.css"/>
 <title>WildCoin:contact</title>
 </head>
 
 <body>
-<header>
-    <div class="burger" id="burger">
-        <span></span>
-    </div>
-    <div class="theme-switch-wrapper">
+    <div id="body-container">
+        <header>
+            <div class="burger" id="burger">
+                <span></span>
+            </div>
+            <div class="theme-switch-wrapper">
     
-    <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <span class="slider round">
-        <img id="moon" src="../assets/img/307307.svg" alt="">
-        <img id="sun" src="../assets/img/sun--v2.png" alt="">
-        </span>
-    </label>
+                <label class="theme-switch" for="checkbox">
+                    <input id="checkbox" type="checkbox"/>
+                    <span class="slider round">
+                  <img alt="" id="moon" src="../assets/img/307307.svg">
+                  <img alt="" id="sun" src="../assets/img/sun--v2.png">
+                </span>
+                </label>
+            </div>
+            <div class="topnav">
+                <div class="logo-title">
+                    <a href="../index.html">
+                        <img
+                                alt="wild code school project wild coin"
+                                class="logo"
+                                src="../assets/img/Copie_de_logo-white-transparentback_1.png"
+                        />
+                    </a>
+    
+                    <!-- <a class="coin" href="index.html">wildcoin</a> -->
+                </div>
+                <nav class="nav-menu" id="nav-menu">
+                    <ul class="nav-slider">
+                        <li class="nav-slider-item">
+                            <a href="../index.html">Accueil</a>
+                        </li>
+                        <li class="nav-slider-item">
+                            <a href="../src/articles.html">Articles</a>
+                        </li>
+                        <li class="nav-slider-item">
+                            <a href="../src/ratings.html">Cours</a>
+                        </li>
+                        <li class="nav-slider-item">
+                            <a href="../src/team.html">Equipe</a>
+                        </li>
+                        <li class="nav-slider-item">
+                            <a href=""></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="contact-form-card">
+            <form>
+                <h2>Contactez-nous</h2>
+                <div id="name-cont" class="complet">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="user_name">
+                </div>
+                <div id="mail-cont" class="complet">
+                    <label for="mail">e-mail :</label>
+                    <input type="email" id="mail" name="user_mail">
+                </div>
+                <div id="msg-cont" class="complet">
+                    <label for="msg">Message :</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </div>
+                <button class="button" id="button">Envoyer</button>
+            </form>
+            <div class="hidden modal"><p></p></div>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <ul class="footer-contact">
+                    <li class="footer-contact-item">
+                        <a href="contact.html">
+                            Contactez-nous
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="logo-reseaux-sociaux">
+                <div class="logo-size">
+                    <i class="fab fa-facebook"></i>
+                </div>
+                <div class="logo-size">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="logo-size">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="logo-size">
+                    <i class="fab fa-github"></i>
+                </div>
+            </div>
+        </footer>
     </div>
-    <div class="topnav">
-    <div class="logo-title">
-        <a href="../index.html">
-        <img
-        class="logo"
-        src="../assets/img/Copie_de_logo-white-transparentback_1.png"
-        alt="wild code school project wild coin"
-        />
-    </a>
-    </div>
-    <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-slider">
-        <li class="nav-slider-item">
-            <a href="../index.html">Accueil</a>
-        </li>
-        <li class="nav-slider-item">
-            <a href="./articles.html">Articles</a>
-          </li>
-        <li class="nav-slider-item">
-            <a href="ratings.html">Cours</a>
-        </li>
-        <li class="nav-slider-item">
-            <a href="team.html">Equipe</a>
-        </li>
-        <li class="nav-slider-item">
-            <a href=""></a>
-            </li>
-        </ul>
-    </nav>
-    </div>
-</header>
-<div id="contact-form-card">
-<form >
-    <h2>Contactez-nous</h2>
-    <div id="name-cont" class="complet">
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="user_name">
-    </div>
-    <div id="mail-cont" class="complet">
-        <label for="mail">e-mail :</label>
-        <input type="email" id="mail" name="user_mail">
-    </div>
-    <div id="msg-cont" class="complet">
-        <label for="msg">Message :</label>
-        <textarea id="msg" name="user_message"></textarea>
-    </div>
-    <button class="button" id="button">Envoyer</button>
-</form>
-</div>
-<footer>
-    <div class="footer-content">
-        <ul class="footer-contact"> 
-            <li class="footer-contact-item">
-                <a href="../src/contact.html">
-                Contactez-nous
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="logo-reseaux-sociaux">
-    <div class="logo-size">
-        <i class="fab fa-facebook"></i>
-    </div>
-    <div class="logo-size">
-        <i class="fab fa-instagram"></i>
-    </div>
-    <div class="logo-size">
-        <i class="fab fa-youtube"></i>
-    </div>
-    <div class="logo-size">
-        <i class="fab fa-github"></i>
-    </div>
-    </div>
-</footer>
 <script
     src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
     data-auto-replace-svg="nest"
@@ -107,6 +111,5 @@
 <script src="../assets/js/script.js"></script>
 <script src="../assets/js/darkmode.js"></script>
 <script src="../assets/js/contact.js"></script>
-
 </body>
 </html>
