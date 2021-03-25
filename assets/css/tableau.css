@@ -1,9 +1,10 @@
 .tableau-grid{
+
     width:600px;
     height:250px;
     display:grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     box-shadow: 3px 3px 3px grey;
     border-radius: 10px;
     font-family: Roboto;
@@ -25,7 +26,6 @@
 .filters{
 
     height: 50px;
-   
     position:relative;
     bottom: -80px;
     width: 100%;
