@@ -135,9 +135,7 @@
     }
 
     .article__thumbnail {
-        align-self: center;
-        width: 5vw;
-        height: 5vw;
+        height: 60%;
     }
 
     .article__complement {

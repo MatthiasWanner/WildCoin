@@ -2,7 +2,52 @@
     display: none;
 }
 
+body .swiper-container {
+    display: none;
+}
+
 @media screen and (min-width: 992px) {
+    body .swiper-container {
+        display: flex;
+        width: 50%;
+        height: 35vh;
+        margin: 0;
+    }
+
+    .swiper-slide {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .swiper-pagination-bullet {
+        font-size: 12px;
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+    }
+
+    body .swiper-pagination-bullet {
+        opacity: 1;
+        color: var(var(--primary-color));
+        background-color: var(--secondary-color-transparent);
+    }
+
+    body .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+    }
+
+    .swiper-pagination-bullet-active {
+        color: var(--primary-color);
+    }
+
+    body .swiper-pagination-bullet-active {
+        background-color: var(--ternary-color);
+    }
+
     .carousel {
         display: unset;
         align-items: center;
