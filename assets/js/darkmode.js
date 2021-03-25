@@ -18,13 +18,13 @@ keepToggle()
 
 const swapTheme = (e) => {
 
-    if (wStorage == "dark"){
+    if ( (document.documentElement.classList.contains("theme-dark") == true)){
         console.log('light')
         theme.toggle("theme-light")
         window.localStorage.setItem('theme','light')
         document.documentElement.classList.add("theme-light")
         document.documentElement.classList.remove("theme-dark")
-    } else if (wStorage == "light"){
+    } else if ((document.documentElement.classList.contains("theme-light") == true)){
         console.log("dark")
         theme.toggle("theme-dark")
         window.localStorage.setItem('theme','dark')
