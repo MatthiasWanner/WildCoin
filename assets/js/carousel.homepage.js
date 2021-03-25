@@ -1,27 +1,3 @@
-// /**
-//  * Force a cooldown on carousel swaps
-//  * @returns {boolean}
-//  */
-// const inCooldown = () => {
-// 	if (lastSwap === void 0) {
-// 		lastSwap = new Date().getTime();
-// 	} else if (new Date().getTime() - lastSwap < cooldown) {
-// 		return true;
-// 	} else {
-// 		lastSwap = new Date().getTime();
-// 	}
-//
-// 	return false;
-// };
-//
-// for (const button of document.querySelectorAll('.carousel__number > .carousel__button')) {
-// 	button.onclick = element => {
-// 		moveToIndex(
-// 			document.getElementsByClassName('article__video'),
-// 			parseInt(element.target.textContent));
-// 	};
-// }
-
 for (const article of articlesList) {
 	const wrapper = document.createElement('div');
 	wrapper.classList.add('swiper-slide', 'grid');
@@ -36,6 +12,10 @@ for (const article of articlesList) {
 	const h2 = document.createElement('h3');
 	h2.textContent = article.title;
 
+	const date = document.createElement('p');
+	date.classList.add('article__desc');
+	date.textContent = article.desc;
+
 	const description = document.createElement('p');
 	description.textContent = article.desc;
 
@@ -44,6 +24,7 @@ for (const article of articlesList) {
 	tags.textContent = article.tags.map(tag => `#${tag}`).join(' ');
 
 	flex.appendChild(h2);
+	flex.appendChild(date);
 	flex.appendChild(description);
 	flex.appendChild(tags);
 

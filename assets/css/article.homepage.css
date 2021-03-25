@@ -46,7 +46,7 @@
 @media screen and (min-width: 992px) {
     .article {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .article__wrapper {
@@ -99,11 +99,16 @@
     .article__access:hover > p,
     .article__access:hover a {
         overflow: hidden;
-        color: var(--secondary-color);
+        color: var(--ternary-color);
+    }
+
+    .article__access:hover a {
+        font-size: 1.8rem;
+        background-color: var(--bg-header-color);
     }
 
     .article__access:hover .article__img {
-        filter: brightness(50%);
+        filter: brightness(15%);
     }
 
     .article__img {
