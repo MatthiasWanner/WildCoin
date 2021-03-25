@@ -1,13 +1,7 @@
-document.onkeydown = key => {
-	switch (key.key) {
-		case 'ArrowLeft':
-			moveDirection('left');
-			break;
-		case 'ArrowRight':
-			moveDirection('right');
-			break;
+const articles = document.querySelectorAll('.article__access');
 
-		default:
-			break;
+document.onkeydown = ({ key }) => {
+	if (key > 0 && key <= articles.length) {
+		document.querySelectorAll('.article__access a')[key - 1].click();
 	}
 };

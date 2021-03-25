@@ -1,12 +1,61 @@
 let sun = document.getElementById('sun');
 let moon = document.getElementById('moon');
-const swapTheme = (e) => {
-    switchTheme(e)
-	const theme = document.documentElement.classList;
+let classList = document.documentElement.classList
+let wStorage = window.localStorage.getItem('theme')
+const theme = document.documentElement.classList;
 
-	theme.toggle('theme-dark');
-	theme.toggle('theme-light');
-};
+
+
+
+
+const keepToggle = () => {
+
+
+    
+  
+
+    if (wStorage == "light"){
+        theme.add("theme-light")
+    } else if (wStorage == "dark"){
+        theme.add("theme-dark")
+    }
+ 
+
+
+}
+
+
+keepToggle()
+
+const swapTheme = (e) => {
+
+    console.log(wStorage)
+
+
+
+
+    if (wStorage == "dark"){
+        theme.toggle("theme-light")
+        window.localStorage.setItem('theme','light')
+        document.documentElement.classList.add("theme-light")
+        document.documentElement.classList.remove("theme-dark")
+        
+    } else {
+        theme.toggle("theme-dark")
+        window.localStorage.setItem('theme','dark')
+        document.documentElement.classList.remove("theme-light")
+        document.documentElement.classList.add("theme-dark")
+    }
+
+
+
+
+
+  
+
+
+
+}
 
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
