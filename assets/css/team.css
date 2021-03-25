@@ -273,12 +273,12 @@ body{
 
     .profil-img{
         margin-top: 10px;
-        width: 15vh;
-        height: 15vh;
+        width: 10vw;
+        height: 10vw;
     }
 
     .profil-description{
-        font-size: 1em;
+        font-size: 0.75em;
         height: auto;
         margin-top: 10px;
     }
