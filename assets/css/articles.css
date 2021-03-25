@@ -107,9 +107,9 @@ h1{
 .holy-aside h2{
     text-align: center;
     margin-bottom: 20px;
-    border: 1px solid rgb(223, 223, 223);
+  
     border-radius: 10px;
-    box-shadow: 2px 2px 2px rgb(199, 199, 199);
+    
 }
 
 
@@ -297,10 +297,10 @@ h1{
 .holy-aside h2{
     text-align: center;
     margin-bottom: 20px;
-    border: 1px solid rgb(223, 223, 223);
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgb(199, 199, 199);
-    
+    text-align: center;
+    margin-bottom: 20px;
+    border: 0px;
+    box-shadow: 0px 0px 0px black;
 }
 
 
@@ -330,10 +330,7 @@ article{
    
 }
 
-.holy-aside h2{
-    text-align: center;
-    margin-bottom: 20px;
-}
+
 
 
 
