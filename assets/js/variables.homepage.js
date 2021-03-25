@@ -35,7 +35,7 @@ const updateIndex = newIndex => {
  */
 const articlesList = [
 	{
-		image: 'assets/img/blockchain.webp',
+		image: 'assets/img/articles/thumbnails/blockchain.webp',
 		title: '2020',
 		link: 'https://thisisyoutube.com',
 		date: '01 / 01 / 2021',
@@ -46,7 +46,7 @@ const articlesList = [
 		]
 	},
 	{
-		image: 'assets/img/blockchain.webp',
+		image: 'assets/img/articles/thumbnails/blockchain.webp',
 		title: '2021',
 		link: 'https://thisisyoutube.com',
 		date: '01 / 01 / 2021',
@@ -57,7 +57,7 @@ const articlesList = [
 		]
 	},
 	{
-		image: 'assets/img/blockchain.webp',
+		image: 'assets/img/articles/thumbnails/blockchain.webp',
 		title: '2022 (page2)',
 		link: 'https://thisisyoutube.com',
 		date: '01 / 01 / 2022',
@@ -68,7 +68,7 @@ const articlesList = [
 		]
 	},
 	{
-		image: 'assets/img/blockchain.webp',
+		image: 'assets/img/articles/thumbnails/blockchain.webp',
 		title: '2023',
 		link: 'https://thisisyoutube.com',
 		date: '01 / 01 / 2023',
@@ -79,7 +79,7 @@ const articlesList = [
 		]
 	},
 	{
-		image: 'assets/img/blockchain.webp',
+		image: 'assets/img/articles/thumbnails/blockchain.webp',
 		title: '2024 (page 3)',
 		link: 'https://thisisyoutube.com',
 		date: '01 / 01 / 2024',
@@ -90,7 +90,7 @@ const articlesList = [
 		]
 	},
 	{
-		image: 'assets/img/blockchain.webp',
+		image: 'assets/img/articles/thumbnails/blockchain.webp',
 		title: '2025',
 		link: 'https://thisisyoutube.com',
 		date: '01 / 01 / 2025',
@@ -101,7 +101,7 @@ const articlesList = [
 		]
 	},
 	{
-		image: 'assets/img/blockchain.webp',
+		image: 'assets/img/articles/thumbnails/blockchain.webp',
 		title: '2025 (page 4)',
 		link: 'https://thisisyoutube.com',
 		date: '01 / 01 / 2025',
@@ -112,7 +112,7 @@ const articlesList = [
 		]
 	},
 	{
-		image: 'assets/img/blockchain.webp',
+		image: 'assets/img/articles/thumbnails/blockchain.webp',
 		title: '2026',
 		link: 'https://thisisyoutube.com',
 		date: '01 / 01 / 2026',
