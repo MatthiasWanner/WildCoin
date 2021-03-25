@@ -6,6 +6,11 @@
     --secondary-color: rgb(83, 99, 144);
     --ternary-color: #C7C7C7;
     --secondary-color-transparent: rgba(83, 99, 144, .7);
+
+    /* Thumbnails in team page */
+    --thumbnail-background: #e6d1d1;
+    --thumbnail-border: 1px solid #ED6C6D;
+    --thumbnail-shadow-color: grey; 
 }
 
 .theme-dark:root {
@@ -19,6 +24,11 @@
     --secondary-color: #818CAB;
     --secondary-color-transparent: rgba(129, 140, 171, .7);
     --ternary-color: #818CAB;
+
+    /* Thumbnails in team page */
+    --thumbnail-background: #122044;
+    --thumbnail-border: 2px solid #767390;
+    --thumbnail-shadow-color:#5b647d;
 }
 
 :root {

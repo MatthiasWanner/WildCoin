@@ -15,8 +15,7 @@ body{
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    padding-top: var(--height-header-lg);
-    padding-bottom: var(--height-header-lg);
+    background-color: var(--background-color);
 }
 
 /* Team */
@@ -24,21 +23,24 @@ body{
     font-family: 'Roboto';
     font-weight: normal;
     font-size: 1.5em;
-
+    color: var(--primary-color);
 }
 
 .text-container{
     padding: 10px;
+    color: var(--primary-color);
 }
 
 .team-title{
     width: 100%;
     text-align: center;
     font-size: 3em;
+    color: var(--primary-color);
 }
 
 .text-container h3{
     font-size: 2em;
+    color: var(--primary-color);
 }
 
 .text-description{
@@ -47,6 +49,7 @@ body{
     text-align: center;
     padding: 0px 10px 10px;
     margin-top: 10px;
+    color: var(--primary-color);
 }
 
 .container{
@@ -72,8 +75,9 @@ body{
 }
 
 .item{
+    color: var(--primary-color);
     position: relative;
-    background-color: #e6d1d1;
+    background-color: var(--thumbnail-background);
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
@@ -81,8 +85,8 @@ body{
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ED6C6D;
-    box-shadow: 3px 2px 7px grey;
+    border: var(--thumbnail-border);
+    box-shadow: 3px 2px 7px var(--thumbnail-shadow-color);
     border-radius: 10px;
     max-height: 20vh;
     transform: translateY(0) scale(1);
@@ -182,6 +186,10 @@ body{
     .header{
         height: 40vh;
     }
+    
+    .item{
+        max-height: 40vh;
+    }
 
     .open{
         max-height: 300vh;
@@ -227,16 +235,24 @@ body{
       .item, .invert-container{
         flex-direction: column;
         width: 20vw;
+        max-height: 20vw;
         align-items: center;
         justify-content: flex-start;
         flex-wrap: nowrap;
-        min-height: 20vw;
+        /* min-height: 20vw; */
+    }
+
+    .button{
         cursor: pointer;
     }
 
     .close:hover{
         -webkit-transform: scale(1.1) translateY(0);
         transform: scale(1.1);
+    }
+
+    .open{
+        max-height: 200vh;
     }
 
     .open:hover{
@@ -257,12 +273,12 @@ body{
 
     .profil-img{
         margin-top: 10px;
-        width: 15vh;
-        height: 15vh;
+        width: 10vw;
+        height: 10vw;
     }
 
     .profil-description{
-        font-size: 1em;
+        font-size: 0.75em;
         height: auto;
         margin-top: 10px;
     }
