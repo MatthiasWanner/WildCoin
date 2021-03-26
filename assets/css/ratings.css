@@ -237,6 +237,8 @@ footer {
     border-top: 1px solid rgba(129, 129, 129, 0.089);
 }
 
+
+
 @keyframes opacity {
     from {
         opacity: 0;
@@ -254,13 +256,14 @@ h1 {
 
 h2 {
     font-size: 1.25em;
+    color: var(--primary-color)
 }
 
 h1,
 h2,
 p {
     font-family: "Red Hat Text", sans-serif;
-    color: #616161;
+    color: var(--primary-color)
 }
 
 .container {
