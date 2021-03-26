@@ -62,12 +62,14 @@ input:hover{
     outline: none;
     transform: scale(1.05);
     background-color: var(--thumbnail-background);
+    color: var(--primary-color);
 }
 
 input:focus{
     outline: none;
     transform: scale(1.05);
     background-color: var(--thumbnail-background);
+    color: var(--primary-color);
 }
 
 textarea:hover{
@@ -80,6 +82,7 @@ textarea:focus{
     outline: none;
     transform: scale(1.05);
     background-color: var(--thumbnail-background);
+    color: var(--primary-color);
 }
 
 
@@ -112,6 +115,9 @@ h2 {
 }
 
 .button{
+    background-color: var(--thumbnail-background);
+    color: var(--primary-color);
+    font-size: 1em;
     margin-top: 30px;
     margin-bottom: 60px;
     width: 150px;
