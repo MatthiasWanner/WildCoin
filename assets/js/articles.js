@@ -199,7 +199,7 @@ const myData = async () => {
   const prices = data.map((obj) => obj.high);
   let date = new Date(prices * 1000);
   let hours = date.getHours();
-  console.log(hours);
+  
 
   return {
     times,
