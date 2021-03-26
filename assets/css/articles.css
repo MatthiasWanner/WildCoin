@@ -6,7 +6,7 @@ body::-webkit-scrollbar {
 
   body {
     -ms-overflow-style: none;  
-    scrollbar-width: none;  
+    
   } 
 
 .holy-grail{
@@ -317,7 +317,7 @@ article{
 
 
 #strong{
-    font-weight: strong;
+    font-weight: bold;
     font-size: 15px;
    
 }
