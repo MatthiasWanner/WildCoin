@@ -6,6 +6,7 @@ let select = document.getElementById("checkbox")
 
 
 const keepToggle = () => {
+  
     if (wStorage === "light"){
         theme.add("theme-light")
         sun.style.opacity = "1";
