@@ -320,7 +320,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(4vh);
+    transform: translateX(35px);
 }
 
 .slider.round {
@@ -330,31 +330,24 @@ input:checked + .slider:before {
 .slider img {
     position: relative;
     width: 20px;    
-  
     transition: 0.4s;
 }
 
 .slider.round:before {
     border-radius: 50%;
-<<<<<<< HEAD
-    background-image: url('../img/moon.svg');
-=======
     background-image: url('../img/sun.png');
->>>>>>> 4320dcca510669ab470ddda617dff9a4c0fdfa7b
 }
 
 .slider #sun {
     position: relative;
     top: 7px;
     left: -17px;
-   
     transition: 0.4s;
     width: 26px;
 }
 .slider #moon {
     position: relative;
-    opacity: 0;
-    right: -43px;
+    left: 44px;
     top: 4px;
 }
 
@@ -667,3 +660,4 @@ input:checked + .slider:before {
 
 
 }
+
