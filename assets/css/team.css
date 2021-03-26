@@ -20,7 +20,7 @@ body{
 
 /* Team */
 .text{
-    font-family: 'Roboto';
+    font-family: 'Roboto', 'sans-serif';
     font-weight: normal;
     font-size: 1.5em;
     color: var(--primary-color);
@@ -44,7 +44,7 @@ body{
 }
 
 .text-description{
-    font-family: 'Roboto';
+    font-family: 'Roboto', 'sans-serif';
     font-size: 1.5em;
     text-align: center;
     padding: 0px 10px 10px;

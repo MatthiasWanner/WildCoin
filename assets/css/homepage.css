@@ -14,7 +14,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: calc(100vh - var(--height-header) * 2);
     color: var(--primary-color);
 }
 
@@ -81,7 +80,8 @@ main {
     display: none;
 }
 
-.graph {
+body .table-grid,
+.table__select {
     display: none;
 }
 
@@ -91,6 +91,10 @@ main {
 
 /* || Large */
 @media screen and (min-width: 992px) {
+    main {
+        height: calc(100vh - var(--height-header) * 2);
+    }
+
     #themeSwap {
         display: unset;
     }

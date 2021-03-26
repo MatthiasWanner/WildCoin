@@ -6,7 +6,7 @@ body::-webkit-scrollbar {
 
   body {
     -ms-overflow-style: none;  
-    scrollbar-width: none;  
+    
   } 
 
 .holy-grail{
@@ -188,7 +188,7 @@ article{
 
 
 
-@media screen and ( min-width: 575px){
+@media screen and ( min-width: 900px){
    
     .carousel {
         display: block;
@@ -317,7 +317,7 @@ article{
 
 
 #strong{
-    font-weight: strong;
+    font-weight: bold;
     font-size: 15px;
    
 }
@@ -412,6 +412,7 @@ container {
 #tableauSurvey {
     border: 1px solid var(--secondary-color);
     width: 90%;
+    margin-top: 70px;
    
     text-align:center;
 }
@@ -508,7 +509,7 @@ container {
   left:020px;
 }
 .carousel__button--next {
-  right:-150px;
+  display:none;
   
  
 }

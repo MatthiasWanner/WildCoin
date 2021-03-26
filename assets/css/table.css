@@ -54,3 +54,13 @@
     color: var(--primary-color);
     background-color: var(--ternary-color);
 }
+
+@media screen and (min-width: 992px) {
+    body .table-grid {
+        display: grid;
+    }
+
+    .table__select {
+        display: flex;
+    }
+}
