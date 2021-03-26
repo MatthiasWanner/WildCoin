@@ -94,7 +94,7 @@ form.addEventListener('submit', (e) => {
   setTimeout(() => {
     if ((nameCheck === true) && (mailCheck === true) && (messageCheck === true)) {
       popupContainer.classList.remove('hidden-container');
-      modal.querySelector('p').innerText = `Merci ${name}! Votre message est envoyé :)`;
+      modal.querySelector('p').innerText = `🚀 Merci ${name}! Votre message est envoyé :)`;
       nameInput.value = '';
       emailInput.value = '';
       messageInput.value = '';

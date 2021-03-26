@@ -34,7 +34,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 80vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,7 +195,7 @@ body {
 }
 
 .tableauSurvey {
-    margin-top: -400px;
+    margin-top: -518px;
     width: 50%;
     height: 400px;
     position: relative;
@@ -374,7 +374,6 @@ card img {
 }
 
 @media (max-width: 576px) {
-
     cards img {
         width: 30px;
     }
@@ -392,7 +391,7 @@ card img {
 
     .filters {
         padding-left: 20%;
-        z-index: 0;
+        z-index: 999;
         padding-right: 20%;
         height: 80px;
         width: 100%;
@@ -576,7 +575,7 @@ card img {
         margin: 0;
         padding: 0;
         width: 100%;
-        height: 80vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -630,9 +629,6 @@ card img {
         width: 100%;
     }
     .cosmos {
-        width: 100%;
-    }
-    .eth {
         width: 100%;
     }
 
