@@ -195,7 +195,7 @@ body {
 }
 
 .tableauSurvey {
-    margin-top: -518px;
+    margin-top: -418px;
     width: 50%;
     height: 400px;
     position: relative;
@@ -575,7 +575,7 @@ card img {
         margin: 0;
         padding: 0;
         width: 100%;
-        height: 100vh;
+        height: 80vh;
         display: flex;
         align-items: center;
         justify-content: space-around;
