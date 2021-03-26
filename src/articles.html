@@ -1,89 +1,75 @@
 <!DOCTYPE html>
-<html lang="fr" class="theme-light">
+<html class="theme-light" lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <link href="../assets/css/variables.css" rel="stylesheet"/>
 
 
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/articles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/articles.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
     <title>WildCoin Arcicle</title>
 </head>
 <body>
 
-  <header>
-    <div class="burger" id="burger">
-        <span></span>
-    </div>
-    <div class="theme-switch-wrapper">
+    <header>
+        <div class="burger" id="burger">
+            <span></span>
+        </div>
+        <div class="theme-switch-wrapper">
 
-      <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <span class="slider round">
-          <img id="moon" src="../assets/img/moon.svg" alt="">
-          <img id="sun" src="../assets/img/sun.png" alt="">
+            <label class="theme-switch" for="checkbox">
+                <input id="checkbox" type="checkbox"/>
+                <span class="slider round">
+          <img alt="" id="moon" src="../assets/img/moon.svg">
+          <img alt="" id="sun" src="../assets/img/sun.png">
         </span>
-      </label>
-    </div>
-    <div class="topnav">
-      <div class="logo-title">
-        <a href="../index.html">
-          <img
-          class="logo"
-          src="../assets/img/WCS-logo-transparent.png"
-          alt="wild code school project wild coin"
-        />
-      </a>
-
-       
-      </div>
-      <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-slider">
-          <li class="nav-slider-item">
-            <a href="../index.html">Accueil</a>
-          </li>
-          <li class="nav-slider-item">
-            <a href="./articles.html">Articles</a>
-          </li>
-          <li class="nav-slider-item">
-            <a href="ratings.html">Cours</a>
-          </li>
-          <li class="nav-slider-item">
-            <a href="team.html">Equipe</a>
-          </li>
-          <li class="nav-slider-item">
-              <a href=""></a>
-            </li>
-        </ul>
-      </nav>
-    </div>
-
-</header>
+            </label>
+        </div>
+        <div class="topnav">
+            <div class="logo-title">
+                <a href="../index.html">
+                    <img
+                            alt="wild code school project wild coin"
+                            class="logo"
+                            src="../assets/img/WCS-logo-transparent.png"
+                    />
+                </a>
 
 
+            </div>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-slider">
+                    <li class="nav-slider-item">
+                        <a href="../index.html">Accueil</a>
+                    </li>
+                    <li class="nav-slider-item">
+                        <a href="./articles.html">Articles</a>
+                    </li>
+                    <li class="nav-slider-item">
+                        <a href="ratings.html">Cours</a>
+                    </li>
+                    <li class="nav-slider-item">
+                        <a href="team.html">Equipe</a>
+                    </li>
+                    <li class="nav-slider-item">
+                        <a href=""></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-
-
-
-
-
-
-
-
-
+    </header>
 
 
     <div class="holy-grail">
         <div class="holy-c1">
-
-
 
 
         </div>
@@ -102,197 +88,304 @@
         </div>
         <div></div>
         <div id="aside-left">
-            <div id="tableauSurvey" class="tableauSurvey">
+            <div class="tableauSurvey" id="tableauSurvey">
                 <container class="container_2">
-                  <cards id="tableauBorder" class="cards">
-                    <myChart class="myChart">
-                      <card class="asset-info">
-                        <div class="title"></div>
-                        <div class="details">
-                          <h2 class="asset-price" id="myPrice">MY PRICE</h2>
-                        </div>
-                      </card>
-                      <canvas id="myChart"></canvas>
-                    </myChart>
-                    <div id="select-div">
-                        <div class="filters">
-                            <div class="currencyChoose">
-                              <label for="select-currency">Choose a currency:</label>
-                              <select name="select-currency" id="select-currency">
-                                <option value="EUR">EUR</option>
-                                <option value="USD">USD</option>
-                                <option value="JPY">JPY</option>
-                              </select>
-                            </div>
+                    <cards class="cards" id="tableauBorder">
+                        <myChart class="myChart">
+                            <card class="asset-info">
+                                <div class="title"></div>
+                                <div class="details">
+                                    <h2 class="asset-price" id="myPrice">MY PRICE</h2>
+                                </div>
+                            </card>
+                            <canvas id="myChart"></canvas>
+                        </myChart>
+                        <div id="select-div">
+                            <div class="filters">
+                                <div class="currencyChoose">
+                                    <label for="select-currency">Choose a currency:</label>
+                                    <select id="select-currency" name="select-currency">
+                                        <option value="EUR">EUR</option>
+                                        <option value="USD">USD</option>
+                                        <option value="JPY">JPY</option>
+                                    </select>
+                                </div>
 
-                            <div class="cryptoChoixe">
-                              <label for="select-crypto">Choose a crypto:</label>
-                              <select name="select-crypto" id="select-crypto">
-                                <option value="BTC">BTC</option>
-                                <option value="ETH">ETH</option>
-                                <option value="LTC">LTC</option>
-                                <option value="XRP">XRP</option>
-                                <option value="BNB">BNB</option>
-                                <option value="ATOM">COSMO</option>
-                              </select>
+                                <div class="cryptoChoixe">
+                                    <label for="select-crypto">Choose a crypto:</label>
+                                    <select id="select-crypto" name="select-crypto">
+                                        <option value="BTC">BTC</option>
+                                        <option value="ETH">ETH</option>
+                                        <option value="LTC">LTC</option>
+                                        <option value="XRP">XRP</option>
+                                        <option value="BNB">BNB</option>
+                                        <option value="ATOM">COSMO</option>
+                                    </select>
+                                </div>
                             </div>
-                          </div>
-                      </div>
-                  </cards>
+                        </div>
+                    </cards>
 
                 </container>
 
-              </div>
+            </div>
 
 
-
-
-
-
-
-
-              <div class="carousel-wrapper">
+            <div class="carousel-wrapper">
                 <div class="carousel">
-                  <img class="carousel__photo initial" src="../assets/img/carousel_article/citibank.png" alt="article_photo_placeholder">
-                  <img class="carousel__photo" src="../assets/img/carousel_article/solana.png" alt="article_photo_placeholder">
-                  <img class="carousel__photo" src="../assets/img/carousel_article/nft.png" alt="article_photo_placeholder">
-                  <img class="carousel__photo" src="../assets/img/carousel_article/ripple.png" alt="article_photo_placeholder">
-                  <img class="carousel__photo" src="../assets/img/carousel_article/turtledex.png" alt="article_photo_placeholder">
-                  <img class="carousel__photo" src="../assets/img/carousel_article/etf.png" alt="article_photo_placeholder">
-                  <img class="carousel__photo" src="../assets/img/carousel_article/scam.png" alt="article_photo_placeholder">
+                    <img alt="article_photo_placeholder" class="carousel__photo initial"
+                         src="../assets/img/carousel_article/citibank.png">
+                    <img alt="article_photo_placeholder" class="carousel__photo"
+                         src="../assets/img/carousel_article/solana.png">
+                    <img alt="article_photo_placeholder" class="carousel__photo"
+                         src="../assets/img/carousel_article/nft.png">
+                    <img alt="article_photo_placeholder" class="carousel__photo"
+                         src="../assets/img/carousel_article/ripple.png">
+                    <img alt="article_photo_placeholder" class="carousel__photo"
+                         src="../assets/img/carousel_article/turtledex.png">
+                    <img alt="article_photo_placeholder" class="carousel__photo"
+                         src="../assets/img/carousel_article/etf.png">
+                    <img alt="article_photo_placeholder" class="carousel__photo"
+                         src="../assets/img/carousel_article/scam.png">
 
-                  <img class="carousel__photo" src="../assets/img/carousel_article/swiss.png" alt="article_photo_placeholder">
-                  <img class="carousel__photo" src="../assets/img/carousel_article/precursor.png" alt="article_photo_placeholder">
-                  <img class="carousel__photo" src="../assets/img/carousel_article/brave.png" alt="article_photo_placeholder">
-                  <img class="carousel__photo" src="../assets/img/carousel_article/bull-run.png" alt="article_photo_placeholder">
-                  <img class="carousel__photo" src="../assets/img/carousel_article/swap.png" alt="article_photo_placeholder">
+                    <img alt="article_photo_placeholder" class="carousel__photo"
+                         src="../assets/img/carousel_article/swiss.png">
+                    <img alt="article_photo_placeholder" class="carousel__photo"
+                         src="../assets/img/carousel_article/precursor.png">
+                    <img alt="article_photo_placeholder" class="carousel__photo"
+                         src="../assets/img/carousel_article/brave.png">
+                    <img alt="article_photo_placeholder" class="carousel__photo"
+                         src="../assets/img/carousel_article/bull-run.png">
+                    <img alt="article_photo_placeholder" class="carousel__photo"
+                         src="../assets/img/carousel_article/swap.png">
 
 
-
-
-                  <div class="carousel__button--next"></div>
-                  <div class="carousel__button--prev"></div>
+                    <div class="carousel__button--next"></div>
+                    <div class="carousel__button--prev"></div>
                 </div>
-              </div>
-            <div class="holy-aside">
-
-           </div>
-
+            </div>
+            <div class="holy-aside"></div>
         </div>
 
         <div class="holy-main">
             <article>
-            <img src="../assets/img/proof-of-work.png" alt="">
-         <h1>   Proof of Work (POW). Pourquoi cela fait-il la puissance du réseau Bitcoin ?</h1>
+                <img alt="" src="../assets/img/proof-of-work.png">
+                <h1>Proof of Work (POW). Why is this the power of the Bitcoin network?</h1>
+                <p>Proof of Work (POW). Why is this the power of the Bitcoin network?</p>
+                <h2>POW</h2>
+                <p>
+                    The proof of work consists of a piece of information that is extremely expensive to obtain but very
+                    easy to verify, which the miner must produce to validate its candidate block and which every node in
+                    the network can easily and quickly verify.
+                    <br>
+                    The proof-of-work procedure is performed on a candidate block that collects all the transactions
+                    that the node has in its own mempool that it decides to add. These transactions are verified
+                    independently by each node, but are not confirmed, i.e. they are not yet part of the blockchain,
+                    because they have not yet been inserted into a valid block.
+                    <br>
+                    When the miner calculates the hash of the blockheader, it actually considers all the transactions
+                    present in the block, because the merkleroot of the candidate block summarizes all the transactions
+                    that have been inserted in the block, because it is the "digest" value of the merkle tree.
+                    <br>
+                    The merkle tree is nothing more than a structure of transaction hashes that progressively summarizes
+                    all the transactions it has examined, until it reaches the top, which is a single global hash that
+                    is the "fingerprint" of all the transactions.
+                <h2>La procédure de validation</h2>
+                <p>
+                    The POW is thus obtained by a procedure by which the miner creates the hash of the blockheader, in a
+                    repeated way, until it can find a value of this hash which is lower than a fixed value repeatedly,
+                    until he can find a value of this hash which is lower than a value fixed by the protocol
+                    (target) by the protocol (target) which can vary thanks to an auto-adjustment every 2016 blocks. In
+                    this case, we speak of a "difficulty adjustment" procedure which reacts automatically to the
+                    hashrate available network by calibrating the difficulty and ensuring that the Bitcoin network
+                    produces 1 block every 10 minutes, no less. every 10 minutes, no more and no less.
+                    <br>
+                    To be able to satisfy this value, the miner, makes many attempts by changing some
+                    parameters of the header, including the nonce and extra nonce.
+                </p>
 
-    Les gens sont souvent confus à propos de la “proof of work” dans le réseau Bitcoin et pourtant, il s’agit de l’une des caractéristiques de sécurité les plus importantes du protocole et donne donc à Bitcoin ses caractéristiques de valeur enviable que tout le monde lui attribue. De nos jours, Bitcoin fait également l’objet d’une grande couverture médiatique grâce à une augmentation de l’adoption, même par les acteurs institutionnels, et de nombreuses entreprises se lancent dans le minage.
-
-    <h2>POW</h2>
-    <p>
-    La proof of work consiste en un élément d’information extrêmement coûteux à obtenir mais très facile à vérifier, que le mineur doit produire pour valider son bloc candidat et que chaque nœud du réseau peut vérifier facilement et rapidement.
-<br>
-    La procédure de preuve du travail est effectuée sur un bloc candidat qui rassemble toutes les transactions que le nœud a dans son propre mempool qu’il décide d’ajouter. Ces transactions sont vérifiées indépendamment par chaque nœud, mais ne sont pas confirmées, c’est-à-dire qu’elles ne font pas encore partie de la blockchain, car elles n’ont pas encore été insérées dans un bloc valide.
-<br>
-    Lorsque le mineur calcule l’hash du blockheader, il considère en fait toutes les transactions présentes dans le bloc, car le merkleroot du bloc candidat résume toutes les transactions qui ont été insérées dans le bloc, parce que c’est la valeur “digest” de l’arbre de merkle.
-<br>
-    L’arbre de merkle (merkle tree) n’est rien d’autre qu’une structure de hashs de transactions qui résume progressivement toutes les transactions qu’il a examinées, jusqu’à ce qu’il atteigne le sommet, qui est un seul hash global qui est l'”empreinte” de toutes les transactions.
-    <br>
-    <h2>La procédure de validation</h2>
-    Le POW est donc obtenu par une procédure par laquelle le mineur crée le hash du blockheader, de manière répétée, jusqu’à ce qu’il puisse trouver une valeur de ce hash qui soit inférieure à une valeur fixée par le protocole (target) qui peut varier grâce à un auto-ajustement tous les 2016 blocs. Dans ce cas, on parle d’une procédure de “réglage de la difficulté” qui réagit automatiquement au hashrate disponible dans le réseau en calibrant la difficulté et en s’assurant que le réseau Bitcoin produit 1 bloc toutes les 10 minutes, ni plus ni moins.
-<br>
-    proof of work bitcoin minage
-    la valeur target de la difficulté actuelle
-    Pour pouvoir satisfaire cette valeur, le mineur, fait de nombreuses tentatives en changeant certains paramètres de l’en-tête, y compris le nonce et le extra nonce.
-<br>
-    <h2>La récompense au mineur</h2>
-    Parmi les transactions présentes dans le bloc, la première est la transaction coinbase. Cette transaction permet au mineur de s’octroyer la récompense pour avoir exploité le bloc selon la valeur établie par les règles du protocole.
-<br>
-    Les frais des transactions insérées font également partie de la récompense du mineur. C’est pourquoi le mineur est incité à ajouter autant de transactions que possible, en commençant par celles dont les frais sont les plus élevés. Toutefois, les règles du protocole autorisent encore des blocs comportant très peu de transactions.
-<br>
-    Une fois cela fait, le bloc est propagé au réseau et tous les autres nœuds vérifient le respect du protocole, puis vérifient le bloc. Si le bloc est vérifié, il devient le TIP, c’est-à-dire le bloc le plus élevé.
-<br>
-    Si le bloc avait une récompense différente, qui n’est pas compatible avec la valeur actuelle autorisée par le protocole, il serait ici rejeté par les autres nœuds et le mineur n’aurait aucune récompense. Cet événement s’inscrit dans le cadre du mécanisme d’avantage/punition du système d’incitation économique de Bitcoin.
-<br>
-    J’espère avoir été utile pour comprendre le fonctionnement du mécanisme de validation des transactions du réseau Bitcoin. Si vous avez des questions, vous pouvez poster un commentaire et me contacter, je resterai disponible. Je suis également heureux si vous souhaitez me joindre sur mon site web ou sur mon linkedin.
-
-              
+                <h2>La récompense au mineur</h2>
+                Among the transactions present in the block, the first is the coinbase transaction. This transaction
+                allows the miner to get the reward for exploiting the block according to the value established by the
+                protocol rules.
+                <br>
+                The costs of the inserted transactions are also part of the miner's reward. This is why the miner is
+                encouraged to add as many transactions as possible, starting with those with the highest fees. However,
+                the protocol rules still allow for blocks with very few transactions.
+                Once this is done, the block is propagated to the network and all the other nodes check for compliance
+                with the protocol, then verify the block. If the block is verified, it becomes the TIP, the highest
+                block.
+                <br>
+                If the block had a different reward, which is not compatible with the current value allowed by the
+                protocol, it would be rejected by the other nodes and the miner would have no reward. This event is part
+                of the benefit/punishment mechanism of Bitcoin's economic incentive system.
+                I hope I've been helpful in understanding how the Bitcoin network's transaction validation mechanism
+                works. If you have any questions, you can post a comment and contact me, I will remain available. I am
+                also happy if you want to reach me on my website or linkedin.
             </article>
             <article>
-                <img src="../assets/img/jami.png" alt="">
+                <img alt="" src="../assets/img/Jami.png">
                 <p>
-
-                    <span id="strong">                   Aujourd’hui, je veux parler d’un système de messagerie à source ouverte qui est vraiment différent des autres alternatives disponibles telles que whatsapp, telegram, signal et tous les dérivés de signal. On en parle beaucoup ces derniers temps à cause du changement de politique de whatsapp et beaucoup de gens sont allés ailleurs, notamment vers le telegram et signal. Mais en réalité, ces applications alternatives à whatsapp constituent une amélioration de votre vie privée ?</span>
+                    <span id="strong">
+                        Today I want to talk about an open source messaging system that is really different
+                        from the other alternatives available such as whatsapp, telegram, signal and all the signal
+                        derivatives. There has been a lot of talk about it lately because of the whatsapp policy change
+                        and many people have gone elsewhere, especially to telegram and signal.
+                        But in reality, these alternative applications to whatsapp are an improvement to your privacy?
+                    </span>
                     <br>
-                   Signal?
-                   Par exemple, si l’on considère signal, il est opensource et le dépôt est sur github. Cela semble être une excellente alternative à whatsapp, mais …. Si vous allez examiner les exigences à l’url https://github.com/aqnouch/Signal-Setup-Guide vous verrez la liste suivante (au moment où j’écris cet article) des systèmes et logiciels nécessaires à l’installation d’un serveur. Je parle du serveur parce que c’est le serveur qui détermine la gestion des comptes et des métadonnées et qui est responsable gérer les données:
-                   <br>
-                   Requirements (signal)
-                   <br>
-                   <h2>Twilio (pour les SMS OTP)</h2>
-                   Amazon S3 (pour Avatar et pièces jointes, peut être sous-titré avec MinIO)
-                   Amazon SQS (pour la file d’attente CDS, peut être remplacée par LocalStack)
-                   Firebase (pour les notifications “push”)
-                   Comme vous pouvez le voir, signal utilise des services externes pour fonctionner, dont amazon. Ces exigences sont en fait des conditions préalables nécessaires à remplir, au niveau de l’installation du serveur, pour qu’il fonctionne correctement. C’est-à-dire ce qui doit être mis en place pour rendre l’installation possible et fonctionner. Donc, pour ne pas utiliser whatsapp à cause de l’attaque contre la vie privée, nous sommes confrontés à une alternative qui, bien qu’étant open source, dépend d’autres services de grandes entreprises et nous sommes alors revenus à la case départ. Si notre communication passe par des outils qui appartiennent ou sont gérés par d’autres entreprises, nous aurons en quelque sorte une interférence de ces entreprises sur nos données.
-                   <br>
-                   <h2>Telegram?</h2>
-                   Que peut-on dire sur telegram ? Pouvons-nous voir le code des serveurs de telegram (j’ai mentionné le serveur, qui est l’unité qui gère les connexions et trie les communications) ? Est-il dans le domaine public ? Non. Pourquoi pas ? On ne le sait pas. Le fait que nous ne puissions pas connaître le code source du serveur, ni la structure avec laquelle il est constitué, les librairies qu’il utilise et la façon dont il gère les données, est un problème important pour notre vie privée.
-                   <br>
-                   La chose que on sait sur telegram est d’envoyer vos messages cryptés à quelque truc. Comme vous n’avez pas le code source, vous ne savez pas exactement ce qui est fait sur ce serveur avec vos données. Il n’est donc pas très logique de recommander telegram comme solution pour améliorer la confidentialité de vos communications textuelles. En fin de compte, nous sommes toujours dans un domaine invérifiable et non transparent.
-                   <br>
-                   <h2>Jami!</h2>
-                   Il nous faut donc une alternative qui soit réellement décentralisée et qui n’ait pas d’impact sur notre vie privée. Une véritable alternative est jami. Un logiciel que j’ai pu essayer et analyser pendant quelques semaine de test et j’ai pu voir à quel point il est vraiment bon de protéger notre vie privée et de ne pas laisser nos métadonnées sur des serveurs tiers.
-                   <br>
-                   jami est un logiciel open source, décentralisé et peer2peer. Qu’est-ce que cela signifie ? c’est-à-dire qu’il n’utilise pas de serveur central et que la communication se fait en fait entre les deux pairs avec un cryptage de bout en bout. il n’utilise pas non plus de serveur central qui peut ensuite surveiller les métadonnées.
-                   <br>
-                   <h2>Nos métadonnées</h2>
-                   Qu’est-ce que les métadonnées ? Les métadonnées sont toutes les informations entourant une communication, telles que 1) la date à laquelle la communication a eu lieu, 2) l’identité des parties connectées à la communication, 3) la durée de la communication, etc. Des informations extrêmement importantes que les services centralisés utiliseront tôt ou tard pour gagner de l’argent grâce à votre vie privée. Ces métadonnées fournissent un profil précis de votre situation, de vos comportements et même de vos connaissances. Ils sont donc très utiles pour construire votre alter-ego numérique.
-                   <br>
-                   Avec jami, nous allons résoudre le problème à la source, en empêchant la collecte et le stockage des métadonnées, grâce à la décentralisation que le système permet. En fait, nous n’avons que deux terminaux qui communiquent et toutes les données (métadonnées) de communication sont stockées localement.
-                   <br>
-                   <h2>Les clés cryptographiques</h2>
-                   Rien ne réside sur un serveur ou un tiers. Nous sommes seuls responsables de la communication et de nos données et toute communication est cryptée avec des clés qui n’appartiennent qu’à nous. Comme toujours, lorsque nous sommes les propriétaires exclusifs des clés cryptographiques, nous sommes propriétaires du contenu que nous échangeons avec l’autre partie. La décentralisation permet également d’éviter les points intermédiaires où les métadonnées peuvent être surveillées.
-                   <br>
-                   jami n’a pas besoin d’un serveur central et votre compte n’est donc stocké que localement. lorsque vous voulez utiliser votre compte, vous n’avez pas besoin de vous connecter à un service et vous ne devez fournir aucune donnée ou numéro de téléphone à qui que ce soit, ni même un courriel. Jami n’a donc pas besoin de s’enregistrer et n’a pas besoin de numéros de référence pour fonctionner.
-                   <br>
-                   Le mot de passe que vous indiquez au démarrage de Jami est utilisé uniquement pour crypter les données localement sur votre appareil. Les messages sont cryptés avec une clé RSA.
-                   <br>
-                   jami est disponible pour windows, linux, android, ios et est facile à installer. Le logiciel est disponible à l’adresse https://jami.net/ où vous pouvez également trouver des informations sur l’installation qui, comme mentionné, est très simple. Vous trouverez également un accès au dépôt de code source qui est ouvert.
-                   <br>
-                   J’espère avoir fourni des informations et des ressources à forte valeur ajoutée et avoir été utile. Si vous le souhaitez, vous pouvez me contacter pour toute question ou précision concernant mon profil sur linkedin ou vous pouvez me contacter et me suivre et soutenir sur patreon  avec des conseils et du contenu exclusif.
-            </article>
-            <article id="crypto">
-             <h1> What is cryptocurrency?</h1>
-Cryptocurrency is a form of payment that can be exchanged online for goods and services. Many companies have issued their own currencies, often called tokens, and these can be traded specifically for the good or service that the company provides. Think of them as you would arcade tokens or casino chips. You’ll need to exchange real currency for the cryptocurrency to access the good or service.
-
-Cryptocurrencies work using a technology called blockchain. Blockchain is a decentralized technology spread across many computers that manages and records transactions. Part of the appeal of this technology is its security.
-            </article>
-            <article id="blockchain">
-              <h1>What's a blockchain ?</h1>
-              A blockchain is a growing list of records, called blocks, that are linked using cryptography.Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data (generally represented as a Merkle tree). By design, a blockchain is resistant to modification of its data. This is because once recorded, the data in any given block cannot be altered retroactively without alteration of all subsequent blocks.
+                <h2>Signal?</h2>
+                For example, if we consider signal, it is opensource and the repository is on github. It
+                seems to be a great be a great alternative to whatsapp, but .... If you go and look at the
+                requirements at the url https://github.com/aqnouch/Signal-Setup-Guide you will see the following
+                list (at the time of writing) of the systems and software needed to install a server. I mention the
+                server because it is the server that determines the management of accounts and metadata and is
+                responsible for managing the data:
                 <br>
-For use as a distributed ledger, a blockchain is typically managed by a peer-to-peer network collectively adhering to a protocol for inter-node communication and validating new blocks. Although blockchain records are not unalterable, blockchains may be considered secure by design and exemplify a distributed computing system with high Byzantine fault tolerance. The blockchain has been described as "an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way".
-              <br>
-The blockchain was invented by a person (or group of people) using the name Satoshi Nakamoto in 2008 to serve as the public transaction ledger of the cryptocurrency bitcoin.
-<br> The identity of Satoshi Nakamoto remains unknown to date. The invention of the blockchain for bitcoin made it the first digital currency to solve the double-spending problem without the need of a trusted authority or central server. The bitcoin design has inspired other applications and blockchains that are readable by the public and are widely used by cryptocurrencies. The blockchain is considered a type of payment rail.Private blockchains have been proposed for business use but Computerworld called the marketing of such privatized blockchains without a proper security model "snake oil".However, others have argued that permissioned blockchains, if carefully designed, may be more decentralized and therefore secure in practice than permissionless ones.
+                <a href="https://github.com/aqnouch/Signal-Setup-Guide">Requirements (Signal)</a>
+                <br>
+
+                <h2>Twilio (for OTP SMS)</h2>
+                Amazon S3 (for Avatar and attachments, can be subbed with MinIO) Amazon SQS (for CDS queue, can be
+                replaced by LocalStack) Firebase (for push notifications) As you can see, signal uses external services
+                to run, including amazon. These requirements are in fact necessary preconditions to be met, at the
+                server installation level, for it to work properly. That is, what needs to be in place to make the
+                installation possible and work. So, in order not to use whatsapp because of the attack on privacy, we
+                are faced with an alternative that, although open source, depends on other services of large companies
+                and then we are back to square one. If our communication goes through tools that are owned or managed by
+                other companies, we will somehow have interference from those companies on our data.
+                <br>
+                <h2>Telegram?</h2>
+                What can we say about telegram? Can we see the code of the telegram servers (I mentioned the server,
+                which is the unit that manages connections and sorts communications)? Is it in the public domain? No.
+                Why not? We don't know it. The fact that we can't know the source code of the server, nor the structure
+                with which it is made up, the libraries it uses and the way it handles data, is a big problem for our
+                privacy.
+                <br>
+                The thing we know about telegram is that it sends your encrypted messages to something. Since you don't
+                have the source code, you don't know exactly what is being done on that server with your data. So it
+                doesn't make much sense to recommend telegram as a solution to improve the privacy of your text
+                communications. At the end of the day, we are still in an unverifiable and non-transparent domain.
+                <h2>Jami!</h2>
+                So we need an alternative that is truly decentralized and does not impact our privacy. A real
+                alternative is Jami. A software that I could try and analyze during a few weeks of testing and I could
+                see how good it really is to protect our privacy and not leave our metadata on third party servers.
+                <br>
+                Jami is an open source, decentralized and peer2peer software. What does that mean? It means that it
+                doesn't use a central server and the communication is actually between the two peers with end-to-end
+                encryption. it also doesn't use a central server that can then monitor the metadata.
+                <br>
+
+                <h2>Our metadatas</h2>
+                What is metadata? Metadata is all the information surrounding a communication, such as 1) the date the
+                communication took place, 2) the identity of the parties connected to the communication, 3) the duration
+                of the communication, etc. Extremely important information that centralized services will sooner or
+                later use to make money from your privacy. These metadata provide an accurate profile of your situation,
+                your behaviors and even your knowledge. They are therefore very useful to build your digital alter-ego.
+                <br>
+                With Jami, we will solve the problem at the source, preventing the collection and storage of metadata,
+                thanks to the decentralization that the system allows. In fact, we only have two terminals that
+                communicate and all communication data (metadata) is stored locally.
+
+                <h2>Les clés cryptographiques</h2>
+                Nothing resides on any server or third party. We are solely responsible for the communication and our
+                data and all communication is encrypted with keys that belong only to us. As always, when we are the
+                sole owners of the cryptographic keys, we own the content we exchange with the other party.
+                Decentralization also avoids intermediate points where metadata can be monitored.
+                <br>
+                Jami doesn't need a central server, so your account is only stored locally. When you want to use your
+                account, you don't need to connect to a service and you don't have to provide any data or phone number
+                to anyone, not even an email. Jami does not need to register and does not need reference numbers to
+                work.
+                <br>
+                The password you enter when starting Jami is only used to encrypt data locally on your device. Messages
+                are encrypted with an RSA key.
+                <br>
+                Jami is available for windows, linux, android, ios and is easy to install. The software is available at
+                <a href="https://Jami.net/">https://Jami.net</a> where you can also find information about the
+                installation which, as mentioned, is
+                very simple. You will also find access to the source code repository which is open.
+                <br>
+                I hope I have provided some value-added information and resources and have been helpful. If you wish,
+                you can contact me with any questions or clarifications regarding my profile on linkedin or you can
+                contact me and follow and support me on patreon with tips and exclusive content.
+            </article>
+
+            <article id="crypto">
+                <h1> What is cryptocurrency?</h1>
+                Cryptocurrency is a form of payment that can be exchanged online for goods and services. Many companies
+                have issued their own currencies, often called tokens, and these can be traded specifically for the good
+                or service that the company provides. Think of them as you would arcade tokens or casino chips. You’ll
+                need to exchange real currency for the cryptocurrency to access the good or service.
+
+                Cryptocurrencies work using a technology called blockchain. Blockchain is a decentralized technology
+                spread across many computers that manages and records transactions. Part of the appeal of this
+                technology is its security.
+            </article>
+
+            <article id="blockchain">
+                <h1>What's a blockchain ?</h1>
+                A blockchain is a growing list of records, called blocks, that are linked using cryptography.Each block
+                contains a cryptographic hash of the previous block, a timestamp, and transaction data (generally
+                represented as a Merkle tree). By design, a blockchain is resistant to modification of its data. This is
+                because once recorded, the data in any given block cannot be altered retroactively without alteration of
+                all subsequent blocks.
+                <br>
+                For use as a distributed ledger, a blockchain is typically managed by a peer-to-peer network
+                collectively adhering to a protocol for inter-node communication and validating new blocks. Although
+                blockchain records are not unalterable, blockchains may be considered secure by design and exemplify a
+                distributed computing system with high Byzantine fault tolerance. The blockchain has been described as
+                "an open, distributed ledger that can record transactions between two parties efficiently and in a
+                verifiable and permanent way".
+                <br>
+                The blockchain was invented by a person (or group of people) using the name Satoshi Nakamoto in 2008 to
+                serve as the public transaction ledger of the cryptocurrency bitcoin.
+                <br> The identity of Satoshi Nakamoto remains unknown to date. The invention of the blockchain for
+                bitcoin made it the first digital currency to solve the double-spending problem without the need of a
+                trusted authority or central server. The bitcoin design has inspired other applications and blockchains
+                that are readable by the public and are widely used by cryptocurrencies. The blockchain is considered a
+                type of payment rail.Private blockchains have been proposed for business use but Computerworld called
+                the marketing of such privatized blockchains without a proper security model "snake oil".However, others
+                have argued that permissioned blockchains, if carefully designed, may be more decentralized and
+                therefore secure in practice than permissionless ones.
             </article>
 
             <article id="nvidia">
-              <h1>RTX 3060 Ether mining accidentally unlocked by Nvidia’s own update</h1>
-              A software update released by Nvidia inadvertently bypassed the Ether (ETH) mining block the firm placed on its own GeForce RTX 3060 graphics card.
-<br>
-A spokesperson for Nvidia confirmed on Tuesday that the latest 470.05 driver update was mistakenly released with code intended for use only by Nvidia developers, which allowed for the removal of the hash rate limiter.
-<br>
-“A developer driver inadvertently included code used for internal development which removes the hash rate limiter on RTX 3060 in some configurations,” said an Nvidia spokesperson, as reported by The Verge.
-<br>
-In February, Nvidia decided to intentionally hamper the Ether-mining effectiveness of its RTX 3060 series graphics cards to prevent a demand-induced shortage caused by crypto miners. A three-way handshake between the hardware, the software and the computer firmware was supposed to ensure that the card recognized when it was being used to mine Ether and cut its computational power in half, from 50 megahertz per second to 25 MH/s.
-<br>
-But the back door that allowed the card’s hash rate limiter to be bypassed came from the software side, and it was released by Nvidia itself. The offending beta update has since been pulled by the software company, but versions of it have already made it out onto the internet.
-<br>
-Elsewhere on Tuesday, Andreas Schilling of tech website HardwareLuxx tested reports that custom edits to a computer’s BIOS were required to bypass the hash rate limiter. After testing driver 470.05 with a custom and standard BIOS, Schilling confirmed that no special modifications were required and that Nvidia’s driver removed the hash rate limiter itself.
-<br>
-While the news only compounds the misery of gamers waiting to upgrade their graphics cards, the gaffe by Nvidia might not necessarily result in Ether miners eating up the next supply of GPU shipments. According to Hexus, the latest reports suggest that the affected driver can only unlock one RTX 3060 at a time, rendering it unsuitable for use in large mining-farms, for the time being at least.
-<br>
-Initial rumors suggested a custom modification had bypassed the RTX 3060’s hash rate limiter last Wednesday, allowing it to mine Ether at full capacity. It was later revealed that the mod had not enabled the card to mine Ether specifically but had been rigged to enable the mining of another GPU-mineable cryptocurrency, Ravencoin (RVN).
+                <h1>RTX 3060 Ether mining accidentally unlocked by Nvidia’s own update</h1>
+                A software update released by Nvidia inadvertently bypassed the Ether (ETH) mining block the firm placed
+                on its own GeForce RTX 3060 graphics card.
+                <br>
+                A spokesperson for Nvidia confirmed on Tuesday that the latest 470.05 driver update was mistakenly
+                released with code intended for use only by Nvidia developers, which allowed for the removal of the hash
+                rate limiter.
+                <br>
+                “A developer driver inadvertently included code used for internal development which removes the hash
+                rate limiter on RTX 3060 in some configurations,” said an Nvidia spokesperson, as reported by The Verge.
+                <br>
+                In February, Nvidia decided to intentionally hamper the Ether-mining effectiveness of its RTX 3060
+                series graphics cards to prevent a demand-induced shortage caused by crypto miners. A three-way
+                handshake between the hardware, the software and the computer firmware was supposed to ensure that the
+                card recognized when it was being used to mine Ether and cut its computational power in half, from 50
+                megahertz per second to 25 MH/s.
+                <br>
+                But the back door that allowed the card’s hash rate limiter to be bypassed came from the software side,
+                and it was released by Nvidia itself. The offending beta update has since been pulled by the software
+                company, but versions of it have already made it out onto the internet.
+                <br>
+                Elsewhere on Tuesday, Andreas Schilling of tech website HardwareLuxx tested reports that custom edits to
+                a computer’s BIOS were required to bypass the hash rate limiter. After testing driver 470.05 with a
+                custom and standard BIOS, Schilling confirmed that no special modifications were required and that
+                Nvidia’s driver removed the hash rate limiter itself.
+                <br>
+                While the news only compounds the misery of gamers waiting to upgrade their graphics cards, the gaffe by
+                Nvidia might not necessarily result in Ether miners eating up the next supply of GPU shipments.
+                According to Hexus, the latest reports suggest that the affected driver can only unlock one RTX 3060 at
+                a time, rendering it unsuitable for use in large mining-farms, for the time being at least.
+                <br>
+                Initial rumors suggested a custom modification had bypassed the RTX 3060’s hash rate limiter last
+                Wednesday, allowing it to mine Ether at full capacity. It was later revealed that the mod had not
+                enabled the card to mine Ether specifically but had been rigged to enable the mining of another
+                GPU-mineable cryptocurrency, Ravencoin (RVN).
 
 
             </article>
@@ -300,23 +393,16 @@ Initial rumors suggested a custom modification had bypassed the RTX 3060’s has
 
 
         <div class="holy-aside">
-          <h2>ARTICLES RÉCENTS</h2>
-          <ul>
-              <li><a href="#">Proof of Work (POW). Pourquoi cela fait-il la puissance du réseau Bitcoin ?</a></li>
-              <li><a href="#">Un système de messagerie décentralisé ?</a></li>
-              <li><a href="#">Créer une paire de clés cryptographiques pour signer un document</a></li>
-              <li><a href="#">Le réseau de téléphonie mobile et la vie privée</a></li>
-              <li><a href="#">Bitcoin: Fongibilité, Coinjoin et Lightning network</a></li>
-          </ul>
+            <h2>RECENT ARTICLES</h2>
+            <ul>
+                <li><a href="#">Proof of Work (POW). Why is this the power of the Bitcoin network?</a></li>
+                <li><a href="#">A decentralized messaging system?</a></li>
+                <li><a href="#">Creating a cryptographic key pair to sign a document</a></li>
+                <li><a href="#">The cell phone network and privacy</a></li>
+                <li><a href="#">Bitcoin: Fungibility, Coinjoin and Lightning network</a></li>
+            </ul>
         </div>
-
     </div>
-
-
-
-
-
-
 
 
     <footer>
@@ -346,13 +432,10 @@ Initial rumors suggested a custom modification had bypassed the RTX 3060’s has
     </footer>
 
 
-
-
-
-<script src="../assets/js/articles.js"></script>
-<script src="../assets/js/darkmode.js"></script>
-<script src="../assets/js/script.js"></script>
-<script
+    <script src="../assets/js/articles.js"></script>
+    <script src="../assets/js/darkmode.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script
             data-auto-replace-svg="nest"
             src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
 </body>
