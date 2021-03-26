@@ -80,10 +80,7 @@ main {
     display: none;
 }
 
-body .table-grid {
-    display: none;
-}
-
+body .table-grid,
 .table__select {
     display: none;
 }
