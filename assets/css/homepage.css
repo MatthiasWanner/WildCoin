@@ -11,7 +11,10 @@ body {
 }
 
 main {
-    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: calc(100vh - var(--height-header) * 2);
     color: var(--primary-color);
 }
 
