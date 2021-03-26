@@ -297,8 +297,8 @@ footer {
     height: 40px;
     cursor: pointer;
     position: absolute;
-    top: 25px;
-    left: -50px;
+    top: 20px;
+    left: -35px;
     transition: 0.4s;
     background-color: #CCCCCC;
 }
@@ -350,6 +350,7 @@ input:checked + .slider:before {
     left: 44px;
     top: 4px;
 }
+
 
 @media only screen and (min-width: 576px) {
     .burger {
