@@ -8,8 +8,12 @@ let select = document.getElementById("checkbox")
 const keepToggle = () => {
     if (wStorage === "light"){
         theme.add("theme-light")
+        sun.style.opacity = "1";
+        moon.style.opacity = "0";
     } else if (wStorage === "dark"){
         theme.add("theme-dark")
+        moon.style.opacity = "1";
+        sun.style.opacity = "0"
         select.click()
     }
 }
