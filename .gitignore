@@ -1,5 +1,9 @@
-node_modules
-.vscode
+.idea/
+.vscode/
 package.json
 package-lock.json
-**/.DS_Store 
+node_modules
+dist
+.cache
+.eslintrc.json
+.DS_Store

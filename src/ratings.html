@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="theme-light" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../assets/css/variables.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/ratings.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Red+Hat+Text:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <title>WildCoin Rating Page</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="burger" id="burger">
+        <span></span>
+      </div>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <span class="slider round">
+            <img id="moon" src="../assets/img/moon.svg" alt="" />
+            <img id="sun" src="../assets/img/sun.png" alt="" />
+          </span>
+        </label>
+      </div>
+      <div class="topnav">
+        <div class="logo-title">
+          <a href="../index.html">
+            <img
+              class="logo"
+              src="../assets/img/WCS-logo-transparent.png"
+              alt="wild code school project wild coin"
+            />
+          </a>
+
+          <!-- <a class="coin" href="index.html">wildcoin</a> -->
+        </div>
+        <nav class="nav-menu" id="nav-menu">
+          <ul class="nav-slider">
+            <li class="nav-slider-item">
+              <a href="../index.html">Home</a>
+            </li>
+            <li class="nav-slider-item">
+              <a href="./articles.html">Articles</a>
+            </li>
+            <li class="nav-slider-item">
+              <a href="ratings.html">Ratings</a>
+            </li>
+            <li class="nav-slider-item">
+              <a href="team.html">Team</a>
+            </li>
+            <li class="nav-slider-item">
+              <a href=""></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <container class="container">
+      <cards class="cards">
+        <bitcoin class="btc">
+          <card class="asset-info">
+            <div class="title">
+              <img
+                src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/btc.svg"
+                width="10%" alt="BTC_LOGO"
+              />
+              <h1>Bitcoin</h1>
+            </div>
+            <div class="details">
+              <h2 class="asset-price" id="btcPrice">BTC PRICE</h2>
+            </div>
+          </card>
+          <canvas id="btcChart"></canvas>
+        </bitcoin>
+
+        <cosmos class="cosmos">
+          <card class="asset-info">
+            <div class="title">
+              <img
+                src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/atm.svg"
+                width="10%" alt="ATM_LOGO"
+              />
+              <h1>Cosmos</h1>
+            </div>
+            <div class="details">
+              <h2 class="asset-price" id="atomPrice">ATOM PRICE</h2>
+            </div>
+          </card>
+          <canvas id="cosmosChart"></canvas>
+        </cosmos>
+
+        <ethereum class="ethereum">
+          <card class="asset-info">
+            <div class="title">
+              <img
+                src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/eth.svg"
+                width="10%" alt="ETH_LOGO"
+              />
+              <h1>Ethereum</h1>
+            </div>
+            <div class="details">
+              <h2 class="asset-price" id="ethPrice">ETH PRICE</h2>
+            </div>
+          </card>
+          <canvas id="ethereumChart"></canvas>
+        </ethereum>
+
+        <ltc class="ltc">
+          <card class="asset-info">
+            <div class="title">
+              <img
+                src="https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/ltc.svg"
+                width="10%" alt="LTC_LOGO"
+              />
+              <h1>LTC</h1>
+            </div>
+            <div class="details">
+              <h2 class="asset-price" id="ltcPrice">LTC PRICE</h2>
+            </div>
+          </card>
+          <canvas id="ltcChart"></canvas>
+        </ltc>
+
+        <xrp class="xrp">
+          <card class="asset-info">
+            <div class="title">
+              <img
+                src="../assets/img/logos/xrp.svg"
+                width="10%"
+              />
+              <h1>XRP</h1>
+            </div>
+            <div class="details">
+              <h2 class="asset-price" id="xrpPrice">XRP PRICE</h2>
+            </div>
+          </card>
+          <canvas id="xrpChart"></canvas>
+        </xrp>
+        <bnb class="bnb">
+          <card class="asset-info">
+            <div class="title">
+              <img src="../assets/img/logos/bnb.svg" width="10%" />
+              <h1>BNB</h1>
+            </div>
+            <div class="details">
+              <h2 class="asset-price" id="bnbPrice">BNB PRICE</h2>
+            </div>
+          </card>
+          <canvas id="bnbChart"></canvas>
+        </bnb>
+      </cards>
+    </container>
+
+    <div id="tableauSurvey" class="tableauSurvey">
+      <container class="container_2">
+        <cards id="tableauBorder" class="cards">
+          <myChart class="myChart">
+            <card class="asset-info">
+              <div class="title"></div>
+              <div class="details">
+                <h2 class="asset-price" id="myPrice">MY PRICE</h2>
+              </div>
+            </card>
+            <canvas id="myChart"></canvas>
+          </myChart>
+        </cards>
+      </container>
+    </div>
+
+    <div class="filters">
+      <div class="currencyChoose">
+        <label for="select-currency">Devise:</label>
+        <select name="select-currency" id="select-currency">
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+          <option value="JPY">JPY</option>
+        </select>
+      </div>
+
+      <div class="cryptoChoixe">
+        <label for="select-crypto">Crypto:</label>
+        <select name="select-crypto" id="select-crypto">
+          <option value="BTC">BTC</option>
+          <option value="ETH">ETH</option>
+          <option value="LTC">LTC</option>
+          <option value="XRP">XRP</option>
+          <option value="BNB">BNB</option>
+          <option value="ATOM">COSMO</option>
+        </select>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <ul class="footer-contact">
+          <li class="footer-contact-item">
+            <a href="../src/contact.html"> Contact-us </a>
+          </li>
+        </ul>
+      </div>
+      <div class="logo-reseaux-sociaux">
+        <div class="logo-size">
+          <i class="fab fa-facebook"></i>
+        </div>
+        <div class="logo-size">
+          <i class="fab fa-instagram"></i>
+        </div>
+        <div class="logo-size">
+          <i class="fab fa-youtube"></i>
+        </div>
+        <div class="logo-size">
+          <i class="fab fa-github"></i>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+    <script src="../assets/js/darkmode.js"></script>
+  </body>
+</html>
