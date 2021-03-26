@@ -395,7 +395,7 @@ card img {
         padding-right: 20%;
         height: 80px;
         width: 100%;
-        background-color: var(--secondary-color);
+        background-color: var(--shadow-header-color);
         position: fixed;
 
         color: rgba(255, 255, 255, 0.493);
@@ -516,7 +516,7 @@ card img {
 
     .filters {
         justify-content: center;
-        background-color: var(--heading-color);
+        background-color: var(--shadow-header-color);
     }
 
     .container {
