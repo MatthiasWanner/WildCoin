@@ -155,7 +155,7 @@ nav {
     width: 100vh;
     height: 84vh;
     transition-duration: 0.4s;
-    transform: translateX(-700px);
+    transform: translateX(-900px);
     opacity: 1;
     background-color: #0000008F;
 }
@@ -293,12 +293,12 @@ footer {
 }
 
 .slider {
-    width: 75px;
+    width: 80px;
     height: 40px;
     cursor: pointer;
     position: absolute;
-    top: 25px;
-    left: -50px;
+    top: 20px;
+    left: -35px;
     transition: 0.4s;
     background-color: #CCCCCC;
 }
@@ -320,7 +320,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(4vh);
+    transform: translateX(35px);
 }
 
 .slider.round {
@@ -330,33 +330,27 @@ input:checked + .slider:before {
 .slider img {
     position: relative;
     width: 20px;    
-  
     transition: 0.4s;
 }
 
 .slider.round:before {
     border-radius: 50%;
-<<<<<<< HEAD
-    background-image: url('../img/moon.svg');
-=======
     background-image: url('../img/sun.png');
->>>>>>> 4320dcca510669ab470ddda617dff9a4c0fdfa7b
 }
 
 .slider #sun {
     position: relative;
     top: 7px;
     left: -17px;
-   
     transition: 0.4s;
     width: 26px;
 }
 .slider #moon {
     position: relative;
-    opacity: 0;
-    right: -43px;
+    left: 44px;
     top: 4px;
 }
+
 
 @media only screen and (min-width: 576px) {
     .burger {
@@ -667,3 +661,4 @@ input:checked + .slider:before {
 
 
 }
+
