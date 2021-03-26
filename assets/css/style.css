@@ -155,7 +155,7 @@ nav {
     width: 100vh;
     height: 84vh;
     transition-duration: 0.4s;
-    transform: translateX(-700px);
+    transform: translateX(-900px);
     opacity: 1;
     background-color: #0000008F;
 }
