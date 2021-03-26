@@ -761,7 +761,7 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
-    background-image: url("./assets/moon.svg");
+    background-image: url("../img/moon.svg");
 }
 
 .slider #sun {

@@ -293,7 +293,7 @@ footer {
 }
 
 .slider {
-    width: 75px;
+    width: 80px;
     height: 40px;
     cursor: pointer;
     position: absolute;
@@ -336,11 +336,7 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
-<<<<<<< HEAD
     background-image: url('../img/moon.svg');
-=======
-    background-image: url('../img/sun.png');
->>>>>>> 4320dcca510669ab470ddda617dff9a4c0fdfa7b
 }
 
 .slider #sun {
