@@ -391,7 +391,7 @@ card img {
 
     .filters {
         padding-left: 20%;
-        z-index: 999;
+        z-index: 0;
         padding-right: 20%;
         height: 80px;
         width: 100%;
