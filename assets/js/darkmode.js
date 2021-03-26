@@ -12,7 +12,6 @@ const keepToggle = () => {
         theme.add("theme-dark")
         select.click()
     }
-    
 }
 
 keepToggle()
@@ -35,7 +34,7 @@ const swapTheme = (e) => {
         document.documentElement.classList.add("theme-dark")
     }
 
-    function swapTheme(e) {
+   
         if (e.target.checked) {
             moon.style.opacity = "1";
             sun.style.opacity = "0"
@@ -44,9 +43,6 @@ const swapTheme = (e) => {
             sun.style.opacity = "1";
             moon.style.opacity = "0";
         }    
-    }
-        
-
 }
 
 
@@ -54,7 +50,4 @@ const swapTheme = (e) => {
 
 
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-
-
-
 toggleSwitch.addEventListener('change', swapTheme, false);
