@@ -39,7 +39,7 @@ const swapTheme = (e) => {
 
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
-function switchTheme(e) {
+function swapTheme(e) {
     if (e.target.checked) {
         moon.style.opacity = "1";
         sun.style.opacity = "0"
