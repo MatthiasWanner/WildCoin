@@ -1,11 +1,11 @@
-.tableau__wrapper {
+.table__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 40%;
 }
 
-.tableau-grid {
+.table-grid {
     font-family: Roboto, sans-serif;
     display: grid;
     height: 20vh;
@@ -17,23 +17,23 @@
     grid-template-rows: 1fr 1fr;
 }
 
-.tableau-grid img {
+.table-grid img {
     width: 20px;
 }
 
-.tableau-grid div {
+.table-grid div {
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.tableau__logo {
+.table__logo {
     width: 50px;
     height: 50px;
 }
 
-.tableau__price {
+.table__price {
     align-self: flex-start;
 }
 
