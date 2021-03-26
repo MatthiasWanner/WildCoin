@@ -110,7 +110,7 @@
     }
 
     .article__access:hover .article__img {
-        filter: brightness(15%);
+        filter: blur(4px) brightness(30%);
     }
 
     .article__img {
