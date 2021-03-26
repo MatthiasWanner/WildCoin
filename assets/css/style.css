@@ -336,7 +336,7 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
-    background-image: url('../img/307307.svg');
+    background-image: url('../img/moon.svg');
 }
 
 .slider #sun {
@@ -663,4 +663,3 @@ input:checked + .slider:before {
 
 
 }
-
