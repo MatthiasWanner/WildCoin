@@ -5,6 +5,7 @@ const form = document.querySelector('form');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('mail');
 const messageInput = document.getElementById('msg');
+const popupContainer = document.querySelector('.popup-container');
 const modal = document.querySelector('.modal');
 // mail regex in format xxx@yyy.zzz
 const mailRegex = /.+@.+\..+/;
@@ -92,7 +93,7 @@ form.addEventListener('submit', (e) => {
 
   setTimeout(() => {
     if ((nameCheck === true) && (mailCheck === true) && (messageCheck === true)) {
-      modal.classList.remove('hidden');
+      popupContainer.classList.remove('hidden-container');
       modal.querySelector('p').innerText = `Merci ${name}! Votre message est envoyé :)`;
       nameInput.value = '';
       emailInput.value = '';
@@ -100,12 +101,12 @@ form.addEventListener('submit', (e) => {
       messageInput.style = 'none';
       emailInput.style = 'none';
       nameInput.style = 'none';
+      setTimeout(() => { modal.classList.remove('hidden'); }, 50);
+      setTimeout(() => { modal.classList.add('hidden'); }, 3000);
       setTimeout(() => {
-        modal.classList.add('hidden');
-      }, 3000);
-      setTimeout(() => {
+        popupContainer.classList.add('hidden-container');
         modal.querySelector('p').innerText = '';
-      }, 5500);
+      }, 4000);
     }
   }, 50);
 });
