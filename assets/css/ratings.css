@@ -34,7 +34,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,7 +195,7 @@ body {
 }
 
 .tableauSurvey {
-    margin-top: -518px;
+    margin-top: -400px;
     width: 50%;
     height: 400px;
     position: relative;
@@ -374,6 +374,7 @@ card img {
 }
 
 @media (max-width: 576px) {
+
     cards img {
         width: 30px;
     }
@@ -575,7 +576,7 @@ card img {
         margin: 0;
         padding: 0;
         width: 100%;
-        height: 100vh;
+        height: 80vh;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -629,6 +630,9 @@ card img {
         width: 100%;
     }
     .cosmos {
+        width: 100%;
+    }
+    .eth {
         width: 100%;
     }
 

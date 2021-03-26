@@ -179,7 +179,9 @@ const myData = async () => {
   );
   const json = await response.json();
   const data = json.Data.Data;
-  const times = data.map((obj) => obj.time);
+  const times = data.map((obj) => {obj.time});
+  
+  
   const prices = data.map((obj) => obj.high);
   
   
@@ -386,6 +388,7 @@ async function printBtcChart() {
 
 async function printLtcChart() {
   let { times, prices } = await ltcData();
+  
 
   let ltcChart = document.getElementById("ltcChart").getContext("2d");
 
