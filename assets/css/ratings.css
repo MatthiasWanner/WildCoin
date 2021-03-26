@@ -195,13 +195,11 @@ body {
 }
 
 .tableauSurvey {
-    margin-top: -398px;
-    margin-right: 280px;
+    margin-top: -518px;
     width: 50%;
-    height: 300px;
+    height: 400px;
     position: relative;
     right: 20px;
-
 }
 
 .filters {
@@ -397,7 +395,7 @@ card img {
         padding-right: 20%;
         height: 80px;
         width: 100%;
-        background-color: var(--shadow-header-color);
+        background-color: var(--secondary-color);
         position: fixed;
 
         color: rgba(255, 255, 255, 0.493);
@@ -577,7 +575,7 @@ card img {
         margin: 0;
         padding: 0;
         width: 100%;
-        height: 80vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -615,7 +613,13 @@ card img {
         position: absolute;
     }
 
-    
+    container {
+        width: 10%;
+        height: 30%;
+        padding-bottom: 0px;
+
+        top: 0px;
+    }
 
     .btc {
         width: 100%;
@@ -648,9 +652,8 @@ card img {
     }
     #tableauSurvey {
         border: 0px solid var(--secondary-color);
-        width: 500px;
+        width: 900px;
         top: 30px;
-
     }
 
     .btc,
@@ -676,7 +679,7 @@ card img {
 
     .myChart {
         display: grid;
-        max-width: 500px;
+        max-width: 300%;
         min-width: 500px;
         grid-template-columns: 1fr;
         grid-template-rows: minmax(50px, 60px) 1fr;

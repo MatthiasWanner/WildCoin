@@ -35,23 +35,22 @@ const swapTheme = (e) => {
         document.documentElement.classList.add("theme-dark")
     }
 
-
-
-}
-
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-
-function swapTheme(e) {
-    if (e.target.checked) {
-        moon.style.opacity = "1";
-        sun.style.opacity = "0"
+    function swapTheme(e) {
+        if (e.target.checked) {
+            moon.style.opacity = "1";
+            sun.style.opacity = "0"
+        }
+        else {
+            sun.style.opacity = "1";
+            moon.style.opacity = "0";
+        }    
     }
-    else {
-        sun.style.opacity = "1";
-        moon.style.opacity = "0";
-    }    
+        
+
 }
-    
+
+
+
 
 
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
