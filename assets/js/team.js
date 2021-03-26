@@ -81,6 +81,7 @@ const article = {
     pictureContainer.classList.add('container', 'profil-img');
     const profilPicture = new Image();
     profilPicture.src = this.picture;
+    profilPicture.alt = `${this.name} profil picture`;
     pictureContainer.appendChild(profilPicture);
     const textDiv = document.createElement('div');
     textDiv.classList.add('text-description');
