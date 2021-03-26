@@ -17,7 +17,6 @@ body {
     margin: 0;
     padding-top: var(--height-header);
     padding-bottom: var(--height-header);
-    font-display: swap;
     background-color: var(--background-color);
 }
 
@@ -186,17 +185,16 @@ footer {
     font-size: var(--font-size);
     cursor: pointer;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-contact {
     display: flex;
     align-items: center;
     list-style-type: none;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
+    padding: 0;
+    margin: 0;
 }
 
 /* Footer Animation */
@@ -384,11 +382,6 @@ input:checked + .slider:before {
         flex-direction: row;
         height: var(--height-header);
         padding: 0;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        margin-inline-start: 0;
-        margin-inline-end: 0;
-        padding-inline-start: 0;
     }
 
     .nav-slider-item {
@@ -428,6 +421,7 @@ input:checked + .slider:before {
         height: var(--height-header);
         margin: 0;
         width: 30vw;
+        padding: 0;
     }
 
     .footer-contact {
@@ -435,6 +429,9 @@ input:checked + .slider:before {
         width: 30vw;
         height: var(--height-header);
         font-weight: 600;
+        padding: 0;
+        margin: 0;
+        align-content: center;
     }
 
     .footer-contact:hover {
@@ -521,6 +518,8 @@ input:checked + .slider:before {
         font-size: var(--font-size);
         width: 30vw;
         font-weight: 600;
+        padding: 0;
+        margin: 0;
     }
 
     .footer-contact:hover {
@@ -583,6 +582,8 @@ input:checked + .slider:before {
         width: 30vw;
         height: var(--height-header);
         font-weight: 600;
+        padding: 0;
+        margin: 0;
     }
     .footer-contact:hover {
         font-size: var(--font-size-bold);
